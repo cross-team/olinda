@@ -1,0 +1,35 @@
+.header {
+  border-bottom: $border-base-light-alpha;
+  display: grid;
+  grid-template: 1fr / 177px auto 230px;
+  height: 90px;
+
+  &__brand {
+    height: 36px;
+    margin: 0;
+    place-self: center end;
+    width: 148px;
+
+    &__image {
+      fill: $white;
+    }
+
+    &__name {
+      color: $light-font-color;
+      @include sl-only;
+    }
+  }
+
+  .nav {
+    &__link {
+      
+      border-bottom: 5px solid $gold;
+      margin-bottom: -5px;
+    }
+  }
+
+  &__contact {
+    place-self: center start;
+    width: 200px;
+  }
+}

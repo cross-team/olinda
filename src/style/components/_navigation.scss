@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  place-self: stretch center;
+  position: relative;
+
+  &__link {
+    align-items: center;
+    color: $light-font-color;
+    display: flex;
+    font-size: rem(20px);
+    padding: 0 20px;
+    text-decoration: none;
+    box-sizing: content-box;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
