@@ -1,13 +1,14 @@
 .header {
   border-bottom: $border-base-light-alpha;
   display: grid;
-  grid-template: 1fr / 177px auto 230px;
+  grid-template: 1fr / 230px auto 230px;
   height: 90px;
+  padding: 0 calc((100vw - 2560px) / 2);
 
   &__brand {
     height: 36px;
-    margin: 0;
-    place-self: center end;
+    margin: 0 0 0 30px;
+    place-self: center start;
     width: 148px;
 
     &__image {
@@ -15,7 +16,7 @@
     }
 
     &__name {
-      color: $light-font-color;
+      color: $font-color-light;
       @include sl-only;
     }
   }

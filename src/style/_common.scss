@@ -2,3 +2,7 @@ body {
   @include font-base;
   background: #1E2446;
 }
+
+.sample {
+  min-height: calc(100vh - 90px);
+}

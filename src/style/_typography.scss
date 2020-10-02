@@ -3,6 +3,8 @@ $font-size-base: 16px;
 $font-weight-base: 400;
 $font-weight-bold: 600;
 
+$font-size-copy: 1rem;
+
 @mixin font-base {
   font: normal 400 $font-size-base / 1.5 $font-family-base;
   letter-spacing: .0075rem;

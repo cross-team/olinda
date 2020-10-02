@@ -1,9 +1,10 @@
 import React from 'react';
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
+import PropTypes from 'prop-types';
 
-const Navigation = () => {
+const Navigation = ({ className }) => {
   return (
-    <nav className="nav">
+    <nav className={`nav ${className}`}>
       <Link to="/#cards" className="nav__link" tabIndex="0">
         Payment Solutions
       </Link>
@@ -21,6 +22,10 @@ const Navigation = () => {
       </Link>
     </nav>
   );
+};
+
+Navigation.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Navigation;

@@ -1,11 +1,12 @@
 .nav {
   display: flex;
+  justify-content: center;
   place-self: stretch center;
   position: relative;
 
   &__link {
     align-items: center;
-    color: $light-font-color;
+    color: $font-color-light;
     display: flex;
     font-size: rem(20px);
     padding: 0 20px;
