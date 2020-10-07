@@ -1,1 +1,13 @@
 @import "normalize.css/normalize";
+
+@import "variables";
+@import "typography";
+@import "functions";
+@import "mixins";
+@import "common";
+
+@import "components/header";
+@import "components/footer";
+@import "components/hero";
+@import "components/navigation";
+@import "components/button";

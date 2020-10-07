@@ -1,0 +1,43 @@
+.hero {
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 768px;
+  overflow: hidden;
+  padding: 204px 0 0;
+  position: relative;
+  
+  &__title {
+    color: $font-color-light;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  &__copy {
+    color: $font-color-light;
+    font-size: $font-size-h6;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__screens-front {
+    bottom: 0;
+    height: vwCalc(594);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: vwCalc(372);
+    z-index: 2;
+  }
+
+  &__screens-back {
+    bottom: 0;
+    height: vwCalc(514);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: vwCalc(1025);
+    z-index: 1;
+  }
+}
