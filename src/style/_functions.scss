@@ -1,3 +1,7 @@
 @function rem($size) {
   @return #{$size / $font-size-base}rem;
 }
+
+@function vwCalc($num){
+  @return ($num / ($num * 0 + 1)) / 1920 * 100vw;
+}
