@@ -1,0 +1,24 @@
+.seling {
+  box-sizing: border-box;
+  height: vwCalc(980);
+  min-height: 768px;
+  overflow: hidden;
+  padding: 114px 0 0;
+  position: relative;
+  
+  &__title {
+    color: $font-color-light;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  &__copy {
+    color: $font-color-light;
+    font-size: $font-size-h6;
+    margin: 0 auto;
+    text-align: center;
+    width: gridCalc(6);
+  }
+}

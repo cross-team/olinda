@@ -40,4 +40,14 @@
     width: vwCalc(1025);
     z-index: 1;
   }
+
+  &__legal {
+    bottom: 30px;
+    color: $font-color-light;
+    left: 30px;
+    line-height: $line-height-base;
+    margin: 0;
+    max-width: 297px;
+    position: absolute;
+  }
 }
