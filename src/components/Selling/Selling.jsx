@@ -17,7 +17,12 @@ const Selling = () => {
   `);
 
   return (
-    <BackgroundImage Tag="section" className="selling" fluid={sellingBg.sharp.fluid}>
+    <BackgroundImage
+      Tag="section"
+      className="selling"
+      fluid={sellingBg.sharp.fluid}
+      backgroundColor="#63676f"
+    >
       <Fade bottom cascade duration={500} distance="50px">
         <div>
           <h2 className="selling__title">Seamless Merchant Services</h2>
