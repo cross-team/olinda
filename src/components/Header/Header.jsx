@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Brand from '../../images/brand.svg';
+import IconMenu from '../../images/icon-menu.svg';
 import Navigation from '../Navigation/Navigation';
 import Button from '../Button/Button';
 
@@ -30,6 +31,7 @@ const Header = () => {
       </h1>
       <Navigation className="header__nav" />
       <Button className="header__contact">Contact Us</Button>
+      <IconMenu className="header__menu" />
     </header>
   );
 };

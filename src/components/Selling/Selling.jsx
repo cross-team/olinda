@@ -18,6 +18,7 @@ const Selling = () => {
 
   return (
     <BackgroundImage
+      id="payment-solutions"
       Tag="section"
       className="selling"
       fluid={sellingBg.sharp.fluid}

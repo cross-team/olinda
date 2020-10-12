@@ -82,10 +82,7 @@ const Footer = () => {
             Privacy Policy
           </Link>
           <Link to="/" className="nav-legal__link" tabIndex="0">
-            Terms and Conditions
-          </Link>
-          <Link to="/" className="nav-legal__link" tabIndex="0">
-            Cookies Policy
+            Terms of Use
           </Link>
           <Link to="/" className="nav-legal__link" tabIndex="0">
             Accessibility Statement

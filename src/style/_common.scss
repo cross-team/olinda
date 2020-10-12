@@ -2,3 +2,7 @@ body {
   @include font-base;
   background: $gray-4;
 }
+
+.wrap {
+  padding: 0 calc((100vw - 2560px) / 2);
+}
