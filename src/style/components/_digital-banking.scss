@@ -1,0 +1,178 @@
+@keyframes coinsZigZag {
+  from {
+    transform: translate(0, -5%);
+  }
+
+  to {
+    transform: translate(0, 5%);
+  }
+}
+
+.digital-banking {
+  box-sizing: border-box;
+  height: vwCalc(980);
+  min-height: 768px;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  &__wrap {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &__title {
+    color: $font-color-blue;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin: 11% calc(#{gridCalc(1)} + #{$grid-gap-default}) rem(15px) 0;
+    text-align: right;
+    width: gridCalc(5);
+  }
+
+  &__copy {
+    color: $font-color-gray;
+    font-size: $font-size-h6;
+    line-height: $line-height-base;
+    margin: 0 calc(#{gridCalc(1)} + #{$grid-gap-default}) rem(36px) 0;
+    text-align: right;
+    width: gridCalc(5);
+  }
+
+  &__brands {
+    margin: 0 calc(#{gridCalc(1)} + #{$grid-gap-default}) 0 0;
+    text-align: right;
+    width: gridCalc(5);
+
+    &__brand {
+      margin: 0 0 0 45px;
+    }
+  }
+
+  &__note {
+    color: $font-color-gray;
+    margin: auto calc(#{gridCalc(1)} + #{$grid-gap-default}) 30px 0;
+    text-align: right;
+    width: gridCalc(5);
+  }
+
+  &__float-elements {
+    height: vwCalc(256);
+    left: -34px;
+    position: absolute;
+    top: 32px;
+    width: vwCalc(433);
+    max-height: maxHeightCalc(298);
+    max-width: maxWidthCalc(298, 629);
+  }
+
+  &__coin {
+    position: absolute !important;
+    animation-name: coinsZigZag;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+    &--1 {
+      height: vwCalc(110);
+      left: 0;
+      top: 0;
+      width: vwCalc(110);
+      animation-delay: .2s;
+    }
+    &--2 {
+      height: vwCalc(60);
+      left: vhCalc(80);
+      top: vhCalc(154);
+      width: vwCalc(60);
+      animation-delay: .3s;
+    }
+    &--3 {
+      height: vwCalc(68);
+      left: vhCalc(163);
+      top: vhCalc(55);
+      width: vwCalc(68);
+      animation-delay: .4s;
+    }
+    &--4 {
+      height: vwCalc(105);
+      left: vhCalc(214);
+      top: vhCalc(151);
+      width: vwCalc(105);
+      animation-delay: .5s;
+    }
+    &--5 {
+      height: vwCalc(84);
+      left: vhCalc(289);
+      top: vhCalc(23);
+      width: vwCalc(84);
+      animation-delay: .6s;
+    }
+    &--6 {
+      height: vwCalc(55);
+      left: vhCalc(366);
+      top: vhCalc(123);
+      width: vwCalc(55);
+      animation-delay: .7s;
+    }
+  }
+}
+
+@media (max-width: 812px) {
+  .digital-banking {
+    height: 100vh;
+
+    &__title {
+      font-size: rem(28px);
+      font-weight: $font-weight-bold;
+      margin: 20% 0 20px;
+      text-align: center;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  
+    &__copy {
+      font-size: 1rem;
+      margin: 0 0 39px;
+      text-align: center;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    &__brands {
+      width: 100%;
+      padding: 0 20px 15px;
+      box-sizing: border-box;
+
+      &__brand {
+        margin: 0;
+
+        &:first-child {
+          width: vwMCalc(186);
+          margin: 0 30px 0 0;
+        }
+        &:last-child {
+          width: vwMCalc(60);
+        }
+      }
+    }
+
+    &__note {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    &__coin {
+      display: none;
+    }
+  }
+}

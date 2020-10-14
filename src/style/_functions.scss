@@ -2,6 +2,26 @@
   @return #{$size / $font-size-base}rem;
 }
 
-@function vwCalc($num){
+@function vwCalc($num) {
   @return ($num / ($num * 0 + 1)) / 1920 * 100vw;
+}
+
+@function vwMCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 375 * 100vw;
+}
+
+@function vhCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 980 * 100vh;
+}
+
+@function maxHeightCalc($height) {
+  @return #{($height / 1440) * 100}vh;
+}
+
+@function maxWidthCalc($heigh, $width) {
+  @return #{((($heigh / 1440) * 100) * $width) / $heigh}vh;
+}
+
+@function gridCalc($colNum) {
+  @return calc((((100vw - #{$grid-gap-default}) / 12) * #{$colNum}) - #{$grid-gap-default});
 }

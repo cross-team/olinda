@@ -26,6 +26,7 @@ module.exports = {
       options: {
         google: {
           families: ['Source Sans Pro:400,600'],
+          display: 'swap',
         },
       },
     },

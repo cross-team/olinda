@@ -51,6 +51,9 @@ const Hero = () => {
           <Image fluid={heroScreensBack.sharp.fluid} alt="Lorem Ipsum dolor" />
         </Fade>
       </div>
+      <p className="hero__legal">
+        Banking services provided by Safra National Bank of New York, Member FDIC.
+      </p>
     </BackgroundImage>
   );
 };

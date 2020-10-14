@@ -1,5 +1,6 @@
 $font-family-base: 'Source Sans Pro', sans-serif;
 $font-size-base: 16px;
+$line-height-base: 1.5;
 
 $font-weight-base: 400;
 $font-weight-bold: 600;
@@ -9,7 +10,8 @@ $font-size-h6: 1.5rem;
 $font-size-copy: 1rem;
 
 @mixin font-base {
-  font: normal 400 $font-size-base / 1.5 $font-family-base;
+  font: normal 400 $font-size-base $font-family-base;
+  line-height: $line-height-base;
   letter-spacing: .0075rem;
 }
 

@@ -1,9 +1,10 @@
 .hero {
   box-sizing: border-box;
-  height: 100vh;
+  height: vwCalc(980);
   min-height: 768px;
+  max-height: 100vh;
   overflow: hidden;
-  padding: 204px 0 0;
+  padding: vhCalc(204) 0 0;
   position: relative;
   
   &__title {
@@ -24,20 +25,72 @@
   &__screens-front {
     bottom: 0;
     height: vwCalc(594);
+    max-height: maxHeightCalc(962);
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
     width: vwCalc(372);
+    max-width: maxWidthCalc(962, 603);
     z-index: 2;
   }
 
   &__screens-back {
     bottom: 0;
     height: vwCalc(514);
+    max-height: maxHeightCalc(830);
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
     width: vwCalc(1025);
+    max-width: maxWidthCalc(830, 1663);
     z-index: 1;
+  }
+
+  &__legal {
+    bottom: 30px;
+    color: $font-color-light;
+    left: 30px;
+    line-height: $line-height-base;
+    margin: 0;
+    max-width: 297px;
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 812px) {
+  .hero {
+    height: 100vh;
+
+    &__title {
+      font-size: rem(28px);
+      margin: 0 0 15px;
+      padding: 0 30px;
+    }
+  
+    &__copy {
+      font-size: 1rem;
+    }
+
+    &__screens-front {
+      height: vwMCalc(418);
+      width: vwMCalc(263);
+    }
+
+    &__screens-back {
+      height: vwMCalc(360);
+      width: vwMCalc(724);
+    }
+
+    &__legal {
+      background: linear-gradient(180deg, rgba(11, 38, 81, 0) 18%, rgba(7, 26, 55, 0.83) 70%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      padding: 100px 20px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
   }
 }

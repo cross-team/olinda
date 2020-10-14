@@ -1,11 +1,14 @@
 $white: #fff;
+$gray-1: #707070;
 $gray-4: #F8F8F8;
 $gold: #C4AD6C;
 $blue-1: #1E2446;
 $navy-dark: #161B33;
 $blue-3: #21295E;
+$clean-blue: #333E7C;
 
 $font-color-light: $white;
+$font-color-gray: $gray-1;
 $font-color-blue: $blue-3;
 
 $border-color-light: $white;
@@ -13,3 +16,5 @@ $border-color-light-alpha: fade-out($white, 0.8);
 $border-base-light: 1px solid $border-color-light;
 $border-base-light-alpha: 1px solid $border-color-light-alpha;
 $border-radius-base: 25px;
+
+$grid-gap-default: 30px;

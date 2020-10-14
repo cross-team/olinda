@@ -1,0 +1,46 @@
+.selling {
+  box-sizing: border-box;
+  height: vwCalc(980);
+  min-height: 768px;
+  max-height: 100vh;
+  overflow: hidden;
+  padding: 114px 0 0;
+  position: relative;
+  
+  &__title {
+    color: $font-color-light;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  &__copy {
+    color: $font-color-light;
+    font-size: $font-size-h6;
+    margin: 0 auto;
+    text-align: center;
+    width: gridCalc(6);
+  }
+}
+
+
+@media (max-width: 812px) {
+  .selling {
+    height: 100vh;
+    
+    &__title {
+      font-size: rem(28px);
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  
+    &__copy {
+      font-size: 1rem;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
+}

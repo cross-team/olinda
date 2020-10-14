@@ -9,6 +9,7 @@
     display: block;
     height: 5px;
     margin: -5px auto 0;
+    transform: translate(0, -5px);
     width: 1230px;
   }
 
@@ -88,6 +89,74 @@
 
     &:last-child {
       margin: 0;
+    }
+  }
+}
+
+@media (max-width: 812px) {
+  .footer {
+    &::before {
+      width: vwMCalc(200);
+    }
+
+    &__social {
+      height: 80px;
+    }
+
+    &__nav {
+      grid-template: 80px / 1fr auto 1fr;
+
+      .nav {
+        display: none;
+      }
+    }
+
+    &__legal {
+      align-items: center;
+      display: grid;
+      grid-template: 100px 80px / 1fr;
+      padding: 0 calc((100vw - 2560px) / 2);
+  
+      &__copy {
+        color: $font-color-light;
+        font-size: $font-size-copy;
+        text-align: center;
+      }
+    }
+  }
+
+  .nav-careers {
+    display: flex;
+    grid-area: 1 / 1 / 2 /4;
+    margin: 0;
+    place-self: stretch center;
+  
+    &__link {
+      align-items: center;
+      color: $font-color-light;
+      display: flex;
+      font-size: rem(20px);
+      
+      text-decoration: none;
+    }
+  }
+
+  .nav-legal {
+    text-align: center;
+    display: block;
+    height: 90px;
+    margin: 0;
+  
+    &__link {
+      display: inline-block;
+      color: $font-color-light;
+      font-size: $font-size-copy;
+      margin: 25px 25px 20px 0;
+      text-decoration: none;
+  
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
