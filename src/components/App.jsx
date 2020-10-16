@@ -5,6 +5,7 @@ import Selling from './Selling/Selling';
 import DigitalBanking from './DigitalBanking/DigitalBanking';
 import Cards from './Cards/Cards';
 import Mission from './Mission/Mission';
+import About from './About/About';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <DigitalBanking />
       <Cards />
       <Mission />
+      <About />
       <Footer />
     </div>
   );

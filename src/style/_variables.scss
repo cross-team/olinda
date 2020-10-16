@@ -11,6 +11,8 @@ $font-color-light: $white;
 $font-color-gray: $gray-1;
 $font-color-blue: $blue-3;
 
+$bg-light-alpha: fade-out($white, 0.9);
+
 $border-color-light: $white;
 $border-color-light-alpha: fade-out($white, 0.8);
 $border-base-light: 1px solid $border-color-light;
