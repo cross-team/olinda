@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Hero from './Hero/Hero';
 import Selling from './Selling/Selling';
 import DigitalBanking from './DigitalBanking/DigitalBanking';
+import Cards from './Cards/Cards';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Selling />
       <DigitalBanking />
+      <Cards />
       <Footer />
     </div>
   );

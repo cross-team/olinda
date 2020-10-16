@@ -72,7 +72,7 @@
     position: absolute !important;
     animation-name: coinsZigZag;
     animation-duration: 1s;
-    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: both;

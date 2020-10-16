@@ -8,7 +8,7 @@ const Selling = () => {
     query {
       sellingBg: file(relativePath: { eq: "selling-bg.jpg" }) {
         sharp: childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 95) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
