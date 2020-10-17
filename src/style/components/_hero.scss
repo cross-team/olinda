@@ -5,7 +5,7 @@
   min-height: 768px;
   max-height: 100vh;
   overflow: hidden;
-  padding: vhCalc(204) 0 0;
+  padding: vwCalc(204) 0 0;
   position: relative;
   
   &__title {
@@ -45,6 +45,26 @@
     width: vwCalc(1025);
     max-width: maxWidthCalc(830, 1663);
     z-index: 1;
+
+    &__left {
+      height: vwCalc(514);
+      max-height: maxHeightCalc(830);
+      left: 0;
+      position: absolute;
+      width: vwCalc(374);
+      max-width: maxWidthCalc(830, 605);
+      top: 0;
+    }
+
+    &__right {
+      height: vwCalc(514);
+      max-height: maxHeightCalc(830);
+      right: 0;
+      position: absolute;
+      width: vwCalc(374);
+      max-width: maxWidthCalc(830, 605);
+      top: 0;
+    }
   }
 
   &__legal {
@@ -62,6 +82,7 @@
 @media (max-width: 812px) {
   .hero {
     height: 100vh;
+    padding: rem(152px) 0 0;
 
     &__title {
       font-size: rem(28px);
@@ -80,7 +101,17 @@
 
     &__screens-back {
       height: vwMCalc(360);
-      width: vwMCalc(724);
+      width: vwMCalc(721);
+
+      &__left {
+        height: vwMCalc(360);
+        width: vwMCalc(263);
+      }
+  
+      &__right {
+        height: vwMCalc(362);
+        width: vwMCalc(252);
+      }
     }
 
     &__legal {

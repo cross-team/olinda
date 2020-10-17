@@ -32,3 +32,33 @@
     display: inline-block;
   }
 }
+
+@media (max-width: 812px) {
+  .support {
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: vwMCalc(580);
+    min-height: 580px;
+    padding: rem(65px) 0 0;
+
+    &__title {
+      box-sizing: border-box;
+      font-size: $font-size-h5;
+      margin: 0 0 rem(20px);
+      padding: 0 15px;
+      width: 100%;
+    }
+  
+    &__copy {
+      box-sizing: border-box;
+      font-size: $font-size-copy;
+      margin: 0 0 rem(30px);
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    &__more {
+      margin: 0;
+    }
+  }
+}

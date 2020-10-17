@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import Fade from 'react-reveal/Fade';
 import Brand from '../../images/brand.svg';
 import IconMenu from '../../images/icon-menu.svg';
 import Navigation from '../Navigation/Navigation';
@@ -21,13 +22,17 @@ const Header = () => {
     handleScroll(currPos.y);
   });
 
+  const [revealed, setRevealed] = useState('hide');
+
   return (
-    <header className={`header header--${scrolly}`}>
+    <header className={`header header--${scrolly} header--${revealed}`}>
       <h1 className="header__brand">
-        <Link to="/">
-          <Brand className="header__brand__image" aria-hidden="true" />
-          <span className="header__brand__name">Safrapay</span>
-        </Link>
+        <Fade duration={500} onReveal={() => setRevealed('revealed')}>
+          <Link to="/">
+            <Brand className="header__brand__image" aria-hidden="true" />
+            <span className="header__brand__name">Safrapay</span>
+          </Link>
+        </Fade>
       </h1>
       <Navigation className="header__nav" />
       <Button className="header__contact">Contact Us</Button>

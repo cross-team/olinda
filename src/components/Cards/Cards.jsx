@@ -5,7 +5,13 @@ import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
 
 const Cards = () => {
-  const { cardsBg, cardsScreens, cardsCardLeft, cardsCardRight } = useStaticQuery(graphql`
+  const {
+    cardsBg,
+    cardsScreens,
+    cardsCardLeft,
+    cardsCardRight,
+    cardsCardMobile,
+  } = useStaticQuery(graphql`
     query {
       cardsBg: file(relativePath: { eq: "cards-bg.jpg" }) {
         sharp: childImageSharp {
@@ -32,6 +38,14 @@ const Cards = () => {
       }
 
       cardsCardRight: file(relativePath: { eq: "cards-card-right.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      cardsCardMobile: file(relativePath: { eq: "cards-card-mobile.png" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -72,10 +86,13 @@ const Cards = () => {
             <div className="cards__back__right">
               <Image fluid={cardsCardRight.sharp.fluid} alt="Lorem Ipsum dolor" />
             </div>
+            <div className="cards__back__mobile">
+              <Image fluid={cardsCardMobile.sharp.fluid} alt="Lorem Ipsum dolor" />
+            </div>
           </div>
         </Fade>
       </div>
-      <p className="hero__legal">
+      <p className="cards__legal">
         Banking services provided by Safra National Bank of New York, Member FDIC.
       </p>
     </BackgroundImage>

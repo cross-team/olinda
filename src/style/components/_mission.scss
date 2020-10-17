@@ -27,3 +27,23 @@
     width: gridCalc(10);
   }
 }
+
+@media (max-width: 812px) {
+  .mission {
+    height: vwMCalc(390);
+    min-height: 270px;
+    max-height: 100vh;
+    
+    &__copy {
+      font-size: $font-size-h6;
+      margin: 0 20px 15px;
+      width: auto;
+    }
+  
+    &__by {
+      font-size: $font-size-copy;
+      margin: 0 20px;
+      width: auto;
+    }
+  }
+}

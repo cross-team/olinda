@@ -5,7 +5,12 @@ import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
 
 const Hero = () => {
-  const { heroBg, heroScreensFront, heroScreensBack } = useStaticQuery(graphql`
+  const {
+    heroBg,
+    heroScreensFront,
+    heroScreensBackLeft,
+    heroScreensBackRight,
+  } = useStaticQuery(graphql`
     query {
       heroBg: file(relativePath: { eq: "hero-bg.jpg" }) {
         sharp: childImageSharp {
@@ -23,7 +28,15 @@ const Hero = () => {
         }
       }
 
-      heroScreensBack: file(relativePath: { eq: "hero-screens-back.png" }) {
+      heroScreensBackLeft: file(relativePath: { eq: "hero-screens-back-left.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      heroScreensBackRight: file(relativePath: { eq: "hero-screens-back-right.png" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -48,7 +61,14 @@ const Hero = () => {
       </div>
       <div className="hero__screens-back">
         <Fade bottom duration={1000} delay={400} distance="150px">
-          <Image fluid={heroScreensBack.sharp.fluid} alt="Lorem Ipsum dolor" />
+          <div>
+            <div className="hero__screens-back__left">
+              <Image fluid={heroScreensBackLeft.sharp.fluid} alt="Lorem Ipsum dolor" />
+            </div>
+            <div className="hero__screens-back__right">
+              <Image fluid={heroScreensBackRight.sharp.fluid} alt="Lorem Ipsum dolor" />
+            </div>
+          </div>
         </Fade>
       </div>
       <p className="hero__legal">

@@ -21,11 +21,11 @@ const About = () => {
     <BackgroundImage id="about" Tag="section" className="about" fluid={aboutBg.sharp.fluid}>
       <Fade bottom cascade duration={1000} distance="50px">
         <div className="about__wrap">
-          <h2 className="about__title">Convenient Digital Banking</h2>
+          <h2 className="about__title">Your Security is Our Priority</h2>
           <p className="about__copy">
-            Open a Business Bank Account with us to move money, make mobile check deposits, and view
-            statements from the convenience of your mobile phone. Use your included debit card to
-            make cash deposits and withdrawals at any of our in-network ATMs.
+            Safrapay Inc. is a service provider of Safra National Bank of New York, Member FDIC.
+            Both are part of the J. Safra group of companies, which has been in the banking business
+            for more than 175 years.
           </p>
           <Button className="about__more">About Us</Button>
         </div>
