@@ -12,4 +12,14 @@
   &:hover {
     background-color: $bg-light-alpha;
   }
+
+  &--secondary {
+    border: $border-base-blue;
+    color: $font-color-blue;
+
+    &:hover {
+      border: $border-base-clean-blue;
+      color: $clean-blue;
+    }
+  }
 }
