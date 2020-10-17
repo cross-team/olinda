@@ -99,6 +99,10 @@
       animation-direction: alternate;
       animation-fill-mode: both;
     }
+
+    &__mobile {
+      display: none;
+    }
   }
 
   &__legal {
