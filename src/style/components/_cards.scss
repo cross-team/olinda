@@ -163,6 +163,7 @@
       }
 
       &__mobile {
+        display: block;
         height: vwMCalc(357);
         left: 50%;
         position: absolute !important;
