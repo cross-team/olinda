@@ -16,7 +16,6 @@
   height: 90px;
   position: absolute;
   transform: translate(0, 0);
-  transition: background-color 0s;
   width: 100%;
   max-width: 2560px;
   z-index: 10;
@@ -154,7 +153,9 @@
 @media (max-width: 812px) {
   .header {
     height: 70px;
-    grid-template: 1fr / auto auto auto;
+    grid-template: 1fr / auto auto 50px;
+    transition: background-color .2s;
+    transition-delay: .5s;
 
     &::after {
       background: $gold;
@@ -166,15 +167,48 @@
       top: 70px;
       left: 50%;
       transform: translate(-50%, 0);
+      transition: transform .5s ease-out;
       width: vwMCalc(200);
     }
 
     &__menu {
+      background: none;
+      border: none;
+      cursor: pointer;
       display: inline-block;
       grid-area:  1 / 3 / 2 / 4;
-      place-self: center end;
-      padding-right: 20px;
-      fill: $font-color-light;
+      height: 24px;
+      place-self: center start;
+      padding: 0;
+      width: 24px;
+      position: relative;
+      overflow: hidden;
+
+      &__open {
+        fill: $font-color-light;
+        height: 12px;
+        left: 50%;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .3s;
+        transition-delay: .5s;
+        width: 18px;
+      }
+
+      &__close {
+        fill: $font-color-light;
+        height: 24px;
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .3s;
+        transition-delay: .5s;
+        width: 24px;
+      }
     }
 
     &__brand {
@@ -187,18 +221,20 @@
       &__image {
         width: 100%;
         height: 100%;
+        transition-delay: .5s;
       }
     }
 
     .nav {
-      display: none;
       align-items: flex-end;
       background: $white;
       flex-direction: column;
+      height: 0;
       left: 0;
-      padding: 7px 0;
+      overflow: hidden;
       position: absolute;
       top: 70px;
+      transition: height .5s ease-out;
       width: 100%;
 
       &::after {
@@ -209,8 +245,13 @@
         color: $font-color-blue;
         padding: 7px 20px;
 
+        &:first-child {
+          padding: 15px 20px 7px;
+          margin: 0;
+        }
+
         &:last-child {
-          padding: 7px 20px;
+          padding: 7px 20px 15px;
         }
 
         &--active {
@@ -220,6 +261,11 @@
           }
         }
       }
+
+      &--open {
+        height: 236px;
+        transition-delay: .1s;
+      }
     }
 
     &__contact {
@@ -227,15 +273,60 @@
     }
 
     &--fixed {
+      transition-delay: 0s;
+
       & .header {
         &__brand {
           &__image {
             transform: scale(1);
+            transition-delay: 0s;
           }
         }
 
         &__menu {
-          fill: $font-color-blue;
+          &__open {
+            fill: $font-color-blue;
+          }
+    
+          &__close {
+            fill: $font-color-blue;
+          }
+        }
+      }
+    }
+
+    &--open {
+      background-color: $white;
+      transition-delay: 0s;
+      border-bottom: $border-base-gray-alpha;
+
+      &::after {
+        transform: translate(-50%, 236px);
+        transition-delay: .1s;
+      }
+
+      & .header {
+        background-color: $white;
+
+        &__brand {
+          &__image {
+            fill: $blue-1;
+            transition-delay: 0s;
+          }
+        }
+
+        &__menu {
+          &__open {
+            opacity: 0;
+            fill: $font-color-blue;
+            transition-delay: 0s;
+          }
+    
+          &__close {
+            opacity: 1;
+            fill: $font-color-blue;
+            transition-delay: 0s;
+          }
         }
       }
     }

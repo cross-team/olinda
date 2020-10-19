@@ -16,8 +16,10 @@ $bg-light-alpha: fade-out($white, 0.9);
 
 $border-color-light: $white;
 $border-color-light-alpha: fade-out($white, 0.8);
+$border-color-gray-alpha: fade-out($gray-1, 0.8);
 $border-base-light: 1px solid $border-color-light;
 $border-base-light-alpha: 1px solid $border-color-light-alpha;
+$border-base-gray-alpha: 1px solid $border-color-gray-alpha;
 $border-base-blue: 1px solid $blue-1;
 $border-base-clean-blue: 1px solid $clean-blue;
 $border-radius-base: 25px;
