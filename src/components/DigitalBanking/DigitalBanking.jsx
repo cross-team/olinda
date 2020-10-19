@@ -59,7 +59,7 @@ const DigitalBanking = () => {
         </div>
       </Fade>
       <Fade left duration={1500} distance="200px">
-        <div className="digital-banking__float-elements">
+        <div className="digital-banking__float-elements" aria-hidden>
           <Image
             fluid={iconCoin.sharp.fluid}
             alt="Coin icon"

@@ -46,7 +46,7 @@ const Navigation = ({ className }) => {
         Cards
       </Link>
       <Link
-        to="cards"
+        to="about"
         className="nav__link"
         activeClass="nav__link--active"
         spy
@@ -59,7 +59,7 @@ const Navigation = ({ className }) => {
         About Us
       </Link>
       <Link
-        to="cards"
+        to="support"
         className="nav__link"
         activeClass="nav__link--active"
         spy

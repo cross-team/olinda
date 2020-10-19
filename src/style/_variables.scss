@@ -1,20 +1,25 @@
 $white: #fff;
 $gray-1: #707070;
 $gray-4: #F8F8F8;
+$gray-light: #F9F9FB;
 $gold: #C4AD6C;
 $blue-1: #1E2446;
-$navy-dark: #161B33;
 $blue-3: #21295E;
+$navy-dark: #161B33;
 $clean-blue: #333E7C;
 
 $font-color-light: $white;
 $font-color-gray: $gray-1;
 $font-color-blue: $blue-3;
 
+$bg-light-alpha: fade-out($white, 0.9);
+
 $border-color-light: $white;
 $border-color-light-alpha: fade-out($white, 0.8);
 $border-base-light: 1px solid $border-color-light;
 $border-base-light-alpha: 1px solid $border-color-light-alpha;
+$border-base-blue: 1px solid $blue-1;
+$border-base-clean-blue: 1px solid $clean-blue;
 $border-radius-base: 25px;
 
 $grid-gap-default: 30px;

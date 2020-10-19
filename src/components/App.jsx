@@ -3,6 +3,10 @@ import Header from './Header/Header';
 import Hero from './Hero/Hero';
 import Selling from './Selling/Selling';
 import DigitalBanking from './DigitalBanking/DigitalBanking';
+import Cards from './Cards/Cards';
+import Mission from './Mission/Mission';
+import About from './About/About';
+import Support from './Support/Support';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -12,6 +16,10 @@ function App() {
       <Hero />
       <Selling />
       <DigitalBanking />
+      <Cards />
+      <Mission />
+      <About />
+      <Support />
       <Footer />
     </div>
   );
