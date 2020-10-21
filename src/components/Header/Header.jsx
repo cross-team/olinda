@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Fade from 'react-reveal/Fade';
+import PropTypes from 'prop-types';
 import Brand from '../../images/brand.svg';
 import IconMenuOpen from '../../images/icon-menu.svg';
 import IconMenuClose from '../../images/icon-close.svg';
 import Navigation from '../Navigation/Navigation';
 import Button from '../Button/Button';
 
-const Header = () => {
+const Header = ({ variation }) => {
   const [scrolly, setScrolly] = useState('top');
 
   const handleScroll = (position) => {
@@ -36,7 +37,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`header header--${scrolly} header--${revealed} header--${menu}`}>
+    <header
+      className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
+    >
       <h1 className="header__brand">
         <Fade duration={500} onReveal={() => setRevealed('revealed')}>
           <Link to="/">
@@ -53,6 +56,10 @@ const Header = () => {
       </button>
     </header>
   );
+};
+
+Header.propTypes = {
+  variation: PropTypes.string,
 };
 
 export default Header;

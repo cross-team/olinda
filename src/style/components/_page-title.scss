@@ -1,0 +1,28 @@
+.title {
+  align-items: center;
+  background-color: $blue-1;
+  box-sizing: border-box;
+  display: flex;
+  height: vwCalc(260);
+  justify-content: center;
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+  
+  &__content {
+    color: $font-color-light;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+}
+
+@media (max-width: 812px) {
+  .title {
+    height: vwMCalc(120);
+    
+    &__copy {
+      font-size: $font-size-h5;
+    }
+  }
+}

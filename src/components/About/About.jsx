@@ -27,7 +27,9 @@ const About = () => {
             Both are part of the J. Safra group of companies, which has been in the banking business
             for more than 175 years.
           </p>
-          <Button className="about__more">About Us</Button>
+          <Button className="about__more" to="/about">
+            About Us
+          </Button>
         </div>
       </Fade>
     </BackgroundImage>

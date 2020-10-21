@@ -73,6 +73,11 @@
     }
   }
 
+  &--internal {
+    background: $blue-1;
+    position: relative;
+  }
+
   &--fixed {
     animation: headerSlideDown .3s ease-out;
     background-color: $white;
