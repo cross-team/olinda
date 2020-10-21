@@ -1,0 +1,9 @@
+$nav-link-height: 24px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px
+);
+@import "bootstrap/scss/bootstrap-grid";

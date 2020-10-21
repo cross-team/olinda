@@ -40,16 +40,18 @@ const Header = ({ variation }) => {
     <header
       className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
     >
-      <h1 className="header__brand">
+      <nav className="header__brand">
         <Fade duration={500} onReveal={() => setRevealed('revealed')}>
-          <Link to="/">
+          <Link to="/" className="header__brand">
             <Brand className="header__brand__image" aria-hidden="true" />
             <span className="header__brand__name">Safrapay</span>
           </Link>
         </Fade>
-      </h1>
-      <Navigation className={`header__nav nav--${menu}`} />
-      <Button className="header__contact">Contact Us</Button>
+      </nav>
+      <Navigation className={`header__nav nav--${menu}`} label="Main Menu" />
+      <Button to="/contact-us" className="header__contact">
+        Contact Us
+      </Button>
       <button className="header__menu" onClick={() => handleMenu()} type="button">
         <IconMenuOpen className="header__menu__open" />
         <IconMenuClose className="header__menu__close" />

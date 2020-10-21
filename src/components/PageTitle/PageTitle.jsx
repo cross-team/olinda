@@ -7,7 +7,7 @@ const PageTitle = ({ title }) => {
     <section id="title" className="title">
       <Fade bottom cascade duration={500} distance="50px">
         <div>
-          <h3 className="title__content">{title}</h3>
+          <h1 className="title__content">{title}</h1>
         </div>
       </Fade>
     </section>

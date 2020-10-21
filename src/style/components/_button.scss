@@ -14,6 +14,33 @@
     background-color: $bg-light-alpha;
   }
 
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $blue-3;
+    border: $border-base-blue;
+    color: $font-color-light;
+
+    &:hover {
+      background-color: $clean-blue;
+      border: $border-base-clean-blue;
+    }
+
+    &:focus {
+      background-color: $clean-blue-light;
+      border-color: $clean-blue-light;
+      box-shadow: 0 0 0 2px $white, 0 0 0 4px $clean-blue-light;
+    }
+
+    &:active {
+      background-color: $blue-brand;
+      border-color: $blue-brand;
+      box-shadow: 0 0 0 2px $white, 0 0 0 4px $blue-brand;
+    }
+  }
+
   &--secondary {
     border: $border-base-blue;
     color: $font-color-blue;

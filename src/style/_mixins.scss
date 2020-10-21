@@ -9,3 +9,22 @@
   white-space: nowrap;
   width: 1px;
 }
+
+@mixin link-body {
+  color: $blue-expanded-2;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $blue-expanded-2;
+  }
+
+  &:focus {
+    color: $blue-expanded-1;
+    outline: 2px solid $clean-blue-light;
+  }
+
+  &:visited {
+    color: $blue-3;
+  }
+}

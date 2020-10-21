@@ -50,7 +50,7 @@ const Hero = () => {
     <BackgroundImage Tag="section" className="hero" fluid={heroBg.sharp.fluid}>
       <Fade bottom cascade duration={500} distance="50px">
         <div>
-          <h2 className="hero__title">Welcome to the Future of Payments, Banking, and Credit</h2>
+          <h1 className="hero__title">Welcome to the Future of Payments, Banking, and Credit</h1>
           <p className="hero__copy">Safrapay is the Perfect Solution for Your Business</p>
         </div>
       </Fade>

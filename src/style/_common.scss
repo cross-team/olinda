@@ -6,3 +6,7 @@ body {
 .wrap {
   padding: 0 calc((100vw - 2560px) / 2);
 }
+
+.sl-only {
+  @include sl-only;
+}

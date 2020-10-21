@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__nav">
-        <Navigation />
-        <nav className="nav-careers">
+        <Navigation label="Footer Menu" />
+        <nav className="nav-careers" aria-label="Careers Menu">
           <a
             href="https://www.linkedin.com/company/safrapay-inc/jobs/"
             className="nav-careers__link"
@@ -31,14 +31,14 @@ const Footer = () => {
         </nav>
       </div>
       <div className="footer__legal">
-        <nav className="nav-legal">
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+        <nav className="nav-legal" aria-label="Legal Menu">
+          <Link to="/privacy-policy" className="nav-legal__link" tabIndex="0">
             Privacy Policy
           </Link>
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+          <Link to="/terms-of-use" className="nav-legal__link" tabIndex="0">
             Terms of Use
           </Link>
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+          <Link to="/accessibility-statement" className="nav-legal__link" tabIndex="0">
             Accessibility Statement
           </Link>
         </nav>

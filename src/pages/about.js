@@ -8,17 +8,32 @@ import Mission from '../components/Mission/Mission';
 import Footer from '../components/Footer/Footer';
 
 export default () => {
-  const { aboutImage } = useStaticQuery(graphql`
+  const { aboutImageLarge, aboutImageSmall } = useStaticQuery(graphql`
     query {
-      aboutImage: file(relativePath: { eq: "page-about-bg.jpg" }) {
+      aboutImageLarge: file(relativePath: { eq: "page-about-bg.jpg" }) {
         sharp: childImageSharp {
           fluid(quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
+      aboutImageSmall: file(relativePath: { eq: "page-about-mobile-bg.jpg" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1024, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `);
+
+  const aboutImage = [
+    aboutImageSmall.sharp.fluid,
+    {
+      ...aboutImageLarge.sharp.fluid,
+      media: `(min-width: 1025px)`,
+    },
+  ];
 
   return (
     <Layout
@@ -28,12 +43,8 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="About Safrapay" />
-      <section Tag="section" className="page-about">
-        <Image
-          className="page-about__picture"
-          fluid={aboutImage.sharp.fluid}
-          alt="Lorem Ipsum dolor"
-        />
+      <section className="page-about">
+        <Image className="page-about__picture" fluid={aboutImage} alt="Lorem Ipsum dolor" />
         <h3 className="page-about__title">Let Safrapay help you grow your business.</h3>
         <div className="page-about__content">
           <p>
