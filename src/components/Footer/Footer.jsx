@@ -12,7 +12,6 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/company/safrapay-inc/jobs/"
             className="nav-careers__link"
-            tabIndex="0"
             target="_blank"
             rel="noreferrer"
             aria-label="Sfrapay on LinkedIn"
@@ -22,7 +21,6 @@ const Footer = () => {
           <a
             href="https://safrapay.applytojob.com/apply"
             className="nav-careers__link"
-            tabIndex="0"
             target="_blank"
             rel="noreferrer"
           >
@@ -32,13 +30,13 @@ const Footer = () => {
       </div>
       <div className="footer__legal">
         <nav className="nav-legal" aria-label="Legal Menu">
-          <Link to="/privacy-policy" className="nav-legal__link" tabIndex="0">
+          <Link to="/privacy-policy" className="nav-legal__link">
             Privacy Policy
           </Link>
-          <Link to="/terms-of-use" className="nav-legal__link" tabIndex="0">
+          <Link to="/terms-of-use" className="nav-legal__link">
             Terms of Use
           </Link>
-          <Link to="/accessibility-statement" className="nav-legal__link" tabIndex="0">
+          <Link to="/accessibility-statement" className="nav-legal__link">
             Accessibility Statement
           </Link>
         </nav>

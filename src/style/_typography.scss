@@ -9,8 +9,10 @@ $font-size-h2: 3rem;
 $font-size-h3: 2.5rem;
 $font-size-h4: 2.12rem;
 $font-size-h5: 1.75rem;
-$font-size-h6: 1.5rem; 
+$font-size-h6: 1.5rem;
+$font-size-h7: 1.25rem;
 $font-size-copy: 1rem;
+$font-size-body2: .87rem;
 
 @mixin font-base {
   font: normal 400 $font-size-base $font-family-base;

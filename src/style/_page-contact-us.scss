@@ -70,6 +70,12 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
+    &__label {
+      &--mobile {
+        display: none;
+      }
+    }
   }
 
   input[type="radio"]:checked + .form-field-radio {
@@ -103,16 +109,41 @@
   }
 }
 
-@media (max-width: 812px) {
+@media (max-width: $max-width-md) {
+  .page-contact-us {
+  
+    &__title {
+      font-size: $font-size-h4;
+      padding: 0 15px;
+    }
+  
+    &__content {
+      padding: 0 15px;
+    }
+
+    .form-field-radio__label {
+      display: none;
+      &--mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
   .page-contact-us {
   
     &__title {
       font-size: $font-size-h6;
-      padding: 0 20px;
+      padding: 0 5px;
     }
   
     &__content {
-      padding: 0 20px;
+      padding: 0 5px;
+    }
+
+    .form-field-radio {
+      padding: rem(10px) rem(7px);
     }
   }
 }
