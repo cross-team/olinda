@@ -5,6 +5,7 @@
   color: $font-color-light;
   cursor: pointer;
   padding: rem(11px) rem(50px) rem(10px);
+  position: relative;
   text-align: center;
   text-decoration: none;
   transition: background-color .3s, color .3s, border-color .3s;
@@ -16,6 +17,19 @@
 
   &:focus {
     outline: none;
+
+    &::after {
+      border: 2px solid $white;
+      border-radius: $border-radius-lg;
+      content: '';
+      display: block;
+      height: calc(100% + 10px);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 10px);
+    }
   }
 
   &--primary {
@@ -31,7 +45,10 @@
     &:focus {
       background-color: $clean-blue-light;
       border-color: $clean-blue-light;
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $clean-blue-light;
+
+      &::after {
+        border-color: $clean-blue-light;
+      }
     }
 
     &:active {

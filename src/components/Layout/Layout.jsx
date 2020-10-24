@@ -27,13 +27,21 @@ const Layout = ({ children, title, decription, keywords }) => {
         <meta property="og:image" content={`https://www.safrapay.com${shareImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <main className="wrap">{children}</main>
+      <main className="wrap">
+        <div className="skiplink">
+          <a href="#content" className="skiplink__action">
+            Skip to main content
+          </a>
+        </div>
+        {children}
+      </main>
     </>
   );
 };
 
 Layout.propTypes = {
-  children: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any,
   title: PropTypes.string,
   decription: PropTypes.string,
   keywords: PropTypes.string,

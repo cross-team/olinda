@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Fade from 'react-reveal/Fade';
 import Button from '../Button/Button';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Support = () => {
   const { supportBg } = useStaticQuery(graphql`
@@ -17,6 +18,8 @@ const Support = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 1000;
+
   return (
     <BackgroundImage
       id="support"
@@ -30,7 +33,7 @@ const Support = () => {
       role="img"
       aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
     >
-      <Fade cascade duration={1000}>
+      <Fade cascade duration={motionDuration}>
         <div>
           <h3 className="support__title">Human Customer Service</h3>
           <p className="support__copy">

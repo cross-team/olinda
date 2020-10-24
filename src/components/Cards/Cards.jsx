@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Cards = () => {
   const {
@@ -55,6 +56,8 @@ const Cards = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <BackgroundImage
       id="cards"
@@ -63,7 +66,7 @@ const Cards = () => {
       fluid={cardsBg.sharp.fluid}
       backgroundColor="#63676f"
     >
-      <Fade bottom cascade duration={500} distance="50px">
+      <Fade bottom cascade duration={motionDuration} distance="50px">
         <div>
           <h2 className="cards__title">Easy Card Management</h2>
           <p className="cards__copy">
@@ -73,12 +76,12 @@ const Cards = () => {
         </div>
       </Fade>
       <div className="cards__screen">
-        <Fade bottom duration={1000} delay={200} distance="100px">
+        <Fade bottom duration={motionDuration} delay={200} distance="100px">
           <Image fluid={cardsScreens.sharp.fluid} alt="Safrapay Banking App on a smartphone." />
         </Fade>
       </div>
       <div className="cards__back">
-        <Fade bottom duration={1000} delay={400} distance="150px">
+        <Fade bottom duration={motionDuration} delay={400} distance="150px">
           <div>
             <div className="cards__back__left">
               <Image

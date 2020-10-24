@@ -10,8 +10,11 @@ import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
 import Footer from '../components/Footer/Footer';
 import Button from '../components/Button/Button';
+import usePrefersReducedMotion from '../hooks/use-reduced-motion';
 
 export default () => {
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <Layout
       title="Contact Us | Safrapay | Merchant and Banking Services"
@@ -20,8 +23,8 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="Contact Us" />
-      <Fade bottom duration={500} distance="50px">
-        <Container as="section" className="page-contact-us" fluid>
+      <Fade bottom duration={motionDuration} distance="50px">
+        <Container as="section" className="page-contact-us" id="content" fluid>
           <h2 className="page-contact-us__title">Let’s work together!</h2>
           <Row className="justify-content-center">
             <Col sm={12} md={6}>

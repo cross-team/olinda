@@ -8,6 +8,7 @@ import IconMenuOpen from '../../images/icon-menu.svg';
 import IconMenuClose from '../../images/icon-close.svg';
 import Navigation from '../Navigation/Navigation';
 import Button from '../Button/Button';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Header = ({ variation }) => {
   const [scrolly, setScrolly] = useState('top');
@@ -36,12 +37,14 @@ const Header = ({ variation }) => {
     }
   };
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <header
       className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
     >
       <nav className="header__brand">
-        <Fade duration={500} onReveal={() => setRevealed('revealed')}>
+        <Fade duration={motionDuration} onReveal={() => setRevealed('revealed')}>
           <Link to="/" className="header__brand">
             <Brand className="header__brand__image" aria-hidden="true" />
             <span className="header__brand__name">Safrapay</span>

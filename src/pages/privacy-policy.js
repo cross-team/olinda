@@ -15,7 +15,7 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="Privacy Policy" />
-      <Container as="section" className="page-legal" fluid>
+      <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">
           <Col sm={12} md={8} className="page-legal__content">
             <p><strong>Last Revised: October 20, 2020</strong></p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Fade from 'react-reveal/Fade';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Selling = () => {
   const { sellingBg } = useStaticQuery(graphql`
@@ -16,6 +17,8 @@ const Selling = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <BackgroundImage
       id="payment-solutions"
@@ -26,7 +29,7 @@ const Selling = () => {
       role="img"
       aria-label="Close up of the hands of a cashier using a hand-held Safrapay point-of-sale device to accept contactless payment from their customer’s smartphone."
     >
-      <Fade bottom cascade duration={500} distance="50px">
+      <Fade bottom cascade duration={motionDuration} distance="50px">
         <div>
           <h2 className="selling__title">Seamless Merchant Services</h2>
           <p className="selling__copy">

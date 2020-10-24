@@ -15,7 +15,7 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="Accessibility Statement" />
-      <Container as="section" className="page-legal" fluid>
+      <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">
           <Col sm={12} md={8} className="page-legal__content">
             <p>At Safrapay, we believe that inclusivity should be at the forefront of everything we do, from the language that we use to the products and services we provide. One of the most critical aspects of that inclusivity is designing with accessibility in mind so that users across the spectrum of needs and abilities are able to easily and intuitively use our products.</p>

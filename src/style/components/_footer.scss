@@ -10,7 +10,7 @@
     height: 5px;
     margin: -5px auto 0;
     transform: translate(0, -5px);
-    width: 1230px;
+    width: vwCalc(1230);
   }
 
   &__social {
@@ -71,7 +71,24 @@
     display: flex;
     font-size: rem(20px);
     margin: 0 20px 0 0;
+    position: relative;
     text-decoration: none;
+
+    &:focus {
+      outline: none;
+
+      &::after {
+        border: 2px solid $white;
+        content: '';
+        display: block;
+        height: rem(40px);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 20px);
+      }
+    }
   }
 }
 
@@ -85,15 +102,32 @@
     color: $font-color-light;
     font-size: $font-size-copy;
     margin: 0 25px 0 0;
+    position: relative;
     text-decoration: none;
 
     &:last-child {
       margin: 0;
     }
+
+    &:focus {
+      outline: none;
+
+      &::after {
+        border: 2px solid $white;
+        content: '';
+        display: block;
+        height: rem(40px);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 20px);
+      }
+    }
   }
 }
 
-@media (max-width: 812px) {
+@media (max-width: $max-width-md) {
   .footer {
     &::before {
       width: vwMCalc(200);

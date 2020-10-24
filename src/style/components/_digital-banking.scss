@@ -9,6 +9,7 @@
 }
 
 .digital-banking {
+  background-color: $gray-4;
   box-sizing: border-box;
   height: vwCalc(980);
   min-height: 768px;
@@ -173,6 +174,14 @@
 
     &__coin {
       display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .digital-banking {
+    &__coin {
+      animation-duration: 0s;
     }
   }
 }

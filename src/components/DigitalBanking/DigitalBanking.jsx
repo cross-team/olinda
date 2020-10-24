@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import Fade from 'react-reveal/Fade';
 import SNBNY from '../../images/snbny-brand.svg';
 import FDICMember from '../../images/fdic-brand.svg';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const DigitalBanking = () => {
   const { digitalBankingBg, iconCoin } = useStaticQuery(graphql`
@@ -27,6 +28,9 @@ const DigitalBanking = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+  const motionDurationCoins = usePrefersReducedMotion() ? 0 : 1500;
+
   return (
     <BackgroundImage
       id="digital-banking"
@@ -40,7 +44,7 @@ const DigitalBanking = () => {
       role="img"
       aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
     >
-      <Fade bottom cascade duration={500} distance="50px">
+      <Fade bottom cascade duration={motionDuration} distance="50px">
         <div className="digital-banking__wrap">
           <h2 className="digital-banking__title">Convenient Digital Banking</h2>
           <p className="digital-banking__copy">
@@ -60,7 +64,7 @@ const DigitalBanking = () => {
           </span>
         </div>
       </Fade>
-      <Fade left duration={1500} distance="200px">
+      <Fade left duration={motionDurationCoins} distance="200px">
         <div className="digital-banking__float-elements" aria-hidden>
           <Image
             fluid={iconCoin.sharp.fluid}

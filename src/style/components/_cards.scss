@@ -186,3 +186,17 @@
     }
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .cards {
+    &__back {
+      &__left {
+        animation-duration: 0s;
+      }
+  
+      &__right {
+        animation-duration: 0s;
+      }
+    }
+  }
+}

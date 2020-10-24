@@ -16,7 +16,7 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="Safrapay Website Terms of Use" />
-      <Container as="section" className="page-legal" fluid>
+      <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">
           <Col sm={12} md={8} className="page-legal__content">
             <p>These terms of use (this “<strong>Agreement</strong>”) are agreed to between Safrapay Inc. (“<strong>Safrapay</strong>”, “<strong>we</strong>” or “<strong>us</strong>”) and each person (a “<strong>User</strong>,” “<strong>you</strong>” or “<strong>your</strong>”) accessing this website (the “<strong>Site</strong>”).  By accessing or using the Site, you agree that this Agreement governs your use of and access to the Site.  For this purpose, “Safrapay” includes affiliates of Safrapay Inc.  Additional terms and conditions apply to specific products and services provided by Safrapay (the “<strong>Services</strong>”).</p>

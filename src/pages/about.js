@@ -9,6 +9,7 @@ import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
 import Mission from '../components/Mission/Mission';
 import Footer from '../components/Footer/Footer';
+import usePrefersReducedMotion from '../hooks/use-reduced-motion';
 
 export default () => {
   const { aboutImageLarge, aboutImageSmall } = useStaticQuery(graphql`
@@ -38,6 +39,8 @@ export default () => {
     },
   ];
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <Layout
       title="About Safrapay | Safrapay US | Merchant and Banking Services"
@@ -46,8 +49,8 @@ export default () => {
     >
       <Header variation="internal" />
       <PageTitle title="About Safrapay" />
-      <Fade bottom cascade duration={500} distance="50px">
-        <Container as="section" className="page-about" fluid>
+      <Fade bottom cascade duration={motionDuration} distance="50px">
+        <Container as="section" className="page-about" id="content" fluid>
           <Row>
             <Col sm={12} md={4} className="no-gutters">
               <Image className="page-about__picture" fluid={aboutImage} alt="A smiling blonde cashier using a hand-held Safrapay point-of-sale device to accept contactless payment from their customer’s phone." />
