@@ -56,17 +56,26 @@ const Hero = () => {
       </Fade>
       <div className="hero__screens-front">
         <Fade bottom duration={1000} delay={200} distance="100px">
-          <Image fluid={heroScreensFront.sharp.fluid} alt="Lorem Ipsum dolor" />
+          <Image
+            fluid={heroScreensFront.sharp.fluid}
+            alt="Safrapay Merchant App on a smartphone."
+          />
         </Fade>
       </div>
       <div className="hero__screens-back">
         <Fade bottom duration={1000} delay={400} distance="150px">
           <div>
             <div className="hero__screens-back__left">
-              <Image fluid={heroScreensBackLeft.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={heroScreensBackLeft.sharp.fluid}
+                alt="Safrapay Banking App on a smartphone."
+              />
             </div>
             <div className="hero__screens-back__right">
-              <Image fluid={heroScreensBackRight.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={heroScreensBackRight.sharp.fluid}
+                alt="Safrapay point-of-sale device being used to start a new sale."
+              />
             </div>
           </div>
         </Fade>

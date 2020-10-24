@@ -27,15 +27,17 @@ const Support = () => {
         backgroundSize: 'contain',
         backgroundPosition: '0 100%',
       }}
+      role="img"
+      aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
     >
       <Fade cascade duration={1000}>
         <div>
-          <h3 className="support__title">24/7 Customer Support</h3>
+          <h3 className="support__title">Human Customer Service</h3>
           <p className="support__copy">
-            Speak with a Safrapay Agent Monday through Friday from 9am to 9pm ET or take advantage
-            of our 24/7 technical support.
+            Our team is ready to answer your questions and help you choose the best solution for
+            your needs.
           </p>
-          <Button className="support__more" variation="secondary">
+          <Button className="support__more" variation="secondary" title="Navigate to Contact Page">
             Contact Us
           </Button>
         </div>

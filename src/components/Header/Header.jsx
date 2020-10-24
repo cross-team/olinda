@@ -49,7 +49,7 @@ const Header = ({ variation }) => {
         </Fade>
       </nav>
       <Navigation className={`header__nav nav--${menu}`} label="Main Menu" />
-      <Button to="/contact-us" className="header__contact">
+      <Button to="/contact-us" className="header__contact" title="Navigate to Contact Page">
         Contact Us
       </Button>
       <button className="header__menu" onClick={() => handleMenu()} type="button">

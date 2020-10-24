@@ -14,7 +14,7 @@ const Footer = () => {
             className="nav-careers__link"
             target="_blank"
             rel="noreferrer"
-            aria-label="Sfrapay on LinkedIn"
+            title="Navigate to Safrapay's LinkedIn page"
           >
             <LinkedIn aria-label="LinkedIn Brand" />
           </a>
@@ -23,6 +23,7 @@ const Footer = () => {
             className="nav-careers__link"
             target="_blank"
             rel="noreferrer"
+            title="Navigate to LinkedIn to view Safrapay’s open job postings"
           >
             Careers at Safrapay
           </a>

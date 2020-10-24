@@ -74,20 +74,29 @@ const Cards = () => {
       </Fade>
       <div className="cards__screen">
         <Fade bottom duration={1000} delay={200} distance="100px">
-          <Image fluid={cardsScreens.sharp.fluid} alt="Lorem Ipsum dolor" />
+          <Image fluid={cardsScreens.sharp.fluid} alt="Safrapay Banking App on a smartphone." />
         </Fade>
       </div>
       <div className="cards__back">
         <Fade bottom duration={1000} delay={400} distance="150px">
           <div>
             <div className="cards__back__left">
-              <Image fluid={cardsCardLeft.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardLeft.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Debit Card."
+              />
             </div>
             <div className="cards__back__right">
-              <Image fluid={cardsCardRight.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardRight.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Credit Card."
+              />
             </div>
             <div className="cards__back__mobile">
-              <Image fluid={cardsCardMobile.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardMobile.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Credit Card."
+              />
             </div>
           </div>
         </Fade>

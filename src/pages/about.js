@@ -50,7 +50,7 @@ export default () => {
         <Container as="section" className="page-about" fluid>
           <Row>
             <Col sm={12} md={4} className="no-gutters">
-              <Image className="page-about__picture" fluid={aboutImage} alt="Lorem Ipsum dolor" />
+              <Image className="page-about__picture" fluid={aboutImage} alt="A smiling blonde cashier using a hand-held Safrapay point-of-sale device to accept contactless payment from their customer’s phone." />
             </Col>
             <Col sm={12} md={6}>
               <h3 className="page-about__title">Let Safrapay help you grow your business.</h3>
