@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
+import { Container, Row, Col } from 'react-bootstrap';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Cards = () => {
@@ -67,13 +68,17 @@ const Cards = () => {
       backgroundColor="#63676f"
     >
       <Fade bottom cascade duration={motionDuration} distance="50px">
-        <div>
-          <h2 className="cards__title">Easy Card Management</h2>
-          <p className="cards__copy">
-            Manage your debit and credit cards through our banking app. Contactless pay options
-            available. Terms and Conditions apply.
-          </p>
-        </div>
+        <Container fluid>
+          <Row className="justify-content-center">
+            <Col sm={12} md={8} lg={6}>
+              <h2 className="cards__title">Easy Card Management</h2>
+              <p className="cards__copy">
+                Manage your debit and credit cards through our banking app. Contactless pay options
+                available. Terms and Conditions apply.
+              </p>
+            </Col>
+          </Row>
+        </Container>
       </Fade>
       <div className="cards__screen">
         <Fade bottom duration={motionDuration} delay={200} distance="100px">
