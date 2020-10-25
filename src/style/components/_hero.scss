@@ -1,9 +1,6 @@
 .hero {
   background-color: $blue-1;
   box-sizing: border-box;
-  height: vwCalc(980);
-  min-height: 768px;
-  max-height: 100vh;
   overflow: hidden;
   padding: vwCalc(204) 0 0;
   position: relative;
@@ -12,57 +9,48 @@
     color: $font-color-light;
     font-size: $font-size-h2;
     font-weight: $font-weight-bold;
-    margin: 0 0 15px;
+    margin: 0 0 rem(15px);
     text-align: center;
   }
 
   &__copy {
     color: $font-color-light;
     font-size: $font-size-h6;
-    margin: 0;
+    margin: 0 0 rem(105px);
     text-align: center;
   }
 
   &__screens-front {
-    bottom: 0;
+    bottom: -1px;
     height: vwCalc(594);
-    max-height: maxHeightCalc(962);
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, 0);
+    margin: 0 auto;
+    position: relative;
     width: vwCalc(372);
-    max-width: maxWidthCalc(962, 603);
     z-index: 2;
   }
 
   &__screens-back {
     bottom: 0;
     height: vwCalc(514);
-    max-height: maxHeightCalc(830);
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
     width: vwCalc(1025);
-    max-width: maxWidthCalc(830, 1663);
     z-index: 1;
 
     &__left {
       height: vwCalc(514);
-      max-height: maxHeightCalc(830);
       left: 0;
       position: absolute;
       width: vwCalc(374);
-      max-width: maxWidthCalc(830, 605);
-      top: 1px;
+      top: 2px;
     }
 
     &__right {
       height: vwCalc(514);
-      max-height: maxHeightCalc(830);
       right: 0;
       position: absolute;
       width: vwCalc(374);
-      max-width: maxWidthCalc(830, 605);
       top: 0;
     }
   }
@@ -79,38 +67,63 @@
   }
 }
 
-@media (max-width: 812px) {
+@media (min-width: $min-width-xxl) {
   .hero {
-    height: 100vh;
-    padding: rem(152px) 0 0;
-
-    &__title {
-      font-size: rem(28px);
-      margin: 0 0 15px;
-      padding: 0 30px;
-    }
-  
-    &__copy {
-      font-size: 1rem;
-    }
+    padding: 230px 0 0;
 
     &__screens-front {
-      height: vwMCalc(418);
-      width: vwMCalc(263);
+      height: 962px;
+      width: 603px;
     }
 
     &__screens-back {
-      height: vwMCalc(360);
-      width: vwMCalc(721);
-
+      height: 830px;
+      width: 1660px;
+  
       &__left {
-        height: vwMCalc(360);
-        width: vwMCalc(263);
+        height: 830px;
+        width: 605px;
       }
   
       &__right {
-        height: vwMCalc(362);
-        width: vwMCalc(252);
+        height: 831px;
+        width: 581px;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .hero {
+    padding: 163px 0 0;
+
+    &__title {
+      font-size: $font-size-h4;
+      margin: 0 30px 15px;
+    }
+
+    &__copy {
+      font-size: $font-size-h7;
+      margin: 0 0 70px;
+    }  
+    
+    &__screens-front {
+      height: vwMdCalc(436);
+      width: vwMdCalc(273);
+    }
+
+    &__screens-back {
+      height: vwMdCalc(376);
+      width: vwMdCalc(752);
+  
+      &__left {
+        height: vwMdCalc(376);
+        width: vwMdCalc(275);
+      }
+  
+      &__right {
+        height: vwMdCalc(377);
+        width: vwMdCalc(263);
       }
     }
 
@@ -123,6 +136,78 @@
       padding: 100px 20px 20px;
       box-sizing: border-box;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .hero {
+    padding: vwSmCalc(167) 0 0;
+
+    &__title {
+      margin: 0 0 15px;
+      padding: 0 120px;
+    }
+  
+    &__copy {
+      font-size: 1rem;
+      margin: 0 0 55px;
+    }
+
+    &__screens-front {
+      height: vwSmCalc(631);
+      width: vwSmCalc(395);
+    }
+
+    &__screens-back {
+      height: vwSmCalc(525);
+      width: vwSmCalc(1050);
+
+      &__left {
+        height: vwSmCalc(524);
+        width: vwSmCalc(382);
+      }
+  
+      &__right {
+        height: vwSmCalc(525);
+        width: vwSmCalc(367);
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-xs) {
+  .hero {
+    padding: vwXsCalc(152) 0 0;
+
+    &__title {
+      font-size: $font-size-h5;
+      padding: 0 20px;
+    }
+  
+    &__copy {
+      font-size: 1rem;
+      margin: 0 0 73px;
+    }
+
+    &__screens-front {
+      height: vwXsCalc(418);
+      width: vwXsCalc(263);
+    }
+
+    &__screens-back {
+      height: vwXsCalc(360);
+      width: vwXsCalc(723);
+
+      &__left {
+        height: vwXsCalc(360);
+        width: vwXsCalc(263);
+      }
+  
+      &__right {
+        height: vwXsCalc(362);
+        width: vwXsCalc(252);
+      }
     }
   }
 }
