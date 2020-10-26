@@ -9,42 +9,30 @@
 }
 
 .digital-banking {
-  box-sizing: border-box;
-  height: vwCalc(980);
-  min-height: 768px;
-  max-height: 100vh;
+  background-color: $gray-4;
   overflow: hidden;
+  padding: vwCalc(324) 0 0;
   position: relative;
-
-  &__wrap {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
   
   &__title {
     color: $font-color-blue;
     font-size: $font-size-h2;
     font-weight: $font-weight-bold;
-    margin: 11% calc(#{gridCalc(1)} + #{$grid-gap-default}) rem(15px) 0;
+    margin: 0 0 rem(15px);
     text-align: right;
-    width: gridCalc(5);
   }
 
   &__copy {
     color: $font-color-gray;
     font-size: $font-size-h6;
     line-height: $line-height-base;
-    margin: 0 calc(#{gridCalc(1)} + #{$grid-gap-default}) rem(36px) 0;
+    margin: 0 0 rem(36px);
     text-align: right;
-    width: gridCalc(5);
   }
 
   &__brands {
-    margin: 0 calc(#{gridCalc(1)} + #{$grid-gap-default}) 0 0;
+    margin: 0 0 vwCalc(287);
     text-align: right;
-    width: gridCalc(5);
 
     &__brand {
       margin: 0 0 0 45px;
@@ -53,9 +41,7 @@
 
   &__note {
     color: $font-color-gray;
-    margin: auto calc(#{gridCalc(1)} + #{$grid-gap-default}) 30px 0;
     text-align: right;
-    width: gridCalc(5);
   }
 
   &__float-elements {
@@ -64,8 +50,6 @@
     position: absolute;
     top: 32px;
     width: vwCalc(433);
-    max-height: maxHeightCalc(298);
-    max-width: maxWidthCalc(298, 629);
   }
 
   &__coin {
@@ -86,93 +70,248 @@
     }
     &--2 {
       height: vwCalc(60);
-      left: vhCalc(80);
-      top: vhCalc(154);
+      left: 20%;
+      top: 60%;
       width: vwCalc(60);
       animation-delay: .3s;
     }
     &--3 {
       height: vwCalc(68);
-      left: vhCalc(163);
-      top: vhCalc(55);
+      left: 40%;
+      top: 20%;
       width: vwCalc(68);
       animation-delay: .4s;
     }
     &--4 {
       height: vwCalc(105);
-      left: vhCalc(214);
-      top: vhCalc(151);
+      left: 55%;
+      top: 60%;
       width: vwCalc(105);
       animation-delay: .5s;
     }
     &--5 {
       height: vwCalc(84);
-      left: vhCalc(289);
-      top: vhCalc(23);
+      left: 70%;
+      top: 10%;
       width: vwCalc(84);
       animation-delay: .6s;
     }
     &--6 {
       height: vwCalc(55);
-      left: vhCalc(366);
-      top: vhCalc(123);
+      left: 90%;
+      top: 50%;
       width: vwCalc(55);
       animation-delay: .7s;
     }
   }
 }
 
-@media (max-width: 812px) {
+@media (min-width: $min-width-xxl) {
   .digital-banking {
-    height: 100vh;
+    padding: 572px 0 0;
+
+    &__brands {
+      margin: 0 0 529px;
+    }
+
+    &__float-elements {
+      height: 298px;
+      left: -52px;
+      top: 120px;
+      width: 629px;
+    }
+  
+    &__coin {
+      &--1 {
+        height: 128px;
+        width: 128px;
+      }
+      &--2 {
+        height: 70px;
+        width: 70px;
+      }
+      &--3 {
+        height: 79px;
+        width: 79px;
+      }
+      &--4 {
+        height: 122px;
+        width: 122px;
+      }
+      &--5 {
+        height: 98px;
+        width: 98px;
+      }
+      &--6 {
+        height: 64px;
+        width: 64px;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-lg) {
+  .digital-banking {
+    &::before,
+    &::after {
+      background-position: -50px 100% !important;
+    }
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .digital-banking {
+    padding: vwMdCalc(100) 0 vwMdCalc(705);
+
+    &::before,
+    &::after {
+      background-position: 0 100% !important;
+      background-size: vwMdCalc(788) auto !important;
+    }
 
     &__title {
-      font-size: rem(28px);
-      font-weight: $font-weight-bold;
-      margin: 20% 0 20px;
+      font-size: $font-size-h4;
+      margin: 0 0 rem(20px);
       text-align: center;
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
     }
   
     &__copy {
-      font-size: 1rem;
-      margin: 0 0 39px;
+      font-size: $font-size-h7;
+      margin: 0 0 rem(40px);
       text-align: center;
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
+    }
+  
+    &__brands {
+      margin: 0 0 vwMdCalc(40);
+      text-align: center;
+    }
+  
+    &__note {
+      text-align: center;
     }
 
+    &__float-elements {
+      height: vwMdCalc(208);
+      left: -35px;
+      top: vwMdCalc(431);
+      width: vwMdCalc(352);
+    }
+  
+    &__coin {
+      &--1 {
+        height: vwMdCalc(89);
+        width: vwMdCalc(89);
+      }
+      &--2 {
+        height: vwMdCalc(48);
+        width: vwMdCalc(48);
+      }
+      &--3 {
+        height: vwMdCalc(55);
+        width: vwMdCalc(55);
+      }
+      &--4 {
+        height: vwMdCalc(85);
+        width: vwMdCalc(85);
+      }
+      &--5 {
+        height: vwMdCalc(68);
+        width: vwMdCalc(68);
+      }
+      &--6 {
+        height: vwMdCalc(44);
+        width: vwMdCalc(44);
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .digital-banking {
+    padding: vwSmCalc(100) 0 vwSmCalc(664);
+
+    &::before,
+    &::after {
+      background-position: 0 100% !important;
+      background-size: vwSmCalc(739) auto !important;
+    }
+
+    &__float-elements {
+      height: vwSmCalc(207);
+      left: -35px;
+      top: vwSmCalc(473);
+      width: vwSmCalc(332);
+    }
+  }
+}
+
+@media (max-width: $max-width-xs) {
+  .digital-banking {
+    padding: vwXsCalc(80) 0 vwXsCalc(378);
+
+    &::before,
+    &::after {
+      background-position: 0 100% !important;
+      background-size: 100% auto !important;
+    }
+
+    &__title {
+      font-size: $font-size-h5;
+    }
+  
+    &__copy {
+      font-size: $font-size-copy;
+    }
+  
     &__brands {
-      width: 100%;
-      padding: 0 20px 15px;
-      box-sizing: border-box;
-
+      margin: 0 0 vwXsCalc(30);
+  
       &__brand {
-        margin: 0;
-
-        &:first-child {
-          width: vwMCalc(186);
-          margin: 0 30px 0 0;
-        }
-        &:last-child {
-          width: vwMCalc(60);
-        }
+        margin: 0 0 0 0;
+        height: rem(38px);
       }
     }
 
-    &__note {
-      margin: 0;
-      text-align: center;
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
+    &__float-elements {
+      height: vwXsCalc(125);
+      left: -21px;
+      top: vwXsCalc(470);
+      width: vwXsCalc(180);
     }
-
+  
     &__coin {
-      display: none;
+      &--1 {
+        height: vwXsCalc(57);
+        width: vwXsCalc(57);
+      }
+      &--2 {
+        height: vwXsCalc(31);
+        width: vwXsCalc(31);
+      }
+      &--3 {
+        height: vwXsCalc(35);
+        width: vwXsCalc(35);
+      }
+      &--4 {
+        height: vwXsCalc(54);
+        width: vwXsCalc(54);
+      }
+      &--5 {
+        height: vwXsCalc(43);
+        width: vwXsCalc(43);
+      }
+      &--6 {
+        height: vwXsCalc(28);
+        width: vwXsCalc(28);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .digital-banking {
+    &__coin {
+      animation-duration: 0s;
     }
   }
 }

@@ -6,6 +6,18 @@
   @return ($num / ($num * 0 + 1)) / 1920 * 100vw;
 }
 
+@function vwMdCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1024 * 100vw;
+}
+
+@function vwSmCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 768 * 100vw;
+}
+
+@function vwXsCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 375 * 100vw;
+}
+
 @function vwMCalc($num) {
   @return ($num / ($num * 0 + 1)) / 375 * 100vw;
 }

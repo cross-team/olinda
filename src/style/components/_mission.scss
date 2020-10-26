@@ -1,49 +1,54 @@
 .mission {
-  align-items: center;
-  background-color: $white;
-  box-sizing: border-box;
-  display: flex;
-  height: vwCalc(459);
-  justify-content: center;
-  min-height: 200px;
-  max-height: 100vh;
-  overflow: hidden;
-  position: relative;
+  padding: vwCalc(140);
+  background-color: $gray-4;
   
   &__copy {
     color: $font-color-blue;
     font-size: $font-size-h3;
     font-weight: $font-weight-base;
-    margin: 0 auto 15px;
+    margin: 0 auto rem(14px);
     text-align: center;
-    width: gridCalc(10);
   }
 
   &__by {
     color: $font-color-gray;
     font-size: $font-size-h6;
-    margin: 0 auto;
     text-align: center;
-    width: gridCalc(10);
   }
 }
 
-@media (max-width: 812px) {
+@media (min-width: $min-width-xxl) {
   .mission {
-    height: vwMCalc(390);
-    min-height: 270px;
-    max-height: 100vh;
-    
+    padding: 140px 0;
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .mission {
+    padding: vwMdCalc(100) 0;
+
     &__copy {
-      font-size: $font-size-h6;
-      margin: 0 20px 15px;
-      width: auto;
+      font-size: $font-size-h5;
+      margin: 0 0 rem(20px);
     }
   
     &__by {
-      font-size: $font-size-copy;
-      margin: 0 20px;
-      width: auto;
+      font-size: $font-size-h7;
+    }
+  }
+}
+
+@media (max-width: $max-width-xs) {
+  .mission {
+    padding: vwXsCalc(100) 0;
+
+    &__copy {
+      font-size: $font-size-h6;
+      margin: 0 0 rem(26px);
+    }
+  
+    &__by {
+      font-size: $font-size-copy;;
     }
   }
 }

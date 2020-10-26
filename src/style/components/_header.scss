@@ -28,7 +28,25 @@
     height: 36px;
     margin: 0 0 0 30px;
     place-self: center start;
+    position: relative;
     width: 148px;
+
+    &:focus {
+      outline: none;
+  
+      &::after {
+        border: 2px solid $white;
+        border-radius: $border-radius-lg;
+        content: '';
+        display: block;
+        height: 60px;
+        left: 50%;
+        position: absolute;
+        top: -10%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 30px);
+      }
+    }
 
     &__image {
       fill: $white;
@@ -45,8 +63,6 @@
     position: relative;
 
     &__link {
-      border-bottom: 5px solid transparent;
-      margin-bottom: -5px;
       position: relative;
       transition: color 0s, border .3s;
     }
@@ -73,6 +89,11 @@
     }
   }
 
+  &--internal {
+    background: $blue-1;
+    position: relative;
+  }
+
   &--fixed {
     animation: headerSlideDown .3s ease-out;
     background-color: $white;
@@ -83,6 +104,15 @@
 
     & .header {
       &__brand {
+        &:focus {
+          &::after {
+            border-color: $clean-blue-light;
+            height: 50px;
+            transform: translate(-63%, -50%);
+            width: 100%;
+          }
+        }
+
         &__image {
           fill: $blue-1;
           transform: scale(.72);
@@ -93,7 +123,7 @@
       &__nav {
         .nav__link {
           color: $font-color-blue;
-          margin: 0 20px -5px;
+          margin: 0 20px;
           padding: 0;
 
           &:first-child {
@@ -104,7 +134,7 @@
             margin-right: 0;
           }
 
-          &::after {
+          &::before {
             background: fade-out($gold, 1);
             bottom: -5px;
             content: '';
@@ -118,9 +148,15 @@
           }
 
           &--active {
-            &::after {
+            &::before {
               background: $gold;
               transform: scaleX(1);
+            }
+          }
+
+          &:focus {
+            &::after {
+              border-color: $clean-blue-light;
             }
           }
         }
@@ -128,8 +164,17 @@
 
       &__contact {
         background-color: $blue-3;
+        border-color:  $blue-3;
+        
         &:hover {
           background-color: $clean-blue;
+          border-color: $clean-blue;
+        }
+
+        &:focus {
+          &::after {
+            border-color: $clean-blue-light;
+          }
         }
       }
     }
@@ -150,7 +195,7 @@
   }
 }
 
-@media (max-width: 812px) {
+@media (max-width: $max-width-lg) {
   .header {
     height: 70px;
     grid-template: 1fr / auto auto 50px;
@@ -216,12 +261,18 @@
       margin: 0 0 0 20px;
       width: 98px;
       position: relative;
-      top: -10px;
 
       &__image {
         width: 100%;
         height: 100%;
         transition-delay: .5s;
+      }
+
+      &:focus{
+        &::after {
+          height: 50px;
+          top: 10%;
+        }
       }
     }
 
@@ -243,6 +294,7 @@
 
       &__link {
         color: $font-color-blue;
+        margin: 0;
         padding: 7px 20px;
 
         &:first-child {
@@ -281,6 +333,15 @@
             transform: scale(1);
             transition-delay: 0s;
           }
+
+          &:focus{
+            &::after {
+              height: 50px;
+              top: 10%;
+              transform: translate(-50%, -50%);
+              width: calc(100% + 30px);
+            }
+          }
         }
 
         &__menu {
@@ -290,6 +351,13 @@
     
           &__close {
             fill: $font-color-blue;
+          }
+        }
+
+        &__nav {
+          .nav__link {
+            padding: 7px 20px;
+            margin: 0;
           }
         }
       }
@@ -313,6 +381,16 @@
             fill: $blue-1;
             transition-delay: 0s;
           }
+
+          &:focus{
+            &::after {
+              border-color: $clean-blue-light;
+              height: 50px;
+              top: 10%;
+              transform: translate(-50%, -50%);
+              width: calc(100% + 30px);
+            }
+          }
         }
 
         &__menu {
@@ -327,6 +405,36 @@
             fill: $font-color-blue;
             transition-delay: 0s;
           }
+        }
+      }
+
+      .nav {
+        &__link {
+          // margin: 0;
+
+          &:focus {
+            &::after {
+
+              border-color: $clean-blue-light;
+              width: calc(100% - 20px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header {
+    &--fixed {
+      animation-duration: 0s;
+    }
+
+    &--revealed {
+      .nav {
+        &::after {
+          transition-duration: 0s;
         }
       }
     }

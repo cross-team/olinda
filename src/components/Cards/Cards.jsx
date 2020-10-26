@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
+import { Container, Row, Col } from 'react-bootstrap';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Cards = () => {
   const {
@@ -55,6 +57,8 @@ const Cards = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+
   return (
     <BackgroundImage
       id="cards"
@@ -63,31 +67,44 @@ const Cards = () => {
       fluid={cardsBg.sharp.fluid}
       backgroundColor="#63676f"
     >
-      <Fade bottom cascade duration={500} distance="50px">
-        <div>
-          <h2 className="cards__title">Easy Card Management</h2>
-          <p className="cards__copy">
-            Manage your debit and credit cards through our banking app. Contactless pay options
-            available. Terms and Conditions apply.
-          </p>
-        </div>
+      <Fade bottom cascade duration={motionDuration} distance="50px">
+        <Container fluid>
+          <Row className="justify-content-center">
+            <Col sm={12} md={8} lg={6}>
+              <h2 className="cards__title">Easy Card Management</h2>
+              <p className="cards__copy">
+                Manage your debit and credit cards through our banking app. Contactless pay options
+                available. Terms and Conditions apply.
+              </p>
+            </Col>
+          </Row>
+        </Container>
       </Fade>
       <div className="cards__screen">
-        <Fade bottom duration={1000} delay={200} distance="100px">
-          <Image fluid={cardsScreens.sharp.fluid} alt="Lorem Ipsum dolor" />
+        <Fade bottom duration={motionDuration} delay={200} distance="100px">
+          <Image fluid={cardsScreens.sharp.fluid} alt="Safrapay Banking App on a smartphone." />
         </Fade>
       </div>
       <div className="cards__back">
-        <Fade bottom duration={1000} delay={400} distance="150px">
+        <Fade bottom duration={motionDuration} delay={400} distance="150px">
           <div>
             <div className="cards__back__left">
-              <Image fluid={cardsCardLeft.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardLeft.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Debit Card."
+              />
             </div>
             <div className="cards__back__right">
-              <Image fluid={cardsCardRight.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardRight.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Credit Card."
+              />
             </div>
             <div className="cards__back__mobile">
-              <Image fluid={cardsCardMobile.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={cardsCardMobile.sharp.fluid}
+                alt="Digital rendering of the front of a Safra Business Credit Card."
+              />
             </div>
           </div>
         </Fade>

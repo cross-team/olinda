@@ -4,6 +4,7 @@
 @import "typography";
 @import "functions";
 @import "mixins";
+@import "grid";
 @import "common";
 
 @import "components/header";
@@ -17,3 +18,8 @@
 @import "components/support";
 @import "components/navigation";
 @import "components/button";
+@import "components/page-title";
+
+@import "page-about";
+@import "page-contact-us";
+@import "page-legal";

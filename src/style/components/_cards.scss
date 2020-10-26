@@ -18,62 +18,48 @@
 
 .cards {
   background-color: $blue-1;
-  box-sizing: border-box;
-  height: vwCalc(980);
-  min-height: 768px;
-  max-height: 100vh;
   overflow: hidden;
   padding: vwCalc(114) 0 0;
   position: relative;
+  text-align: center;
   
   &__title {
     color: $font-color-light;
     font-size: $font-size-h2;
     font-weight: $font-weight-bold;
-    margin: 0 0 15px;
-    text-align: center;
+    margin: 0 0 rem(15px);
   }
 
   &__copy {
     color: $font-color-light;
     font-size: $font-size-h6;
-    margin: 0 auto;
-    text-align: center;
-    width: gridCalc(6);
+    margin: 0 0 rem(34px);
   }
 
   &__screen {
-    bottom: 0;
     height: vwCalc(673);
-    max-height: maxHeightCalc(1052);
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, 0);
+    margin: 0 auto;
     width: vwCalc(541);
-    max-width: maxWidthCalc(1052, 845);
+    position: relative;
     z-index: 2;
   }
 
   &__back {
     bottom: 0;
     height: vwCalc(593);
-    max-height: maxHeightCalc(844);
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
     width: vwCalc(1310);
-    max-width: maxWidthCalc(844, 2026);
     z-index: 1;
 
     &__left {
       height: vwCalc(533);
-      max-height: maxHeightCalc(758);
       left: 0;
       position: absolute !important;
       top: 0;
       transform: translate(-50%, 0);
       width: vwCalc(436);
-      max-width: maxWidthCalc(758, 622);
       animation-name: cardsZigZag;
       animation-duration: 6s;
       animation-iteration-count: infinite;
@@ -84,13 +70,11 @@
 
     &__right {
       height: vwCalc(533);
-      max-height: maxHeightCalc(758);
       position: absolute !important;
       right: 0;
       top: 0;
       transform: translate(-50%, 0);
       width: vwCalc(436);
-      max-width: maxWidthCalc(758, 622);
       animation-name: cardsZigZag;
       animation-duration: 6s;
       animation-delay: 1s;
@@ -113,45 +97,122 @@
     margin: 0;
     max-width: 297px;
     position: absolute;
+    text-align: left;
     z-index: 3;
   }
 }
 
-
-@media (max-width: 812px) {
+@media (min-width: $min-width-xxl) {
   .cards {
-    box-sizing: border-box;
-    height: 100vh;
-    padding: rem(78px) 0 0;
-    
-    &__title {
-      box-sizing: border-box;
-      font-size: rem(28px);
-      margin: 0 0 rem(20px);
-      padding: 0 20px;
-      width: 100%;
-    }
-  
+    padding: 150px 0 0;
+
     &__copy {
-      box-sizing: border-box;
-      font-size: $font-size-copy;
-      margin: 0 0 rem(20px);
-      padding: 0 20px;
-      width: 100%;
+      margin: 0 0 rem(115px);
     }
 
     &__screen {
-      height: vwMCalc(467);
-      transform: translate(-55%, 0);
-      width: vwMCalc(376);
+      height: 1052px;
+      width: 845px;
+    }
+
+    &__back {
+      height: 844px;
+      width: 2026px;
+      
+  
+      &__left {
+        height: 758px;
+        width: 622px;
+      }
+  
+      &__right {
+        height: 758px;
+        width: 622px;
+      }
+  
+      &__mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .cards {
+    padding: vwMdCalc(100) 0 0;
+
+    &__title {
+      font-size: $font-size-h4;
+      margin: 0 0 rem(20px);
+    }
+
+    &__copy {
+      font-size: $font-size-h7;
+      margin: 0 0 rem(39px);
+    }
+
+    &__screen {
+      height: vwMdCalc(498);
+      width: vwMdCalc(401);
+    }
+
+    &__back {
+      height: vwMdCalc(395);
+      width: vwMdCalc(932);
+      
+      &__left {
+        height: vwMdCalc(395);
+        width: vwMdCalc(323);
+      }
+  
+      &__right {
+        height: vwMdCalc(395);
+        width: vwMdCalc(323);
+      }
+  
+      &__mobile {
+        display: none;
+      }
+    }
+
+    &__legal {
+      background: linear-gradient(180deg, rgba(11, 38, 81, 0) 18%, rgba(7, 26, 55, 0.83) 70%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      padding: 100px 20px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .cards {
+    padding: vwSmCalc(100) 0 0;
+    
+    &__title {
+      margin: 0 0 rem(20px);
+    }
+  
+    &__copy {
+      font-size: $font-size-copy;
+      margin: 0 0 rem(100px);
+    }
+
+    &__screen {
+      height: vwSmCalc(694);
+      transform: translate(-15%, 0);
+      width: vwSmCalc(559);
       z-index: 1;
     }
 
     &__back {
-      height: vwMCalc(379);
+      height: vwSmCalc(551);
       position: absolute;
-      transform: translate(-25%, 0);
-      width: vwMCalc(238);
+      transform: translate(-15%, 0);
+      width: vwSmCalc(336);
       z-index: 2;
   
       &__left {
@@ -164,25 +225,66 @@
 
       &__mobile {
         display: block;
-        height: vwMCalc(357);
+        height: vwSmCalc(504);
         left: 50%;
         position: absolute !important;
         top: 0;
         transform: translate(-50%, 0);
-        width: vwMCalc(238);
+        width: vwSmCalc(336);
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-xs) {
+  .cards {
+    padding: vwXsCalc(78) 0 0;
+    
+    &__title {
+      font-size: $font-size-h5;
+      margin: 0 0 rem(20px);
+    }
+  
+    &__copy {
+      margin: 0 0 rem(133px);
+    }
+
+    &__screen {
+      height: vwXsCalc(467);
+      transform: translate(-5%, 0);
+      width: vwXsCalc(376);
+    }
+
+    &__back {
+      height: vwXsCalc(379);
+      transform: translate(-25%, 0);
+      width: vwXsCalc(238);
+
+      &__mobile {
+        height: vwXsCalc(357);
+        transform: translate(-50%, 0);
+        width: vwXsCalc(238);
       }
     }
 
     &__legal {
-      box-sizing: border-box;
-      font-size: $font-size-copy;
-      left: 0;
-      margin: 0 0 rem(20px);
-      padding: rem(20px) 20px 0;
-      position: inherit;
-      text-align: center;
-      width: 100%;
-      max-width: 100%;
+      background: transparent;
+      bottom: vwXsCalc(507);
+    }
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .cards {
+    &__back {
+      &__left {
+        animation-duration: 0s;
+      }
+  
+      &__right {
+        animation-duration: 0s;
+      }
     }
   }
 }

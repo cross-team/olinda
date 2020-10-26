@@ -1,5 +1,6 @@
 $white: #fff;
 $gray-1: #707070;
+$gray-3: #e0e0e0;
 $gray-4: #F8F8F8;
 $gray-light: #F9F9FB;
 $gold: #C4AD6C;
@@ -7,6 +8,10 @@ $blue-1: #1E2446;
 $blue-3: #21295E;
 $navy-dark: #161B33;
 $clean-blue: #333E7C;
+$clean-blue-light: #41509F;
+$blue-brand: #1E2446;
+$blue-expanded-1: #06417B;
+$blue-expanded-2: #185FA4;
 
 $font-color-light: $white;
 $font-color-gray: $gray-1;
@@ -16,12 +21,23 @@ $bg-light-alpha: fade-out($white, 0.9);
 
 $border-color-light: $white;
 $border-color-light-alpha: fade-out($white, 0.8);
+$border-color-gray: $gray-1;
 $border-color-gray-alpha: fade-out($gray-1, 0.8);
 $border-base-light: 1px solid $border-color-light;
 $border-base-light-alpha: 1px solid $border-color-light-alpha;
+$border-base-gray: 1px solid $border-color-gray;
 $border-base-gray-alpha: 1px solid $border-color-gray-alpha;
 $border-base-blue: 1px solid $blue-1;
 $border-base-clean-blue: 1px solid $clean-blue;
+$border-radius-sm: 4px;
 $border-radius-base: 25px;
+$border-radius-lg: 50px;
 
 $grid-gap-default: 30px;
+
+$min-width-xxl: 2560px;
+
+$max-width-lg: 1280px;
+$max-width-md: 1024px;
+$max-width-sm: 768px;
+$max-width-xs: 480px;

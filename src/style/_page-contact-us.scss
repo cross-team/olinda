@@ -1,0 +1,149 @@
+.page-contact-us {
+
+  &__title {
+    color: $font-color-blue;
+    font-size: $font-size-h4;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+
+  .contact-us {
+    &__group {
+      border: none;
+      padding: 0;
+
+      &--row {
+        display: flex;
+      }
+
+      &__name {
+        color: $font-color-blue;
+        font-size: $font-size-h6;
+        font-weight: $font-weight-bold;
+        margin: 0 0 rem(22px);
+
+        &--alt {
+          color: $font-color-gray;
+          font-size: $font-size-base;
+          font-weight: $font-weight-base;
+          margin: 0 0 rem(10px);
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    &__legal {
+      color: $font-color-gray;
+      margin: 0 0 rem(34px);
+      a {
+        @include link-body;
+      }
+    }
+
+    &__submit {
+      display: block;
+      margin: 0 auto rem(115px);
+    }
+  }
+
+  .form-field-radio {
+    align-items: center;
+    border: $border-base-gray;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    color: $font-color-blue;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 rem(40px);
+    padding: rem(10px) rem(20px);
+    width: 50%;
+
+    &--left {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &--right {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &__label {
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+
+  input[type="radio"]:checked + .form-field-radio {
+    background-color: $font-color-blue;
+    color: $font-color-light;
+  }
+
+  .form-field {
+    color: $font-color-gray;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 rem(22px);
+
+    &__text {
+      background-color: $white;
+      border: $border-base-gray;
+      border-radius: $border-radius-sm;
+      margin: 4px 0;
+      padding: 13px;
+    }
+
+    &__textarea {
+      background-color: $white;
+      border: $border-base-gray;
+      border-radius: $border-radius-sm;
+      height: 200px;
+      margin: 4px 0;
+      padding: 13px;
+      resize: none; 
+    }
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .page-contact-us {
+  
+    &__title {
+      font-size: $font-size-h4;
+      padding: 0 15px;
+    }
+  
+    &__content {
+      padding: 0 15px;
+    }
+
+    .form-field-radio__label {
+      display: none;
+      &--mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .page-contact-us {
+  
+    &__title {
+      font-size: $font-size-h6;
+      padding: 0 5px;
+    }
+  
+    &__content {
+      padding: 0 5px;
+    }
+
+    .form-field-radio {
+      padding: rem(10px) rem(7px);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.title {
+  align-items: center;
+  background-color: $blue-1;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  min-height: 260px;
+  overflow: hidden;
+  position: relative;
+  
+  &__content {
+    color: $font-color-light;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media ( max-width: $max-width-md ) {
+  .title {
+    min-height: 110px;
+    padding: rem(30px);
+
+    &__content {
+      font-size: $font-size-h4;
+    }
+  }
+}
+
+@media ( max-width: $max-width-sm ) {
+  .title {
+    min-height: 120px;
+    padding: rem(20px);
+
+    &__content {
+      font-size: $font-size-h5;
+    }
+  }
+}

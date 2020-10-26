@@ -7,38 +7,37 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__nav">
-        <Navigation />
-        <nav className="nav-careers">
+        <Navigation label="Footer Menu" />
+        <nav className="nav-careers" aria-label="Careers Menu">
           <a
             href="https://www.linkedin.com/company/safrapay-inc/jobs/"
             className="nav-careers__link"
-            tabIndex="0"
             target="_blank"
             rel="noreferrer"
-            aria-label="Sfrapay on LinkedIn"
+            title="Navigate to Safrapay's LinkedIn page"
           >
             <LinkedIn aria-label="LinkedIn Brand" />
           </a>
           <a
             href="https://safrapay.applytojob.com/apply"
             className="nav-careers__link"
-            tabIndex="0"
             target="_blank"
             rel="noreferrer"
+            title="Navigate to LinkedIn to view Safrapay’s open job postings"
           >
             Careers at Safrapay
           </a>
         </nav>
       </div>
       <div className="footer__legal">
-        <nav className="nav-legal">
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+        <nav className="nav-legal" aria-label="Legal Menu">
+          <Link to="/privacy-policy" className="nav-legal__link">
             Privacy Policy
           </Link>
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+          <Link to="/terms-of-use" className="nav-legal__link">
             Terms of Use
           </Link>
-          <Link to="/" className="nav-legal__link" tabIndex="0">
+          <Link to="/accessibility-statement" className="nav-legal__link">
             Accessibility Statement
           </Link>
         </nav>

@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Image from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
+import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
 const Hero = () => {
   const {
@@ -46,27 +47,39 @@ const Hero = () => {
     }
   `);
 
+  const motionDuration = usePrefersReducedMotion() ? 0 : 500;
+  const motionDurationBack = usePrefersReducedMotion() ? 0 : 1000;
+
   return (
-    <BackgroundImage Tag="section" className="hero" fluid={heroBg.sharp.fluid}>
-      <Fade bottom cascade duration={500} distance="50px">
+    <BackgroundImage Tag="section" className="hero" id="content" fluid={heroBg.sharp.fluid}>
+      <Fade bottom cascade duration={motionDuration} distance="50px">
         <div>
-          <h2 className="hero__title">Welcome to the Future of Payments, Banking, and Credit</h2>
+          <h1 className="hero__title">Welcome to the Future of Payments, Banking, and Credit</h1>
           <p className="hero__copy">Safrapay is the Perfect Solution for Your Business</p>
         </div>
       </Fade>
       <div className="hero__screens-front">
-        <Fade bottom duration={1000} delay={200} distance="100px">
-          <Image fluid={heroScreensFront.sharp.fluid} alt="Lorem Ipsum dolor" />
+        <Fade bottom duration={motionDurationBack} delay={200} distance="100px">
+          <Image
+            fluid={heroScreensFront.sharp.fluid}
+            alt="Safrapay Merchant App on a smartphone."
+          />
         </Fade>
       </div>
       <div className="hero__screens-back">
-        <Fade bottom duration={1000} delay={400} distance="150px">
+        <Fade bottom duration={motionDurationBack} delay={400} distance="150px">
           <div>
             <div className="hero__screens-back__left">
-              <Image fluid={heroScreensBackLeft.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={heroScreensBackLeft.sharp.fluid}
+                alt="Safrapay Banking App on a smartphone."
+              />
             </div>
             <div className="hero__screens-back__right">
-              <Image fluid={heroScreensBackRight.sharp.fluid} alt="Lorem Ipsum dolor" />
+              <Image
+                fluid={heroScreensBackRight.sharp.fluid}
+                alt="Safrapay point-of-sale device being used to start a new sale."
+              />
             </div>
           </div>
         </Fade>

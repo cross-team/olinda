@@ -1,70 +1,65 @@
 .about {
-  box-sizing: border-box;
-  height: vwCalc(980);
-  min-height: 768px;
-  max-height: 100vh;
-  overflow: hidden;
-  position: relative;
-
-  &__wrap {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-  }
+  padding: vwCalc(314) 0;
   
   &__title {
     color: $font-color-light;
     font-size: $font-size-h2;
     font-weight: $font-weight-bold;
-    margin: 0  0 rem(15px) calc(#{gridCalc(1)} + #{$grid-gap-default});
-    width: gridCalc(4);
+    margin: 0 0 rem(15px);
   }
 
   &__copy {
     color: $font-color-light;
     font-size: $font-size-h6;
     line-height: $line-height-base;
-    margin: 0 0 rem(35px) calc(#{gridCalc(1)} + #{$grid-gap-default});
-    width: gridCalc(3);
+    margin: 0 0 rem(35px);
   }
 
   &__more {
-    margin: 0 0 0 calc(#{gridCalc(1)} + #{$grid-gap-default});
+    display: inline-block;
   }
 }
 
-@media (max-width: 812px) {
+@media (min-width: $min-width-xxl) {
   .about {
-    height: vwMCalc(600);
-    min-height: 350px;
-    
-    &__wrap {
-      align-items: center;
-    }
+    padding: 545px 0;
+  }
+}
+
+@media (max-width: $max-width-md) {
+  .about {
+    padding: vwMdCalc(215) 0;
 
     &__title {
-      font-size: rem(28px);
-      font-weight: $font-weight-bold;
+      font-size: $font-size-h4;
       margin: 0 0 rem(20px);
-      text-align: center;
-      width: 100%;
-      padding: 0 15px;
-      box-sizing: border-box;
     }
   
     &__copy {
-      font-size: 1rem;
-      margin: 0 0 39px;
-      text-align: center;
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
+      font-size: $font-size-h7;
+      margin: 0 0 rem(40px);
     }
+  }
+}
 
-    &__more {
-      margin: 0;
+@media (max-width: $max-width-sm) {
+  .about {
+    padding: vwSmCalc(215) 0;
+  }
+}
+
+@media (max-width: $max-width-xs) {
+  .about {
+    padding: vwXsCalc(110) 0;
+    text-align: center;
+
+    &__title {
+      font-size: $font-size-h5;
+    }
+  
+    &__copy {
+      font-size: $font-size-copy;
+      margin: 0 0 rem(35px);
     }
   }
 }
