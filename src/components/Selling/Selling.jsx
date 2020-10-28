@@ -27,7 +27,6 @@ const Selling = () => {
       className="selling"
       fluid={sellingBg.sharp.fluid}
       backgroundColor="#63676f"
-      role="img"
       aria-label="Close up of the hands of a cashier using a hand-held Safrapay point-of-sale device to accept contactless payment from their customer’s smartphone."
     >
       <Fade bottom cascade duration={motionDuration} distance="50px">

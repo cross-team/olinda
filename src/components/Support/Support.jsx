@@ -46,7 +46,6 @@ const Support = () => {
         backgroundSize: 'contain',
         backgroundPosition: '0 100%',
       }}
-      role="img"
       aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
     >
       <Fade cascade duration={motionDuration}>
