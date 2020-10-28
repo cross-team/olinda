@@ -52,5 +52,13 @@
   .selling {
     height: vwXsCalc(812);
     padding: vwXsCalc(80) 0 0;
+
+    &__title {
+      font-size: $font-size-h5;
+    }
+  
+    &__copy {
+      font-size: $font-size-copy;
+    }
   }
 }

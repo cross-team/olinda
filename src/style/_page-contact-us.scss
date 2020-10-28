@@ -1,9 +1,12 @@
 .page-contact-us {
+  background-color: $white;
+  padding: rem(60px) 0 0;
 
   &__title {
     color: $font-color-blue;
     font-size: $font-size-h4;
     font-weight: $font-weight-bold;
+    margin: 0 0 rem(40px);
     text-align: center;
   }
 

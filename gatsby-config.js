@@ -37,6 +37,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleTagManager: {
+          trackingId: 'GTM-WZK9MSJ',
+          cookieName: 'safrapay-google-tagmanager',
+          dataLayerName: 'dataLayer',
+        },
+        environments: ['production', 'development'],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Safrapay`,

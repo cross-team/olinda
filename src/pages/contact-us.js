@@ -17,7 +17,7 @@ export default () => {
 
   return (
     <Layout
-      title="Contact Us | Safrapay | Merchant and Banking Services"
+      title="Safrapay - Contact Us"
       description="Contact Safrapay to learn more about working with us as a merchant or partner."
       keywords="Safra, safrapay, merchant, banking, merchant services, banking services, contact, work with us, partner"
     >

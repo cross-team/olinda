@@ -43,8 +43,8 @@ export default () => {
 
   return (
     <Layout
-      title="About Safrapay | Safrapay US | Merchant and Banking Services"
-      description="Safrapay provides an on-the-go digital point-of-sale solution as well as access to merchant, digital banking, and financial services that help our customers grow their businesses."
+      title="Safrapay - About Safrapay"
+      description=" Safrapay provides an on-the-go digital point-of-sale solution as well as access to merchant, digital banking, and financial services that help our customers grow their businesses."
       keywords="Safra, Safrapay, digital, payment, payment solution, point-of-sale, POS, merchant, merchant services, financial services, financial tools, business, grow"
     >
       <Header variation="internal" />
@@ -55,7 +55,7 @@ export default () => {
             <Col sm={12} md={4} className="no-gutters">
               <Image className="page-about__picture" fluid={aboutImage} alt="A smiling blonde cashier using a hand-held Safrapay point-of-sale device to accept contactless payment from their customer’s phone." />
             </Col>
-            <Col sm={12} md={6}>
+            <Col sm={12} md={7} lg={7} xl={6}>
               <h3 className="page-about__title">Let Safrapay help you grow your business.</h3>
               <div className="page-about__content">
                 <p>

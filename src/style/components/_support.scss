@@ -6,7 +6,7 @@
   &__title {
     color: $font-color-blue;
     font-size: $font-size-h2;
-    font-weight: $font-weight-base;
+    font-weight: $font-weight-bold;
     margin: 0 0 rem(15px);
   }
 
@@ -30,16 +30,6 @@
 @media (max-width: $max-width-md) {
   .support {
     padding: vwMdCalc(100) 0;
-  
-    &__copy {
-      margin: 0 0 rem(30px);
-    }
-  }
-}
-
-@media (max-width: $max-width-sm) {
-  .support {
-    padding: vwSmCalc(55) 0 vwSmCalc(82);
 
     &__title {
       font-size: $font-size-h4;
@@ -48,6 +38,28 @@
   
     &__copy {
       font-size: $font-size-h7;
+      margin: 0 0 rem(30px);
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .support {
+    padding: vwSmCalc(55) 0 vwSmCalc(386);
+
+    .col-sm-7 {
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+
+    .offset-sm-4 {
+      margin: 0;
+    }
+
+    &::before,
+    &::after {
+      background-position: 50% 100% !important;
+      background-size: auto 55% !important;
     }
   }
 }
@@ -55,7 +67,17 @@
 @media (max-width: $max-width-xs) {
   .support {
     padding: vwXsCalc(65) 0 vwXsCalc(386);
-    background-position: 50% 100%;
+
+    &::before,
+    &::after {
+      background-position: 50% 100% !important;
+      background-size: contain !important;
+    }
+
+    .col-sm-7 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 
     &__title {
       font-size: $font-size-h5;

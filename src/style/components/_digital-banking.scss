@@ -46,9 +46,9 @@
 
   &__float-elements {
     height: vwCalc(256);
-    left: -34px;
+    left: vwCalc(-34);
     position: absolute;
-    top: 32px;
+    bottom: vwCalc(692);
     width: vwCalc(433);
   }
 
@@ -150,18 +150,63 @@
   }
 }
 
+@media (max-width: $max-width-xl) {
+  .digital-banking {
+    &__float-elements {
+      height: vwXlCalc(256);
+      left: vwXlCalc(-13);
+      bottom: vwXlCalc(620);
+      width: vwXlCalc(385);
+    }
+
+    &__coin {
+      &--1 {
+        height: vwXlCalc(110);
+        width: vwXlCalc(110);
+      }
+      &--2 {
+        height: vwXlCalc(60);
+        width: vwXlCalc(60);
+      }
+      &--3 {
+        height: vwXlCalc(68);
+        width: vwXlCalc(68);
+      }
+      &--4 {
+        height: vwXlCalc(105);
+        width: vwXlCalc(105);
+      }
+      &--5 {
+        height: vwXlCalc(84);
+        width: vwXlCalc(84);
+      }
+      &--6 {
+        height: vwXlCalc(55);
+        width: vwXlCalc(55);
+      }
+    }
+  }
+}
+
 @media (max-width: $max-width-lg) {
   .digital-banking {
     &::before,
     &::after {
       background-position: -50px 100% !important;
     }
+
+    &__float-elements {
+      height: vwXlCalc(256);
+      left: vwXlCalc(-13);
+      bottom: vwXlCalc(730);
+      width: vwXlCalc(385);
+    }
   }
 }
 
 @media (max-width: $max-width-md) {
   .digital-banking {
-    padding: vwMdCalc(100) 0 vwMdCalc(705);
+    padding: vwMdCalc(100) 0 vwMdCalc(735);
 
     &::before,
     &::after {
@@ -192,8 +237,8 @@
 
     &__float-elements {
       height: vwMdCalc(208);
-      left: -35px;
-      top: vwMdCalc(431);
+      left: vwMdCalc(-35);
+      bottom: vwMdCalc(544);
       width: vwMdCalc(352);
     }
   
@@ -228,7 +273,7 @@
 
 @media (max-width: $max-width-sm) {
   .digital-banking {
-    padding: vwSmCalc(100) 0 vwSmCalc(664);
+    padding: vwSmCalc(100) 0 vwSmCalc(734);
 
     &::before,
     &::after {
@@ -238,16 +283,43 @@
 
     &__float-elements {
       height: vwSmCalc(207);
-      left: -35px;
-      top: vwSmCalc(473);
+      left: vwSmCalc(-15);
+      bottom: vwSmCalc(521);
       width: vwSmCalc(332);
+    }
+
+    &__coin {
+      &--1 {
+        height: vwSmCalc(89);
+        width: vwSmCalc(89);
+      }
+      &--2 {
+        height: vwSmCalc(48);
+        width: vwSmCalc(48);
+      }
+      &--3 {
+        height: vwSmCalc(55);
+        width: vwSmCalc(55);
+      }
+      &--4 {
+        height: vwSmCalc(85);
+        width: vwSmCalc(85);
+      }
+      &--5 {
+        height: vwSmCalc(68);
+        width: vwSmCalc(68);
+      }
+      &--6 {
+        height: vwSmCalc(44);
+        width: vwSmCalc(44);
+      }
     }
   }
 }
 
 @media (max-width: $max-width-xs) {
   .digital-banking {
-    padding: vwXsCalc(80) 0 vwXsCalc(378);
+    padding: vwXsCalc(80) 0 vwXsCalc(408);
 
     &::before,
     &::after {
@@ -274,8 +346,8 @@
 
     &__float-elements {
       height: vwXsCalc(125);
-      left: -21px;
-      top: vwXsCalc(470);
+      left: vwXsCalc(-21);
+      bottom: vwXsCalc(269);
       width: vwXsCalc(180);
     }
   
