@@ -42,7 +42,6 @@ const DigitalBanking = () => {
         backgroundSize: 'contain',
         backgroundPosition: '0 100%',
       }}
-      role="img"
       aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
     >
       <Fade bottom cascade duration={motionDuration} distance="50px">
