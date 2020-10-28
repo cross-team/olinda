@@ -66,7 +66,12 @@ const Header = ({ variation }) => {
           </Link>
         </Fade>
       </div>
-      <button className="header__menu" onClick={() => handleMenu()} type="button">
+      <button
+        className="header__menu"
+        onClick={() => handleMenu()}
+        type="button"
+        aria-label={menu === 'open' ? 'Close Menu' : 'Open Menu'}
+      >
         <Lottie
           options={{
             renderer: 'svg',
