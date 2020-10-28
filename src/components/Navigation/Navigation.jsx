@@ -30,6 +30,13 @@ const Navigation = ({ className, label }) => {
       <Link to="/#support" className="nav__link" stripHash title="Navigate to support Section">
         Support
       </Link>
+      <Link
+        to="/contact-us"
+        className="nav__link nav__link--contact"
+        title="Navigate to Contact Page"
+      >
+        Contact Us
+      </Link>
     </nav>
   );
 };

@@ -9,7 +9,7 @@ import Footer from '../components/Footer/Footer';
 export default () => {
   return (
     <Layout
-      title="Privacy Policy | Safrapay | Merchant and Banking Services"
+      title="Safrapay - Privacy Policy"
       description="This Privacy Policy is meant to help you understand how Safrapay collects and manages user data."
       keywords="Safra, Safrapay, legal, privacy, cookies, policy, privacy policy, cookies policy, data, user data"
     >
@@ -19,7 +19,7 @@ export default () => {
         <Row className="justify-content-center">
           <Col sm={12} md={8} className="page-legal__content">
             <p><strong>Last Revised: October 20, 2020</strong></p>
-            <p>This Privacy Policy describes how Safrapay Inc. and our U.S. affiliates (collectively, “we,” “us,” or “our”) collect, use, share, and safeguard personal information.  When we receive information for our own purposes, the processing of that information is described by this Privacy Policy. When we receive information on behalf of Safra National Bank of New York (“SNBNY”), the processing of that information is described by its privacy policy which is available <a href="http://www.safra.com/PrivacyPolicy.aspx" title="Safra Privacy Policy" target="_blank" rel="noreferrer">here</a>.</p>
+            <p>This Privacy Policy describes how Safrapay Inc. and our U.S. affiliates (collectively, “we,” “us,” or “our”) collect, use, share, and safeguard personal information.  When we receive information for our own purposes, the processing of that information is described by this Privacy Policy. When we receive information on behalf of Safra National Bank of New York (“SNBNY”), the processing of that information is described by its privacy policy which is available <a href="http://www.safra.com/PrivacyPolicy.aspx" title="Safra Privacy Policy" target="_blank" rel="noreferrer" aria-label="Navigate to Safra Privacy Policy Page">here</a>.</p>
             <p>You can jump to particular topics by going to the headings below:</p>
             <nav aria-label="Content Menu">
               <ul>
@@ -68,102 +68,104 @@ export default () => {
             <h2 id="types-of-information-we-collect">Types of Information We Collect</h2>
             <p>We are a third party service provider of payment processing and digital banking solutions to financial institutions in the United States.  We receive personal information from customers and potential customers (collectively “Customers”) for our own use in providing those services. We also receive personal information and process that information as a third party service provider for SNBNY or other financial institutions.</p>
             <p>The following provides examples of the type of information that we collect from you and how we use that information. </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Context</th>
-                  <th>Types of Data</th>
-                  <th>Primary Purpose for Collection and Use of Data</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Contact Information</td>
-                  <td>We collect the name and contact information of Customers and their owners, employees and related parties with whom we interact. </td>
-                  <td>We use this information to contact Customers and communicate with them concerning normal business administration related to our services.</td>
-                </tr>
-                <tr>
-                  <td>Account Registration (if applicable)</td>
-                  <td>We collect your name and contact information if you create an account on one of our portals or apps.  We also collect information relating to the actions that you perform while logged into your account.</td>
-                  <td>We use this information to provide account related functionalities to our users. Accounts can be used to save your preferences and transaction history. </td>
-                </tr>
-                <tr>
-                  <td>Customer Information</td>
-                  <td>We may collect some or all of the following information from Customers, their owners and related third parties who open accounts: the name, phone number, postal address, email address, driver’s license number, date of birth, Social Security Number, and bank account information.</td>
-                  <td>We collect this information from Customers in order to accurately provide them with financial products and services, and to conduct AML and fraud monitoring.</td>
-                </tr>
-                <tr>
-                  <td>Cookies and first party tracking</td>
-                  <td>We may use cookies and clear GIFs. “Cookies” are small pieces of information that a website sends to a computer’s hard drive while a web site is viewed, and clear GIFs are a type of picture file that can be used to store or send data. </td>
-                  <td>We use this information to ensure our website operates efficiently. </td>
-                </tr>
-                <tr>
-                  <td>Cookies and Third Party Tracking</td>
-                  <td>We may participate in behavior-based advertising, this means that a third party uses technology (e.g., a cookie) to collect information about your use of our website so that they can provide advertising about products and services tailored to your interests on our website, or on other websites.</td>
-                  <td>We use this information to engage in behavior-based advertising and capture website analytics.</td>
-                </tr>
-                <tr>
-                  <td>Demographic Information</td>
-                  <td>We may collect personal information, such as your age or location.  </td>
-                  <td>We use this information to comply with applicable laws. </td>
-                </tr>
-                <tr>
-                  <td>Distance Information</td>
-                  <td>When you use one of our Apps we collect your location from the GPS, Wi-Fi, and/or cellular technology in your device to determine your location. </td>
-                  <td>We use this information to detect and prevent fraud.</td>
-                </tr>
-                <tr>
-                  <td>Email Interconnectivity</td>
-                  <td>If you receive email from us, we use certain tools to capture data related to when you open our message, click on any links or banners it contains.</td>
-                  <td>We use this information to understand how you interact with our communications to you.</td>
-                </tr>
-                <tr>
-                  <td>Employment</td>
-                  <td>If you apply for a job posting, or become an employee, we collect information necessary to process your application or to retain you as an employee.  This may include, among other things, your Social Security Number.  Providing this information is required for employment.</td>
-                  <td>We use information about current employees to perform our contract of employment, or the anticipation of a contract of employment with you.  In some contexts, we are also required by law to collect information about our employees.  We also use this information to have efficient staffing and work force operations. </td>
-                </tr>
-                <tr>
-                  <td>Feedback/Support</td>
-                  <td>If you provide us feedback or contact us for support we will collect your name and e-mail address, as well as any other content that you send to us, in order to reply.</td>
-                  <td>We use this information in order to receive, and act upon, your feedback or issues.</td>
-                </tr>
-                <tr>
-                  <td>Mailing List</td>
-                  <td>When you sign up for one of our mailing lists we collect your email address or postal address.    </td>
-                  <td>We share information about our products and services with individuals that consent to receive such information.  We also use this information to share information about our products or services.</td>
-                </tr>
-                <tr>
-                  <td>Mobile Devices</td>
-                  <td>We may collect information from your mobile device such as unique identifying information broadcast from your device when using our apps or visiting our website.</td>
-                  <td>We have a legitimate interest in identifying unique visitors, and in understanding how users interact with us on their mobile devices. We also have a legitimate interest in detecting and preventing fraud.</td>
-                </tr>
-                <tr>
-                  <td>Partner Promotion</td>
-                  <td>We may collect information that you provide as part of a co-branded promotion with another company.</td>
-                  <td>We use this information to fulfil our promotions.</td>
-                </tr>
-                <tr>
-                  <td>Surveys</td>
-                  <td>We may ask you to participate in a survey regarding the services we provide you.  When you participate in a survey, we collect information that you provide through the survey.  If the survey is provided by a third-party service provider, the third party’s privacy policy applies to the collection, use, and disclosure of your information.</td>
-                  <td>We use this information to understand your opinions and collect information relevant to our organization.</td>
-                </tr>
-                <tr>
-                  <td>Sweepstakes or contests</td>
-                  <td>When you participate in a sweepstakes or contest we collect information about you which includes contact information to notify you if you are selected.</td>
-                  <td>We use this information to operate the sweepstakes.  In some contexts we are also required by law to collect information about those that enter into our sweepstakes.</td>
-                </tr>
-                <tr>
-                  <td>Website interactions</td>
-                  <td>We use technology to monitor how you interact with our website. This may include which links you click on, or information that you type into our online forms.  This may also include information about your device or browser.</td>
-                  <td>We use this information to understand how you interact with our website to better improve it, and to understand your preferences and interests in order to select offerings that you might find most useful.  We also have a legitimate interest in detecting and preventing fraud.</td>
-                </tr>
-                <tr>
-                  <td>Web logs</td>
-                  <td>We may collect information, including your browser type, operating system, Internet Protocol (IP) address (a number that is automatically assigned to a computer when the Internet is used), domain name, click-activity, referring website, and/or a date/time stamp for visitors.</td>
-                  <td>We use this information to monitor our networks and the visitors to our websites.  Among other things, it helps us understand which of our products or services is the most popular.  We may also use this information to prevent fraud.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="page-legal__table">
+              <table aria-label="Table with types of information we collect">
+                <thead>
+                  <tr>
+                    <th>Context</th>
+                    <th>Types of Data</th>
+                    <th>Primary Purpose for Collection and Use of Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Contact Information</td>
+                    <td>We collect the name and contact information of Customers and their owners, employees and related parties with whom we interact. </td>
+                    <td>We use this information to contact Customers and communicate with them concerning normal business administration related to our services.</td>
+                  </tr>
+                  <tr>
+                    <td>Account Registration (if applicable)</td>
+                    <td>We collect your name and contact information if you create an account on one of our portals or apps.  We also collect information relating to the actions that you perform while logged into your account.</td>
+                    <td>We use this information to provide account related functionalities to our users. Accounts can be used to save your preferences and transaction history. </td>
+                  </tr>
+                  <tr>
+                    <td>Customer Information</td>
+                    <td>We may collect some or all of the following information from Customers, their owners and related third parties who open accounts: the name, phone number, postal address, email address, driver’s license number, date of birth, Social Security Number, and bank account information.</td>
+                    <td>We collect this information from Customers in order to accurately provide them with financial products and services, and to conduct AML and fraud monitoring.</td>
+                  </tr>
+                  <tr>
+                    <td>Cookies and first party tracking</td>
+                    <td>We may use cookies and clear GIFs. “Cookies” are small pieces of information that a website sends to a computer’s hard drive while a web site is viewed, and clear GIFs are a type of picture file that can be used to store or send data. </td>
+                    <td>We use this information to ensure our website operates efficiently. </td>
+                  </tr>
+                  <tr>
+                    <td>Cookies and Third Party Tracking</td>
+                    <td>We may participate in behavior-based advertising, this means that a third party uses technology (e.g., a cookie) to collect information about your use of our website so that they can provide advertising about products and services tailored to your interests on our website, or on other websites.</td>
+                    <td>We use this information to engage in behavior-based advertising and capture website analytics.</td>
+                  </tr>
+                  <tr>
+                    <td>Demographic Information</td>
+                    <td>We may collect personal information, such as your age or location.  </td>
+                    <td>We use this information to comply with applicable laws. </td>
+                  </tr>
+                  <tr>
+                    <td>Distance Information</td>
+                    <td>When you use one of our Apps we collect your location from the GPS, Wi-Fi, and/or cellular technology in your device to determine your location. </td>
+                    <td>We use this information to detect and prevent fraud.</td>
+                  </tr>
+                  <tr>
+                    <td>Email Interconnectivity</td>
+                    <td>If you receive email from us, we use certain tools to capture data related to when you open our message, click on any links or banners it contains.</td>
+                    <td>We use this information to understand how you interact with our communications to you.</td>
+                  </tr>
+                  <tr>
+                    <td>Employment</td>
+                    <td>If you apply for a job posting, or become an employee, we collect information necessary to process your application or to retain you as an employee.  This may include, among other things, your Social Security Number.  Providing this information is required for employment.</td>
+                    <td>We use information about current employees to perform our contract of employment, or the anticipation of a contract of employment with you.  In some contexts, we are also required by law to collect information about our employees.  We also use this information to have efficient staffing and work force operations. </td>
+                  </tr>
+                  <tr>
+                    <td>Feedback/Support</td>
+                    <td>If you provide us feedback or contact us for support we will collect your name and e-mail address, as well as any other content that you send to us, in order to reply.</td>
+                    <td>We use this information in order to receive, and act upon, your feedback or issues.</td>
+                  </tr>
+                  <tr>
+                    <td>Mailing List</td>
+                    <td>When you sign up for one of our mailing lists we collect your email address or postal address.    </td>
+                    <td>We share information about our products and services with individuals that consent to receive such information.  We also use this information to share information about our products or services.</td>
+                  </tr>
+                  <tr>
+                    <td>Mobile Devices</td>
+                    <td>We may collect information from your mobile device such as unique identifying information broadcast from your device when using our apps or visiting our website.</td>
+                    <td>We have a legitimate interest in identifying unique visitors, and in understanding how users interact with us on their mobile devices. We also have a legitimate interest in detecting and preventing fraud.</td>
+                  </tr>
+                  <tr>
+                    <td>Partner Promotion</td>
+                    <td>We may collect information that you provide as part of a co-branded promotion with another company.</td>
+                    <td>We use this information to fulfil our promotions.</td>
+                  </tr>
+                  <tr>
+                    <td>Surveys</td>
+                    <td>We may ask you to participate in a survey regarding the services we provide you.  When you participate in a survey, we collect information that you provide through the survey.  If the survey is provided by a third-party service provider, the third party’s privacy policy applies to the collection, use, and disclosure of your information.</td>
+                    <td>We use this information to understand your opinions and collect information relevant to our organization.</td>
+                  </tr>
+                  <tr>
+                    <td>Sweepstakes or contests</td>
+                    <td>When you participate in a sweepstakes or contest we collect information about you which includes contact information to notify you if you are selected.</td>
+                    <td>We use this information to operate the sweepstakes.  In some contexts we are also required by law to collect information about those that enter into our sweepstakes.</td>
+                  </tr>
+                  <tr>
+                    <td>Website interactions</td>
+                    <td>We use technology to monitor how you interact with our website. This may include which links you click on, or information that you type into our online forms.  This may also include information about your device or browser.</td>
+                    <td>We use this information to understand how you interact with our website to better improve it, and to understand your preferences and interests in order to select offerings that you might find most useful.  We also have a legitimate interest in detecting and preventing fraud.</td>
+                  </tr>
+                  <tr>
+                    <td>Web logs</td>
+                    <td>We may collect information, including your browser type, operating system, Internet Protocol (IP) address (a number that is automatically assigned to a computer when the Internet is used), domain name, click-activity, referring website, and/or a date/time stamp for visitors.</td>
+                    <td>We use this information to monitor our networks and the visitors to our websites.  Among other things, it helps us understand which of our products or services is the most popular.  We may also use this information to prevent fraud.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>In addition to the information that we collect from you directly, we may also receive information about you from other sources, including third parties, business partners, our affiliates, or publicly available sources.  For example, if you submit a Customer application, we will conduct background checks, AML checks and other financial checks to assist in our underwriting. </p>
             <h2 id="use-and-processing-of-information">Use and Processing of Information</h2>
             <p>In addition to the purposes and uses described above, we use information in the following ways: </p>
@@ -198,7 +200,7 @@ export default () => {
             <p>In some circumstances, you may designate an authorized agent to submit requests to exercise certain privacy rights on your behalf.  We will require verification that you provided the authorized agent permission to make a request on your behalf.  You must provide us with a copy of the signed permission you have given to the authorized agent to submit the request on your behalf and verify your own identity directly with us.  </p>
             <h2 id="authorized-agent">Information for Authorized Agents</h2>
             <p>If you are an authorized agent submitting a request on behalf of an individual, you must attach a copy of the following information to the request:</p>
-            <p>1.	A completed Authorized Agent Designation <a href="#form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
+            <p>1.	A completed Authorized Agent Designation <a href="#form" aria-label="Navigate to Authorized Agent Designation Form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
             <p>2.	If you are a business located in California, proof that you are registered with the Secretary of State to conduct business in California.</p>
             <p>If we do not receive both pieces of information, the request will be denied.</p>
             <h2 id="how-we-protect-personal-information">How We Protect Personal Information</h2>
@@ -226,92 +228,94 @@ export default () => {
             </p>
             <h2 id="california-information-sharing-disclosure">California Information Sharing Disclosure</h2>
             <p>California Civil Code Sections 1798.115(c), 1798.130(a)(5)(c), 1798.130(c), and 1798.140 indicate that organizations should disclose whether the following categories of personal information are collected, transferred for “valuable consideration,” or transferred for an organization’s “business purpose” (as those terms are defined under California law).  Safrapay does not “sell” data under California law.  The table below indicates the categories of personal information we collect and transfer in a variety of contexts.  Please note that because this list is comprehensive, it may refer to types of information that we collect and share about people other than yourself. </p>
-            <table>
-              <thead>
-                <tr>
-                  <th width="40%">Categories of Personal Information That We Collect</th>
-                  <th>To Whom We Disclose Personal Information for Business Purpose</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Identifiers</strong> – such as name, postal address, phone number, unique personal identifier, online identifier, internet protocol (IP) address, device ID, email address, account name, signature, social security number, driver’s license number, passport number, or other similar identifiers.</td>
-                  <td>
-                    <ul>
-                      <li>Data analytics providers</li>
-                      <li>Marketing communications providers (e.g., email, SMS, post)</li>
-                      <li>Website/email optimization providers</li>
-                      <li>Third parties necessary to complete transactions and provide our products/services,</li>
-                      <li>Internet service providers</li>
-                      <li>Operating systems and platforms</li>
-                      <li>Website/email optimization providers</li>
-                      <li>Data center/host/cloud-service providers</li>
-                      <li>Third parties who assist with information technology and security programs</li>
-                      <li>Government entities, law enforcement, and other parties as required by law, including litigation </li>
-                      <li>Payment processors, financial institutions, and others as needed to complete transactions and for authentication, security, and fraud prevention</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Financial information</strong> – such as bank account number, credit or debit card number, or other financial information.</td>
-                  <td>
-                    <ul>
-                      <li>Data center/host/cloud-service providers </li>
-                      <li>Third parties necessary to complete transactions and provide our products/services,</li>
-                      <li>Payment processors, financial institutions, and others as needed to complete transactions and for authentication, security, and fraud prevention</li>
-                      <li>Third parties who assist with information technology and security programs</li>
-                      <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
-                      <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Geolocation data</strong> – such as precise physical location.</td>
-                  <td>
-                    <ul>
-                      <li>Data analytics providers</li>
-                      <li>Website/email optimization providers</li>
-                      <li>Third parties who assist with information technology and security programs</li>
-                      <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
-                      <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Electronic and sensory data</strong> – such as audio, electronic, visual, thermal, olfactory, or similar information (e.g., pictures, a recording of a customer service call, security video surveillance footage).</td>
-                  <td>
-                    <ul>
-                      <li>Data center/host/cloud-service providers </li>
-                      <li>Third parties necessary to complete transactions and provide our products/services,</li>
-                      <li>Third parties who assist with information technology and security programs</li>
-                      <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
-                      <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Professional/employment information</strong> – such as occupation.</td>
-                  <td>
-                    <ul>
-                      <li>Third parties necessary to complete transactions and provide our products/services,</li>
-                      <li>Third parties who assist with information technology and security programs</li>
-                      <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
-                      <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Inferences</strong> – drawn from any of the information listed above to create a profile</td>
-                  <td>
-                    <ul>
-                      <li>Data center/host/cloud-service providers </li>
-                      <li>Marketing communications providers (e.g., email, SMS, post)</li>
-                      <li>Website/email optimization providers</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="page-legal__table">
+              <table aria-label="Table with categories of personal information we collect">
+                <thead>
+                  <tr>
+                    <th width="40%">Categories of Personal Information That We Collect</th>
+                    <th>To Whom We Disclose Personal Information for Business Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Identifiers</strong> – such as name, postal address, phone number, unique personal identifier, online identifier, internet protocol (IP) address, device ID, email address, account name, signature, social security number, driver’s license number, passport number, or other similar identifiers.</td>
+                    <td>
+                      <ul>
+                        <li>Data analytics providers</li>
+                        <li>Marketing communications providers (e.g., email, SMS, post)</li>
+                        <li>Website/email optimization providers</li>
+                        <li>Third parties necessary to complete transactions and provide our products/services,</li>
+                        <li>Internet service providers</li>
+                        <li>Operating systems and platforms</li>
+                        <li>Website/email optimization providers</li>
+                        <li>Data center/host/cloud-service providers</li>
+                        <li>Third parties who assist with information technology and security programs</li>
+                        <li>Government entities, law enforcement, and other parties as required by law, including litigation </li>
+                        <li>Payment processors, financial institutions, and others as needed to complete transactions and for authentication, security, and fraud prevention</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Financial information</strong> – such as bank account number, credit or debit card number, or other financial information.</td>
+                    <td>
+                      <ul>
+                        <li>Data center/host/cloud-service providers </li>
+                        <li>Third parties necessary to complete transactions and provide our products/services,</li>
+                        <li>Payment processors, financial institutions, and others as needed to complete transactions and for authentication, security, and fraud prevention</li>
+                        <li>Third parties who assist with information technology and security programs</li>
+                        <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
+                        <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Geolocation data</strong> – such as precise physical location.</td>
+                    <td>
+                      <ul>
+                        <li>Data analytics providers</li>
+                        <li>Website/email optimization providers</li>
+                        <li>Third parties who assist with information technology and security programs</li>
+                        <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
+                        <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Electronic and sensory data</strong> – such as audio, electronic, visual, thermal, olfactory, or similar information (e.g., pictures, a recording of a customer service call, security video surveillance footage).</td>
+                    <td>
+                      <ul>
+                        <li>Data center/host/cloud-service providers </li>
+                        <li>Third parties necessary to complete transactions and provide our products/services,</li>
+                        <li>Third parties who assist with information technology and security programs</li>
+                        <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
+                        <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Professional/employment information</strong> – such as occupation.</td>
+                    <td>
+                      <ul>
+                        <li>Third parties necessary to complete transactions and provide our products/services,</li>
+                        <li>Third parties who assist with information technology and security programs</li>
+                        <li>Third parties who assist with fraud prevention, detection, and mitigation</li>
+                        <li>Government entities, law enforcement, and other parties as required by law, including litigation</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inferences</strong> – drawn from any of the information listed above to create a profile</td>
+                    <td>
+                      <ul>
+                        <li>Data center/host/cloud-service providers </li>
+                        <li>Marketing communications providers (e.g., email, SMS, post)</li>
+                        <li>Website/email optimization providers</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </Col>
         </Row>
       </Container>

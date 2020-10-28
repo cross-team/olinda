@@ -54,8 +54,8 @@ const Support = () => {
           <Row className="justify-content-center">
             <Col
               xs={12}
-              sm={{ span: 8, offset: 4 }}
-              md={{ span: 8, offset: 4 }}
+              sm={{ span: 7, offset: 4 }}
+              md={{ span: 7, offset: 3 }}
               xl={{ span: 4, offset: 0 }}
             >
               <h3 className="support__title">Human Customer Service</h3>

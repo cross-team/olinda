@@ -9,7 +9,7 @@ import Footer from '../components/Footer/Footer';
 export default () => {
   return (
     <Layout
-      title="Accessibility Statement | Safrapay | Merchant and Banking Services"
+      title="Safrapay - Accessibility Statement"
       description="This Accessibility Statement details the commitment by Safrapay to make our products as accessible as possible using WCAG 2.1 guidelines."
       keywords="Safra, Safrapay, accessible, ADA, WCAG, WCAG 2.1, accessibility, statement, accessibility statement"
     >

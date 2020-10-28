@@ -10,7 +10,7 @@ import Footer from '../components/Footer/Footer';
 export default () => {
   return (
     <Layout
-      title="Terms of Use | Safrapay | Merchant and Banking Services"
+      title="Safrapay - Terms of Use"
       description="These Terms of Use create a contract between you and Safrapay."
       keywords="Safra, Safrapay, legal, terms, terms of use, contract"
     >

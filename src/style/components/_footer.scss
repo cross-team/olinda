@@ -130,7 +130,7 @@
 @media (max-width: $max-width-md) {
   .footer {
     &::before {
-      width: vwMCalc(200);
+      width: vwXsCalc(200);
     }
 
     &__social {
