@@ -1,6 +1,8 @@
 .mission {
   padding: vwCalc(140);
   background-color: $gray-4;
+  position: relative;
+  z-index: 4;
   
   &__copy {
     color: $font-color-blue;

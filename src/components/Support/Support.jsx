@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+import Plx from 'react-plx';
 import Button from '../Button/Button';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 
@@ -34,47 +35,65 @@ const Support = () => {
     },
   ];
 
+  const parallaxDataSection = [
+    {
+      start: 'self',
+      end: '.footer',
+      properties: [
+        {
+          startValue: -35,
+          endValue: 0,
+          unit: 'vh',
+          property: 'translateY',
+        },
+      ],
+    },
+  ];
+
   const motionDuration = usePrefersReducedMotion() ? 0 : 1000;
 
   return (
-    <BackgroundImage
-      id="support"
-      Tag="section"
-      className="support"
-      fluid={supportBg}
-      style={{
-        backgroundSize: 'contain',
-        backgroundPosition: '0 100%',
-      }}
-      aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
-    >
-      <Fade cascade duration={motionDuration}>
-        <Container fluid>
-          <Row className="justify-content-center">
-            <Col
-              xs={12}
-              sm={{ span: 7, offset: 4 }}
-              md={{ span: 7, offset: 3 }}
-              xl={{ span: 4, offset: 0 }}
-            >
-              <h3 className="support__title">Human Customer Service</h3>
-              <p className="support__copy">
-                Our team is ready to answer your questions and help you choose the best solution for
-                your needs.
-              </p>
-              <Button
-                to="/contact-us"
-                className="support__more"
-                variation="secondary"
-                title="Navigate to Contact Page"
-              >
-                Contact Us
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </Fade>
-    </BackgroundImage>
+    <div id="support">
+      <Plx parallaxData={parallaxDataSection}>
+        <BackgroundImage
+          Tag="section"
+          className="support"
+          fluid={supportBg}
+          style={{
+            backgroundSize: 'contain',
+            backgroundPosition: '0 100%',
+          }}
+          aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
+        >
+          <Fade cascade duration={motionDuration}>
+            <Container fluid>
+              <Row className="justify-content-center">
+                <Col
+                  xs={12}
+                  sm={{ span: 7, offset: 4 }}
+                  md={{ span: 7, offset: 3 }}
+                  xl={{ span: 4, offset: 0 }}
+                >
+                  <h3 className="support__title">Human Customer Service</h3>
+                  <p className="support__copy">
+                    Our team is ready to answer your questions and help you choose the best solution
+                    for your needs.
+                  </p>
+                  <Button
+                    to="/contact-us"
+                    className="support__more"
+                    variation="secondary"
+                    title="Navigate to Contact Page"
+                  >
+                    Contact Us
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
+          </Fade>
+        </BackgroundImage>
+      </Plx>
+    </div>
   );
 };
 

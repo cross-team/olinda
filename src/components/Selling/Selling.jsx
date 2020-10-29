@@ -22,8 +22,8 @@ const Selling = () => {
 
   return (
     <BackgroundImage
-      id="payment-solutions"
       Tag="section"
+      id="payment-solutions"
       className="selling"
       fluid={sellingBg.sharp.fluid}
       backgroundColor="#63676f"
