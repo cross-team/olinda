@@ -63,6 +63,21 @@
   .nav {
     position: relative;
 
+    &__wrap {
+      &::after {
+        background: $gold;
+        bottom: -5px;
+        content: '';
+        display: block;
+        height: 5px;
+        left: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 1.5s ease-out, background-color 0.3s;
+        width: 100%;
+      }
+    }
+
     &__link {
       position: relative;
       transition: color 0s, border 0.3s;
@@ -70,19 +85,6 @@
       &--contact {
         display: none;
       }
-    }
-
-    &::after {
-      background: $gold;
-      bottom: -5px;
-      content: '';
-      display: block;
-      height: 5px;
-      left: 0;
-      position: absolute;
-      transform: scaleX(0);
-      transition: transform 1.5s ease-out, background-color 0.3s;
-      width: 100%;
     }
   }
 
@@ -186,16 +188,20 @@
     }
 
     .nav {
-      &::after {
-        opacity: 0;
+      &__wrap {
+        &::after {
+          opacity: 0;
+        }
       }
     }
   }
 
   &--revealed {
     .nav {
-      &::after {
-        transform: scaleX(1);
+      &__wrap {
+        &::after {
+          transform: scaleX(1);
+        }
       }
     }
   }
@@ -261,20 +267,27 @@
     }
 
     .nav {
-      align-items: flex-end;
-      background: $white;
-      border-bottom: none;
-      flex-direction: column;
-      height: 0;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      top: 70px;
-      transition: height 0.5s ease-out;
       width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
 
-      &::after {
-        display: none;
+      &__wrap {
+        align-items: flex-end;
+        background: $white;
+        border-bottom: none;
+        flex-direction: column;
+        height: 0;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 70px;
+        transition: height 0.5s ease-out;
+        width: 100%;
+
+        &::after {
+          display: none;
+        }
       }
 
       &__link {
@@ -292,9 +305,8 @@
         }
 
         &--active {
-          &::after {
-            opacity: 0;
-            transform: scale(0);
+          &::before {
+            display: none;
           }
         }
 
@@ -304,9 +316,11 @@
       }
 
       &--open {
-        height: 290px;
-        border-bottom: $border-base-gray-alpha;
-        transition-delay: 0.1s;
+        .nav__wrap {
+          height: 290px;
+          border-bottom: $border-base-gray-alpha;
+          transition-delay: 0.1s;
+        }
       }
     }
 
@@ -344,6 +358,10 @@
           .nav__link {
             padding: 7px 20px;
             margin: 0;
+
+            &::before {
+              display: none;
+            }
           }
         }
       }
@@ -415,8 +433,10 @@
 
     &--revealed {
       .nav {
-        &::after {
-          transition-duration: 0s;
+        &__wrap {
+          &::after {
+            transition-duration: 0s;
+          }
         }
       }
     }
