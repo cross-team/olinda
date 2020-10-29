@@ -4,6 +4,7 @@
   overflow: hidden;
   padding: vwCalc(114) 0 0;
   position: relative;
+  z-index: 2;
   
   &__title {
     color: $font-color-light;

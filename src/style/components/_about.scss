@@ -1,5 +1,12 @@
+#about {
+  position: relative;
+  z-index: 3;
+}
+
 .about {
   padding: vwCalc(314) 0;
+  position: relative;
+  z-index: 3;
   
   &__title {
     color: $font-color-light;
@@ -17,6 +24,14 @@
 
   &__more {
     display: inline-block;
+  }
+
+  &__background {
+    height: 100%;
+    left: 0;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
   }
 }
 
