@@ -85,8 +85,9 @@ const Cards = () => {
 
   const parallaxDataOverlay = [
     {
-      start: '#mission',
-      end: '.about__title',
+      start: cardsPosition,
+      startOffset: '10vh',
+      end: missionPosition,
       properties: [
         {
           startValue: 0,

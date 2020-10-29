@@ -4,6 +4,13 @@
   place-self: stretch center;
   position: relative;
 
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    place-self: stretch center;
+    position: relative;
+  }
+
   &__link {
     align-items: center;
     color: $font-color-light;
