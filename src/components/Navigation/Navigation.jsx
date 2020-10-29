@@ -5,11 +5,11 @@ import Scrollspy from 'react-scrollspy';
 
 const Navigation = ({ className, label, ariaHidden }) => {
   return (
-    <div aria-label={label} aria-hidden={ariaHidden} className={`nav ${className}`}>
+    <nav aria-label={label} aria-hidden={ariaHidden} className={`nav ${className}`}>
       <Scrollspy
         items={['payment-solutions', 'digital-banking', 'cards', 'about', 'support']}
         currentClassName="nav__link--active"
-        componentTag="nav"
+        componentTag="div"
         className="nav__wrap"
       >
         <Link
@@ -45,7 +45,7 @@ const Navigation = ({ className, label, ariaHidden }) => {
           Contact Us
         </Link>
       </Scrollspy>
-    </div>
+    </nav>
   );
 };
 

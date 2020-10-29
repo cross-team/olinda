@@ -33,19 +33,34 @@ const DigitalBanking = () => {
 
   const digitalBakingRef = useRef();
   const [digitalBakingPosition, setDigitalBakingPosition] = useState(100);
+  const [digitalBakingPositionStart, setDigitalBakingPositionStart] = useState(100);
   const [cardsPosition, setCardsPosition] = useState(100);
 
   useScrollPosition(() => {
-    const newDigitalBakingOffset = digitalBakingRef.current.offsetTop - 200;
-    setDigitalBakingPosition(newDigitalBakingOffset);
-    setCardsPosition(document.querySelector('#cards').offsetTop);
+    const windowHeight = window.innerHeight;
+
+    const banking = document.querySelector('#digital-banking');
+    const bankingHeight = banking.clientHeight;
+    const bankingOffset = banking.offsetTop;
+
+    const cards = document.querySelector('#cards');
+    const cardsOffset = cards.offsetTop;
+
+    if (bankingHeight >= windowHeight) {
+      setDigitalBakingPositionStart('#cards');
+      setDigitalBakingPosition(bankingOffset);
+    } else {
+      setDigitalBakingPositionStart(bankingOffset);
+      setDigitalBakingPosition(bankingOffset - (windowHeight - bankingHeight));
+    }
+
+    setCardsPosition(cardsOffset);
   });
 
   const parallaxDataSection = [
     {
       start: 'self',
       end: digitalBakingPosition,
-      endOffset: '-20vh',
       properties: [
         {
           startValue: -50,
@@ -56,8 +71,8 @@ const DigitalBanking = () => {
       ],
     },
     {
-      start: digitalBakingPosition,
-      startOffset: '20vh',
+      start: digitalBakingPositionStart,
+      startOffset: '5vh',
       end: cardsPosition,
       properties: [
         {
@@ -84,8 +99,8 @@ const DigitalBanking = () => {
       ],
     },
     {
-      start: digitalBakingPosition,
-      startOffset: '20vh',
+      start: digitalBakingPositionStart,
+      startOffset: '5vh',
       end: cardsPosition,
       properties: [
         {
