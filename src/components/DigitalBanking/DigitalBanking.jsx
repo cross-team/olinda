@@ -45,6 +45,7 @@ const DigitalBanking = () => {
     {
       start: 'self',
       end: digitalBakingPosition,
+      endOffset: '-20vh',
       properties: [
         {
           startValue: -50,
@@ -55,8 +56,8 @@ const DigitalBanking = () => {
       ],
     },
     {
-      start: '#cards',
-      startOffset: '10vh',
+      start: digitalBakingPosition,
+      startOffset: '20vh',
       end: cardsPosition,
       properties: [
         {
@@ -83,7 +84,8 @@ const DigitalBanking = () => {
       ],
     },
     {
-      start: '#cards',
+      start: digitalBakingPosition,
+      startOffset: '20vh',
       end: cardsPosition,
       properties: [
         {
