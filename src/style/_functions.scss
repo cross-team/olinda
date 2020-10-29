@@ -10,6 +10,10 @@
   @return ($num / ($num * 0 + 1)) / 1440 * 100vw;
 }
 
+@function vwLgCalc($num) {
+  @return ($num / ($num * 0 + 1)) / 1280 * 100vw;
+}
+
 @function vwMdCalc($num) {
   @return ($num / ($num * 0 + 1)) / 1024 * 100vw;
 }

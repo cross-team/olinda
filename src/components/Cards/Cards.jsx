@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Image from 'gatsby-image';
@@ -58,10 +59,19 @@ const Cards = () => {
     }
   `);
 
+  const [cardsPosition, setCardsPosition] = useState(100);
+  const [missionPosition, setMissionPosition] = useState(100);
+
+  useScrollPosition(() => {
+    setCardsPosition(document.querySelector('#cards').offsetTop);
+    setMissionPosition(document.querySelector('#mission').offsetTop);
+  });
+
   const parallaxDataSection = [
     {
-      start: '#mission',
-      end: '.about__title',
+      start: cardsPosition,
+      startOffset: '10vh',
+      end: missionPosition,
       properties: [
         {
           startValue: 0,

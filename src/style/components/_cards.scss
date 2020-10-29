@@ -16,12 +16,17 @@
   }
 }
 
+#cards {
+  position: relative;
+  z-index: 2;
+}
+
 .cards {
-  background-color: $blue-1;
   overflow: hidden;
   padding: vwCalc(114) 0 0;
   position: relative;
   text-align: center;
+  opacity: 1 !important;
   
   &__title {
     color: $font-color-light;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
+import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Lottie from 'lottie-web-react';
 import Fade from 'react-reveal/Fade';
@@ -12,6 +13,7 @@ import menuAnimation from '../../motions/menu-animation.json';
 
 const Header = ({ variation }) => {
   const [scrolly, setScrolly] = useState('top');
+  const [cookieConsent, setCookieConsent] = useState(Cookies.get('safrapay-google-tagmanager'));
 
   const handleScroll = (position) => {
     if (position <= -100) {
@@ -55,45 +57,80 @@ const Header = ({ variation }) => {
   const motionDuration = usePrefersReducedMotion() ? 0 : 500;
 
   return (
-    <header
-      className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
-    >
-      <div className="header__brand">
-        <Fade duration={motionDuration} onReveal={() => setRevealed('revealed')}>
-          <Link to="/">
-            <Brand className="header__brand__image" aria-hidden="true" />
-            <span className="header__brand__name">Safrapay</span>
-          </Link>
-        </Fade>
-      </div>
-      <button
-        className="header__menu"
-        onClick={() => handleMenu()}
-        type="button"
-        aria-label={menu === 'open' ? 'Close Menu' : 'Open Menu'}
+    <>
+      <CookieConsent
+        buttonText="Accept"
+        declineButtonText="Decline"
+        disableStyles
+        enableDeclineButton
+        containerClasses="cookie-banner"
+        contentClasses="cookie-banner__content"
+        buttonWrapperClasses="cookie-banner__buttons"
+        buttonClasses="button button--primary"
+        declineButtonClasses="button button--secondary"
+        cookieName="safrapay-google-tagmanager"
+        onAccept={() => setCookieConsent(Cookies.get('safrapay-google-tagmanager'))}
+        onDecline={() => setCookieConsent(Cookies.get('safrapay-google-tagmanager'))}
       >
-        <Lottie
-          options={{
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            animationData: menuAnimation,
-            rendererSettings: {
-              preserveAspectRatio: 'xMinYMin slice',
-            },
-          }}
-          playingState={playingState}
-          speed={2}
-          direction={direction}
-          className="header__menu__icon"
-          eventListeners={eventsMenu}
+        <p>
+          <strong>Your privacy is important to us.</strong>
+        </p>
+        <p>
+          We use cookies to improve our site, understand our audience, and enhance your browsing
+          experience. See our <Link to="/privacy-policy">Privacy Policy</Link> for more details.
+        </p>
+      </CookieConsent>
+      <div className="skiplink">
+        <a href="#content" className="skiplink__action">
+          Skip to main content
+        </a>
+      </div>
+      <header
+        className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
+      >
+        <div className="header__brand">
+          <Fade duration={motionDuration} onReveal={() => setRevealed('revealed')}>
+            <Link to="/">
+              <Brand className="header__brand__image" aria-hidden="true" />
+              <span className="header__brand__name">Safrapay</span>
+            </Link>
+          </Fade>
+        </div>
+        <button
+          className="header__menu"
+          onClick={() => handleMenu()}
+          type="button"
+          aria-label={menu === 'open' ? 'Close Menu' : 'Open Menu'}
+        >
+          <Lottie
+            options={{
+              renderer: 'svg',
+              loop: false,
+              autoplay: false,
+              animationData: menuAnimation,
+              rendererSettings: {
+                preserveAspectRatio: 'xMinYMin slice',
+              },
+            }}
+            playingState={playingState}
+            speed={2}
+            direction={direction}
+            className="header__menu__icon"
+            eventListeners={eventsMenu}
+          />
+        </button>
+        <Navigation
+          className={`header__nav nav--${menu} nav--${
+            cookieConsent !== undefined ? 'cookie-hidden' : 'cookie-open'
+          }`}
+          label="Main Menu"
+          ariaHidden={menu !== 'open'}
         />
-      </button>
-      <Navigation className={`header__nav nav--${menu}`} label="Main Menu" />
-      <Button to="/contact-us" className="header__contact" title="Navigate to Contact Page">
-        Contact Us
-      </Button>
-    </header>
+        <Button to="/contact-us" className="header__contact" title="Navigate to Contact Page">
+          Contact Us
+        </Button>
+      </header>
+    </>
   );
 };
 

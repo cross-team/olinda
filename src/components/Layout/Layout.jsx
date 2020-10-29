@@ -21,14 +21,7 @@ const Layout = ({ children, title, decription, keywords }) => {
         <meta property="og:image" content={`https://www.safrapay.com${shareImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <main className="wrap">
-        <div className="skiplink">
-          <a href="#content" className="skiplink__action">
-            Skip to main content
-          </a>
-        </div>
-        {children}
-      </main>
+      <main className="wrap">{children}</main>
     </>
   );
 };

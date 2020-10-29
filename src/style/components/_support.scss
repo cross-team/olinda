@@ -1,7 +1,8 @@
 .support {
-  background-color: $gray-light;
+  
   padding: vwCalc(110) 0 vwCalc(100);
   text-align: center;
+  opacity: 1 !important;
   
   &__title {
     color: $font-color-blue;

@@ -5,6 +5,7 @@
   padding: vwCalc(114) 0 0;
   position: relative;
   z-index: 2;
+  opacity: 1 !important;
   
   &__title {
     color: $font-color-light;

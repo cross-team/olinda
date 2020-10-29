@@ -59,12 +59,21 @@
   }
 
   &--secondary {
+    background-color: transparent;
     border: $border-base-blue;
     color: $font-color-blue;
 
     &:hover {
       border: $border-base-clean-blue;
       color: $clean-blue;
+    }
+
+    &:focus {
+      border-color: $clean-blue-light;
+
+      &::after {
+        border-color: $clean-blue-light;
+      }
     }
   }
 }

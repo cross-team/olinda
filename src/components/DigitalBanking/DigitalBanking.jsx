@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Image from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
 import Fade from 'react-reveal/Fade';
@@ -30,10 +31,20 @@ const DigitalBanking = () => {
     }
   `);
 
+  const digitalBakingRef = useRef();
+  const [digitalBakingPosition, setDigitalBakingPosition] = useState(100);
+  const [cardsPosition, setCardsPosition] = useState(100);
+
+  useScrollPosition(() => {
+    const newDigitalBakingOffset = digitalBakingRef.current.offsetTop - 200;
+    setDigitalBakingPosition(newDigitalBakingOffset);
+    setCardsPosition(document.querySelector('#cards').offsetTop);
+  });
+
   const parallaxDataSection = [
     {
       start: 'self',
-      end: '#cards',
+      end: digitalBakingPosition,
       properties: [
         {
           startValue: -50,
@@ -45,7 +56,8 @@ const DigitalBanking = () => {
     },
     {
       start: '#cards',
-      end: '#mission',
+      startOffset: '10vh',
+      end: cardsPosition,
       properties: [
         {
           startValue: 0,
@@ -60,7 +72,7 @@ const DigitalBanking = () => {
   const parallaxDataOverlay = [
     {
       start: 'self',
-      end: '#cards',
+      end: digitalBakingPosition,
       properties: [
         {
           startValue: 80,
@@ -72,7 +84,7 @@ const DigitalBanking = () => {
     },
     {
       start: '#cards',
-      end: '#mission',
+      end: cardsPosition,
       properties: [
         {
           startValue: 0,
@@ -88,7 +100,7 @@ const DigitalBanking = () => {
   const motionDurationCoins = usePrefersReducedMotion() ? 0 : 1500;
 
   return (
-    <div id="digital-banking">
+    <div id="digital-banking" ref={digitalBakingRef}>
       <Plx parallaxData={parallaxDataSection}>
         <BackgroundImage
           Tag="section"
@@ -131,7 +143,7 @@ const DigitalBanking = () => {
                 <Col
                   xs={12}
                   sm={{ span: 12, offset: 0 }}
-                  md={{ span: 5, offset: 0 }}
+                  md={{ span: 8, offset: 0 }}
                   lg={{ span: 3, offset: 8 }}
                 >
                   <p className="digital-banking__note">

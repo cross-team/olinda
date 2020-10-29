@@ -1,0 +1,56 @@
+.cookie-banner {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: rem(30px);
+  position: sticky;
+  top: 0;
+  z-index: 11;
+
+  &__content {
+    p {
+      color: $font-color-gray;
+      margin: 0;
+      
+      strong {
+        color: $font-color-blue;
+        display: inline-block;
+        font-size: $font-size-h7;
+        font-weight: $font-weight-bold;
+        margin: 0 0 rem(4px);
+      }
+    }
+    a {
+      @include link-body;
+    }
+  }
+
+  &__buttons {
+    flex: 0 0 365px;
+
+    .button {
+      margin: 0 0 0 rem(25px);
+    }
+  }
+}
+
+@media (max-width: $max-width-sm) {
+  .cookie-banner {
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__content {
+      margin: 0 0 rem(20px);
+    }
+
+    &__buttons {
+      flex: 0 0 auto;
+      min-width: 335px;
+
+      .button:first-child {
+        margin: 0;
+      }
+    }
+  }
+}
