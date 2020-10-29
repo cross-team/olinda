@@ -10,8 +10,8 @@ const Navigation = ({ className, label, ariaHidden }) => {
       currentClassName="nav__link--active"
       componentTag="nav"
       className={`nav ${className}`}
-      aria-label={label}
-      aria-hidden={ariaHidden}
+      ariaLabel={label}
+      ariaHidden={ariaHidden}
     >
       <Link
         to="/#payment-solutions"
