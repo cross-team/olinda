@@ -19,7 +19,7 @@ export default () => {
         <Row className="justify-content-center">
           <Col sm={12} md={8} className="page-legal__content">
             <p><strong>Last Revised: October 20, 2020</strong></p>
-            <p>This Privacy Policy describes how Safrapay Inc. and our U.S. affiliates (collectively, “we,” “us,” or “our”) collect, use, share, and safeguard personal information.  When we receive information for our own purposes, the processing of that information is described by this Privacy Policy. When we receive information on behalf of Safra National Bank of New York (“SNBNY”), the processing of that information is described by its privacy policy which is available <a href="http://www.safra.com/PrivacyPolicy.aspx" title="Safra Privacy Policy" target="_blank" rel="noreferrer" aria-label="Navigate to Safra Privacy Policy Page">here</a>.</p>
+            <p>This Privacy Policy describes how Safrapay Inc. and our U.S. affiliates (collectively, “we,” “us,” or “our”) collect, use, share, and safeguard personal information.  When we receive information for our own purposes, the processing of that information is described by this Privacy Policy. When we receive information on behalf of Safra National Bank of New York (“SNBNY”), the processing of that information is described by its privacy policy which is available <a href="https://www.safra.com/PrivacyPolicy.aspx" title="Safra Privacy Policy" target="_blank" rel="noreferrer" aria-label="Navigate to Safra Privacy Policy Page">here</a>.</p>
             <p>You can jump to particular topics by going to the headings below:</p>
             <nav aria-label="Content Menu">
               <ul>

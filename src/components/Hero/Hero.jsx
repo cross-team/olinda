@@ -51,6 +51,7 @@ const Hero = () => {
   const parallaxDataSection = [
     {
       start: '#payment-solutions',
+      startOffset: '10vh',
       end: '100vh',
       properties: [
         {
@@ -82,7 +83,7 @@ const Hero = () => {
   const motionDurationBack = usePrefersReducedMotion() ? 0 : 1000;
 
   return (
-    <div id="content">
+    <div id="content" className="hero-wrap">
       <Plx parallaxData={parallaxDataSection}>
         <BackgroundImage Tag="section" className="hero" fluid={heroBg.sharp.fluid}>
           <Fade bottom cascade duration={motionDuration} distance="50px">

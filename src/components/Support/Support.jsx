@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -35,15 +36,24 @@ const Support = () => {
     },
   ];
 
+  const [supportPosition, setSupportPosition] = useState(100);
+
+  useScrollPosition(() => {
+    const newSupportOffset =
+      document.querySelector('#support').offsetTop -
+      window.innerHeight +
+      document.querySelector('#support').clientHeight * 0.6;
+    setSupportPosition(newSupportOffset);
+  });
+
   const parallaxDataSection = [
     {
       start: 'self',
-      end: '.footer',
+      end: supportPosition,
       properties: [
         {
-          startValue: -35,
+          startValue: -200,
           endValue: 0,
-          unit: 'vh',
           property: 'translateY',
         },
       ],

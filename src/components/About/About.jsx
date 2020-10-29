@@ -26,7 +26,7 @@ const About = () => {
       end: '.about__more',
       properties: [
         {
-          startValue: -30,
+          startValue: -20,
           endValue: 0,
           unit: 'vh',
           property: 'translateY',

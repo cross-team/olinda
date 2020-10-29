@@ -41,6 +41,7 @@ module.exports = {
       options: {
         googleTagManager: {
           trackingId: 'GTM-WZK9MSJ',
+          // trackingId: 'GTM-NXPQX6W',
           cookieName: 'safrapay-google-tagmanager',
           dataLayerName: 'dataLayer',
         },

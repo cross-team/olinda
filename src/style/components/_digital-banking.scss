@@ -9,10 +9,11 @@
 }
 
 .digital-banking {
-  background-color: $gray-4;
+  background-color: transparent !important;
   overflow: hidden;
   padding: vwCalc(324) 0 0;
   position: relative;
+  opacity: 1 !important;
   
   &__title {
     color: $font-color-blue;
@@ -199,11 +200,35 @@
   }
 }
 
-@media (max-width: $max-width-lg) {
+@media (max-width: 1279px) {
   .digital-banking {
+    padding: vwLgCalc(100) 0 vwLgCalc(735);
+    
     &::before,
     &::after {
       background-position: -50px 100% !important;
+      background-size: vwLgCalc(788) auto !important;
+    }
+
+    &__title {
+      font-size: $font-size-h4;
+      margin: 0 0 rem(20px);
+      text-align: center;
+    }
+  
+    &__copy {
+      font-size: $font-size-h7;
+      margin: 0 0 rem(40px);
+      text-align: center;
+    }
+  
+    &__brands {
+      margin: 0 0 vwMdCalc(40);
+      text-align: center;
+    }
+  
+    &__note {
+      text-align: center;
     }
 
     &__float-elements {

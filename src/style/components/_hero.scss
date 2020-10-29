@@ -1,9 +1,14 @@
+.hero-wrap {
+  position: relative;
+  z-index: 1;
+}
+
 .hero {
-  background-color: $blue-1;
   box-sizing: border-box;
   overflow: hidden;
   padding: vwCalc(204) 0 0;
   position: relative;
+  opacity: 1 !important;
   
   &__title {
     color: $font-color-light;

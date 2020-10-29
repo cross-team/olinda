@@ -1,10 +1,18 @@
 import React from 'react';
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
 import PropTypes from 'prop-types';
+import Scrollspy from 'react-scrollspy';
 
-const Navigation = ({ className, label }) => {
+const Navigation = ({ className, label, ariaHidden }) => {
   return (
-    <nav className={`nav ${className}`} aria-label={label}>
+    <Scrollspy
+      items={['payment-solutions', 'digital-banking', 'cards', 'about', 'support']}
+      currentClassName="nav__link--active"
+      componentTag="nav"
+      className={`nav ${className}`}
+      aria-label={label}
+      aria-hidden={ariaHidden}
+    >
       <Link
         to="/#payment-solutions"
         className="nav__link"
@@ -37,13 +45,14 @@ const Navigation = ({ className, label }) => {
       >
         Contact Us
       </Link>
-    </nav>
+    </Scrollspy>
   );
 };
 
 Navigation.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
+  ariaHidden: PropTypes.bool,
 };
 
 export default Navigation;
