@@ -282,7 +282,8 @@
         overflow: hidden;
         position: absolute;
         top: 70px;
-        transition: height 0.5s ease-out;
+        transition: height 0.5s ease-out, visibility 0s 0.5s;
+        visibility: hidden;
         width: 100%;
 
         &::after {
@@ -319,7 +320,8 @@
         .nav__wrap {
           height: 290px;
           border-bottom: $border-base-gray-alpha;
-          transition-delay: 0.1s;
+          transition: height 0.5s 0.1s ease-out, visibility 0s 0s;
+          visibility: visible;
         }
       }
     }

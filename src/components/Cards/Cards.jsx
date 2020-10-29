@@ -63,8 +63,22 @@ const Cards = () => {
   const [missionPosition, setMissionPosition] = useState(100);
 
   useScrollPosition(() => {
-    setCardsPosition(document.querySelector('#cards').offsetTop);
-    setMissionPosition(document.querySelector('#mission').offsetTop);
+    const windowHeight = window.innerHeight;
+
+    const cards = document.querySelector('#cards');
+    const cardsHeight = cards.clientHeight;
+    const cardsOffset = cards.offsetTop;
+
+    const mission = document.querySelector('#mission');
+    const missionOffset = mission.offsetTop;
+
+    if (cardsHeight >= windowHeight) {
+      setCardsPosition('#mission');
+    } else {
+      setCardsPosition(cardsOffset);
+    }
+
+    setMissionPosition(missionOffset);
   });
 
   const parallaxDataSection = [
