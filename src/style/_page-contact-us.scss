@@ -2,6 +2,10 @@
   background-color: $white;
   padding: rem(60px) 0 0;
 
+  .row {
+    margin: 0;
+  }
+
   &__title {
     color: $font-color-blue;
     font-size: $font-size-h4;
@@ -14,6 +18,10 @@
     &__group {
       border: none;
       padding: 0;
+
+      .row {
+        margin: 0 -15px;
+      }
 
       &--row {
         display: flex;
