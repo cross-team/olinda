@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
@@ -11,7 +11,7 @@ import Button from '../Button/Button';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 import menuAnimation from '../../motions/menu-animation.json';
 
-const Header = ({ variation }) => {
+const Header = ({ variation, location }) => {
   const [scrolly, setScrolly] = useState('top');
   const [cookieConsent, setCookieConsent] = useState(Cookies.get('safrapay-google-tagmanager'));
 
@@ -30,6 +30,7 @@ const Header = ({ variation }) => {
   const [revealed, setRevealed] = useState('hide');
 
   const [menu, setMenu] = useState('closed');
+  const [menuAriaHidden, setMenuAriaHidden] = useState(false);
   const [playingState, setPlayingState] = useState('pause');
   const [direction, setDirection] = useState(1);
 
@@ -38,12 +39,24 @@ const Header = ({ variation }) => {
       setMenu('open');
       setPlayingState('play');
       setDirection(1);
+      setMenuAriaHidden(false);
     } else {
       setMenu('closed');
       setPlayingState('play');
       setDirection(-1);
+      setMenuAriaHidden(true);
     }
   };
+
+  const handleMenuAriaHidden = () => {
+    if (window.innerWidth <= 1280 && menuAriaHidden === false && menu === 'closed') {
+      setMenuAriaHidden(true);
+    }
+  };
+
+  useEffect(() => {
+    handleMenuAriaHidden();
+  });
 
   const eventsMenu = [
     {
@@ -81,9 +94,9 @@ const Header = ({ variation }) => {
         </p>
       </CookieConsent>
       <div className="skiplink">
-        <a href="#content" className="skiplink__action">
+        <Link to={`${location}#content`} className="skiplink__action">
           Skip to main content
-        </a>
+        </Link>
       </div>
       <header
         className={`header header--${scrolly} header--${revealed} header--${menu} header--${variation}`}
@@ -124,9 +137,9 @@ const Header = ({ variation }) => {
             cookieConsent !== undefined ? 'cookie-hidden' : 'cookie-open'
           }`}
           label="Main Menu"
-          ariaHidden={menu !== 'open'}
+          ariaHidden={menuAriaHidden}
         />
-        <Button to="/contact-us" className="header__contact" title="Navigate to Contact Page">
+        <Button to="/contact-us/" className="header__contact" title="Navigate to Contact Page">
           Contact Us
         </Button>
       </header>
@@ -136,6 +149,7 @@ const Header = ({ variation }) => {
 
 Header.propTypes = {
   variation: PropTypes.string,
+  location: PropTypes.string,
 };
 
 export default Header;

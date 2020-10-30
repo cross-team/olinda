@@ -86,8 +86,8 @@ const Hero = () => {
       end: '40vh',
       properties: [
         {
-          startValue: 0,
-          endValue: 60,
+          startValue: 100,
+          endValue: 40,
           unit: '%',
           property: 'opacity',
         },
@@ -99,48 +99,50 @@ const Hero = () => {
   const motionDurationBack = usePrefersReducedMotion() ? 0 : 1000;
 
   return (
-    <div id="content" className="hero-wrap">
-      <Plx parallaxData={parallaxDataSection}>
-        <BackgroundImage Tag="section" className="hero" fluid={heroBg.sharp.fluid}>
-          <Fade bottom cascade duration={motionDuration} distance="50px">
-            <div>
-              <h1 className="hero__title">
-                Welcome to the Future of Payments, Banking, and Credit
-              </h1>
-              <p className="hero__copy">Safrapay is the Perfect Solution for Your Business</p>
-            </div>
-          </Fade>
-          <div className="hero__screens-front">
-            <Fade bottom duration={motionDurationBack} delay={200} distance="100px">
-              <Image
-                fluid={heroScreensFront.sharp.fluid}
-                alt="Safrapay Merchant App on a smartphone."
-              />
-            </Fade>
-          </div>
-          <div className="hero__screens-back">
-            <Fade bottom duration={motionDurationBack} delay={400} distance="150px">
+    <div id="content" className="hero-wrap hero--overlay">
+      <Plx parallaxData={parallaxDataOverlay}>
+        <Plx parallaxData={parallaxDataSection}>
+          <BackgroundImage Tag="section" className="hero" fluid={heroBg.sharp.fluid}>
+            <Fade bottom cascade duration={motionDuration} distance="50px">
               <div>
-                <div className="hero__screens-back__left">
-                  <Image
-                    fluid={heroScreensBackLeft.sharp.fluid}
-                    alt="Safrapay Banking App on a smartphone."
-                  />
-                </div>
-                <div className="hero__screens-back__right">
-                  <Image
-                    fluid={heroScreensBackRight.sharp.fluid}
-                    alt="Safrapay point-of-sale device being used to start a new sale."
-                  />
-                </div>
+                <h1 className="hero__title">
+                  Welcome to the Future of Payments, Banking, and Credit
+                </h1>
+                <p className="hero__copy">Safrapay is the Perfect Solution for Your Business</p>
               </div>
             </Fade>
-          </div>
-          <p className="hero__legal">
-            Banking services provided by Safra National Bank of New York, Member FDIC.
-          </p>
-          <Plx className="hero--overlay" parallaxData={parallaxDataOverlay} />
-        </BackgroundImage>
+            <div className="hero__screens-front">
+              <Fade bottom duration={motionDurationBack} delay={200} distance="100px">
+                <Image
+                  fluid={heroScreensFront.sharp.fluid}
+                  alt="Safrapay Merchant App on a smartphone."
+                />
+              </Fade>
+            </div>
+            <div className="hero__screens-back">
+              <Fade bottom duration={motionDurationBack} delay={400} distance="150px">
+                <div>
+                  <div className="hero__screens-back__left">
+                    <Image
+                      fluid={heroScreensBackLeft.sharp.fluid}
+                      alt="Safrapay Banking App on a smartphone."
+                    />
+                  </div>
+                  <div className="hero__screens-back__right">
+                    <Image
+                      fluid={heroScreensBackRight.sharp.fluid}
+                      alt="Safrapay point-of-sale device being used to start a new sale."
+                    />
+                  </div>
+                </div>
+              </Fade>
+            </div>
+            <p className="hero__legal">
+              Banking services provided by Safra National Bank of New York, Member FDIC.
+            </p>
+            <Plx className="hero--overlay" parallaxData={parallaxDataOverlay} />
+          </BackgroundImage>
+        </Plx>
       </Plx>
     </div>
   );

@@ -98,6 +98,13 @@
       border-radius: $border-radius-sm;
       margin: 4px 0;
       padding: 13px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      &:focus {
+        border-color: $clean-blue-light;
+        box-shadow: 0 0 0 1px $clean-blue-light;
+        outline: none;
+      }
     }
 
     &__textarea {
@@ -107,7 +114,13 @@
       height: 200px;
       margin: 4px 0;
       padding: 13px;
-      resize: none; 
+      resize: none;
+
+      &:focus {
+        border-color: $clean-blue-light;
+        box-shadow: 0 0 0 1px $clean-blue-light;
+        outline: none;
+      }
     }
   }
 }

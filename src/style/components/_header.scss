@@ -98,7 +98,6 @@
 
   &--internal {
     background: $blue-1;
-    position: relative;
   }
 
   &--fixed {
@@ -112,7 +111,7 @@
 
     & .header {
       &__brand {
-        &:focus {
+        a:focus {
           &::after {
             border-color: $clean-blue-light;
             height: 50px;
@@ -258,7 +257,7 @@
         transition-delay: 0.5s;
       }
 
-      &:focus {
+      a:focus {
         &::after {
           height: 50px;
           top: 10%;

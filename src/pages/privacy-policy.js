@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
 import Footer from '../components/Footer/Footer';
+import form from '../assets/Safrapay-Authorized-Agent-Designation-Form-(602557911v1 USA).pdf';
 
 export default () => {
   return (
@@ -13,7 +14,7 @@ export default () => {
       description="This Privacy Policy is meant to help you understand how Safrapay collects and manages user data."
       keywords="Safra, Safrapay, legal, privacy, cookies, policy, privacy policy, cookies policy, data, user data"
     >
-      <Header variation="internal" />
+      <Header variation="internal" location="/privacy-policy/" />
       <PageTitle title="Privacy Policy" />
       <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">
@@ -195,12 +196,12 @@ export default () => {
             <p><strong>4.	Promotional Emails.</strong> You may choose to provide us with your email address for the purpose of allowing us to send free newsletters, surveys, offers, and other promotional materials to you, as well as targeted offers from third parties.  You can stop receiving promotional emails by following the unsubscribe instructions in e-mails that you receive.  If you decide not to receive promotional emails, we may still send you service related communications. </p>
             <p><strong>5.	Promotional Mailings.</strong>  If at any time you do not want to receive offers and/or circulars from us you can remove yourself from our mailing lists by emailing us (our contact information is below) with &quot;NO SNAIL MAIL&quot; in the subject line along with your name, address and zip code. Please note that our mailings are prepared in advance of their being sent. Although we will remove your name from our mailing list after receiving your request, you may still receive mailings from us that had been initiated prior to your name being removed.</p>
             <p><strong>6.	Promotional Text Messages.</strong> If you receive a text message from us that contains promotional information you can opt-out of receiving future text messages by replying “STOP.”</p>
-            <p>Please address written requests and questions about your rights to <a href="mailto:privacy@safrapay.com">privacy@safrapay.com</a> or call us at <a href="tel:+1000">[insert toll free number]</a>.</p>
+            <p>Please address written requests and questions about your rights to <a href="mailto:privacy@safrapay.com">privacy@safrapay.com</a> or call us at <a href="tel:+18774723727">1-877-472-3727</a>.</p>
             <p>Note that, as required by law, we will require you to prove your identity.  We may conduct an identity verification by phone call or email. Depending on your request, we will ask for information to verify your identity. We may also ask you to provide a signed declaration confirming your identity. Following a request, and to the extent required by law, we will use reasonable efforts to supply, correct or delete personal information about you in our files.</p>
             <p>In some circumstances, you may designate an authorized agent to submit requests to exercise certain privacy rights on your behalf.  We will require verification that you provided the authorized agent permission to make a request on your behalf.  You must provide us with a copy of the signed permission you have given to the authorized agent to submit the request on your behalf and verify your own identity directly with us.  </p>
             <h2 id="authorized-agent">Information for Authorized Agents</h2>
             <p>If you are an authorized agent submitting a request on behalf of an individual, you must attach a copy of the following information to the request:</p>
-            <p>1.	A completed Authorized Agent Designation <a href="#form" aria-label="Navigate to Authorized Agent Designation Form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
+            <p>1.	A completed Authorized Agent Designation <a href={form} aria-label="Navigate to Authorized Agent Designation Form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
             <p>2.	If you are a business located in California, proof that you are registered with the Secretary of State to conduct business in California.</p>
             <p>If we do not receive both pieces of information, the request will be denied.</p>
             <h2 id="how-we-protect-personal-information">How We Protect Personal Information</h2>
@@ -219,7 +220,7 @@ export default () => {
               <a href="mailto:privacy@safrapay.com">privacy@safrapay.com</a><br />
               3050 NE Aventura Boulevard<br />
               Aventura, Florida 33180<br />
-              <a href="tel:+1000">[INSERT TOLL FREE PHONE CONTACT]</a>
+              <a href="tel:+18774723727">1-877-472-3727</a>
             </p>
             <p>If you are not satisfied with our response, and are in the European Union, you may have a right to lodge a complaint with your local supervisory authority.</p>
             <p>

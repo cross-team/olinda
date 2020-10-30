@@ -31,13 +31,13 @@ const Footer = () => {
       </div>
       <div className="footer__legal">
         <nav className="nav-legal" aria-label="Legal Menu">
-          <Link to="/privacy-policy" className="nav-legal__link">
+          <Link to="/privacy-policy/" className="nav-legal__link">
             Privacy Policy
           </Link>
-          <Link to="/terms-of-use" className="nav-legal__link">
+          <Link to="/terms-of-use/" className="nav-legal__link">
             Terms of Use
           </Link>
-          <Link to="/accessibility-statement" className="nav-legal__link">
+          <Link to="/accessibility-statement/" className="nav-legal__link">
             Accessibility Statement
           </Link>
         </nav>

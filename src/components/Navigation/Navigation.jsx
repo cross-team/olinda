@@ -11,6 +11,7 @@ const Navigation = ({ className, label, ariaHidden }) => {
         currentClassName="nav__link--active"
         componentTag="div"
         className="nav__wrap"
+        offset={-100}
       >
         <Link
           to="/#payment-solutions"

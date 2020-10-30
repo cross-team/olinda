@@ -13,7 +13,7 @@ export default () => {
       description="This Accessibility Statement details the commitment by Safrapay to make our products as accessible as possible using WCAG 2.1 guidelines."
       keywords="Safra, Safrapay, accessible, ADA, WCAG, WCAG 2.1, accessibility, statement, accessibility statement"
     >
-      <Header variation="internal" />
+      <Header variation="internal" location="/accessibility-statement/" />
       <PageTitle title="Accessibility Statement" />
       <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">
@@ -25,7 +25,7 @@ export default () => {
             <p>We believe in constantly improving and measuring our products in order to provide a fully accessible website and app for all users.  We test our designs using a variety of assistive technologies and accessibility plug-ins, ADA knowledgeable employees to confirm design decisions, and accessibility consultants to cross-check and validate the WCAG 2.1 conformance of our products. </p>
             <p>We have taken steps to ensure that our web and app products continue to comply with ADA and WCAG 2.1 standards as they evolve. We have and will continue to conduct audits on all of our products with the goal of achieving WCAG’s recommended level of compliance. </p>
             <h2 className="copy-size">Contact Us</h2>
-            <p>We want to ensure that communicating with us is easy and convenient.  If you encounter any issues, would like assistance, or have a recommendation for how we can improve, please contact us at contact <a href="mailto:">email</a> and <a href="tel:">telelephone</a> and let us know.</p>
+            <p>We want to ensure that communicating with us is easy and convenient.  If you encounter any issues, would like assistance, or have a recommendation for how we can improve, please contact us at contact <a href="mailto:accessibility@safrapay.com" aria-label="Contact email accessibility@safrapay.com">email</a> and <a href="tel:+18774723727" aria-label="Contact telelephone 1-877-472-3727">telelephone</a> and let us know.</p>
             <p>It is our belief that through diligence, collaboration, and communication we can ensure that our products are as inclusive and accessible as possible.</p>
           </Col>
         </Row>

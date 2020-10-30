@@ -21,7 +21,7 @@ export default () => {
       description="Contact Safrapay to learn more about working with us as a merchant or partner."
       keywords="Safra, safrapay, merchant, banking, merchant services, banking services, contact, work with us, partner"
     >
-      <Header variation="internal" />
+      <Header variation="internal" location="/contact-us/" />
       <PageTitle title="Contact Us" />
       <Fade bottom duration={motionDuration} distance="50px">
         <Container as="section" className="page-contact-us" id="content" fluid>
