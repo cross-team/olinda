@@ -4,8 +4,9 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  min-height: 260px;
+  min-height: 350px;
   overflow: hidden;
+  padding: 90px 0 0;
   position: relative;
   
   &__content {

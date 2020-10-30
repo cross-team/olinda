@@ -75,7 +75,7 @@ const About = () => {
                   </p>
                   <Button
                     className="about__more"
-                    to="/about"
+                    to="/about/"
                     title="Navigate to About Safrapay Page"
                   >
                     Learn More About Safrapay

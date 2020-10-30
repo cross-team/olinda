@@ -51,7 +51,7 @@ export default () => {
       description=" Safrapay provides an on-the-go digital point-of-sale solution as well as access to merchant, digital banking, and financial services that help our customers grow their businesses."
       keywords="Safra, Safrapay, digital, payment, payment solution, point-of-sale, POS, merchant, merchant services, financial services, financial tools, business, grow"
     >
-      <Header variation="internal" />
+      <Header variation="internal" location="/about/" />
       <PageTitle title="About Safrapay" />
       <Fade bottom cascade duration={motionDuration} distance="50px">
         <Container as="section" className="page-about" id="content" fluid>

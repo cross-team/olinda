@@ -14,7 +14,7 @@ export default () => {
       description="These Terms of Use create a contract between you and Safrapay."
       keywords="Safra, Safrapay, legal, terms, terms of use, contract"
     >
-      <Header variation="internal" />
+      <Header variation="internal" location="/terms-of-use/" />
       <PageTitle title="Safrapay Website Terms of Use" />
       <Container as="section" className="page-legal" id="content" fluid>
         <Row className="justify-content-center">

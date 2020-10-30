@@ -99,8 +99,8 @@ const DigitalBanking = () => {
       end: digitalBakingPosition,
       properties: [
         {
-          startValue: 80,
-          endValue: 0,
+          startValue: 20,
+          endValue: 100,
           unit: '%',
           property: 'opacity',
         },
@@ -112,8 +112,8 @@ const DigitalBanking = () => {
       end: cardsPosition,
       properties: [
         {
-          startValue: 0,
-          endValue: 80,
+          startValue: 100,
+          endValue: 20,
           unit: '%',
           property: 'opacity',
         },
@@ -125,102 +125,104 @@ const DigitalBanking = () => {
   const motionDurationCoins = usePrefersReducedMotion() ? 0 : 1500;
 
   return (
-    <div id="digital-banking" ref={digitalBakingRef}>
-      <Plx parallaxData={parallaxDataSection}>
-        <BackgroundImage
-          Tag="section"
-          className="digital-banking"
-          fluid={digitalBankingBg.sharp.fluid}
-          style={{
-            backgroundSize: 'contain',
-            backgroundPosition: '0 100%',
-          }}
-          aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
-        >
-          <Fade bottom cascade duration={motionDuration} distance="50px">
-            <Container fluid>
-              <Row className="justify-content-center">
-                <Col
-                  xs={12}
-                  sm={{ span: 12, offset: 0 }}
-                  md={{ span: 8, offset: 0 }}
-                  lg={{ span: 5, offset: 6 }}
-                >
-                  <h2 className="digital-banking__title">Convenient Digital Banking</h2>
-                  <p className="digital-banking__copy">
-                    Open a Business Bank Account with us to move money, make mobile check deposits,
-                    and view statements from the convenience of your mobile phone. Use your included
-                    debit card to make cash deposits and withdrawals at any of our in-network ATMs.
-                  </p>
-                  <div className="digital-banking__brands">
-                    <SNBNY
-                      className="digital-banking__brands__brand"
-                      aria-label="Safra National Bank of New York"
-                    />
-                    <FDICMember
-                      className="digital-banking__brands__brand"
-                      aria-label="Member FDIC"
-                    />
-                  </div>
-                </Col>
-              </Row>
-              <Row className="justify-content-center">
-                <Col
-                  xs={12}
-                  sm={{ span: 12, offset: 0 }}
-                  md={{ span: 8, offset: 0 }}
-                  lg={{ span: 3, offset: 8 }}
-                >
-                  <p className="digital-banking__note">
-                    Banking services provided by Safra National Bank of New York, Member FDIC.
-                  </p>
-                </Col>
-              </Row>
-            </Container>
-          </Fade>
-          <Fade left duration={motionDurationCoins} distance="200px">
-            <div className="digital-banking__float-elements" aria-hidden>
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--1"
-                fadeIn={false}
-              />
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--2"
-                fadeIn={false}
-              />
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--3"
-                fadeIn={false}
-              />
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--4"
-                fadeIn={false}
-              />
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--5"
-                style={{ postion: 'absolute' }}
-                fadeIn={false}
-              />
-              <Image
-                fluid={iconCoin.sharp.fluid}
-                alt="Coin icon"
-                className="digital-banking__coin digital-banking__coin--6"
-                fadeIn={false}
-              />
-            </div>
-          </Fade>
-          <Plx className="digital-banking--overlay" parallaxData={parallaxDataOverlay} />
-        </BackgroundImage>
+    <div id="digital-banking" ref={digitalBakingRef} className="digital-banking--overlay">
+      <Plx parallaxData={parallaxDataOverlay}>
+        <Plx parallaxData={parallaxDataSection}>
+          <BackgroundImage
+            Tag="section"
+            className="digital-banking"
+            fluid={digitalBankingBg.sharp.fluid}
+            style={{
+              backgroundSize: 'contain',
+              backgroundPosition: '0 100%',
+            }}
+            aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
+          >
+            <Fade bottom cascade duration={motionDuration} distance="50px">
+              <Container fluid>
+                <Row className="justify-content-center">
+                  <Col
+                    xs={12}
+                    sm={{ span: 12, offset: 0 }}
+                    md={{ span: 8, offset: 0 }}
+                    lg={{ span: 5, offset: 6 }}
+                  >
+                    <h2 className="digital-banking__title">Convenient Digital Banking</h2>
+                    <p className="digital-banking__copy">
+                      Open a Business Bank Account with us to move money, make mobile check
+                      deposits, and view statements from the convenience of your mobile phone. Use
+                      your included debit card to make cash deposits and withdrawals at any of our
+                      in-network ATMs.
+                    </p>
+                    <div className="digital-banking__brands">
+                      <SNBNY
+                        className="digital-banking__brands__brand"
+                        aria-label="Safra National Bank of New York"
+                      />
+                      <FDICMember
+                        className="digital-banking__brands__brand"
+                        aria-label="Member FDIC"
+                      />
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="justify-content-center">
+                  <Col
+                    xs={12}
+                    sm={{ span: 12, offset: 0 }}
+                    md={{ span: 8, offset: 0 }}
+                    lg={{ span: 3, offset: 8 }}
+                  >
+                    <p className="digital-banking__note">
+                      Banking services provided by Safra National Bank of New York, Member FDIC.
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
+            </Fade>
+            <Fade left duration={motionDurationCoins} distance="200px">
+              <div className="digital-banking__float-elements" aria-hidden>
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--1"
+                  fadeIn={false}
+                />
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--2"
+                  fadeIn={false}
+                />
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--3"
+                  fadeIn={false}
+                />
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--4"
+                  fadeIn={false}
+                />
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--5"
+                  style={{ postion: 'absolute' }}
+                  fadeIn={false}
+                />
+                <Image
+                  fluid={iconCoin.sharp.fluid}
+                  alt="Coin icon"
+                  className="digital-banking__coin digital-banking__coin--6"
+                  fadeIn={false}
+                />
+              </div>
+            </Fade>
+          </BackgroundImage>
+        </Plx>
       </Plx>
     </div>
   );

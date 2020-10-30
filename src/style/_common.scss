@@ -8,6 +8,9 @@ body {
 }
 
 .skiplink {
+  position: relative;
+  z-index: 11;  
+
   &__action {
     background-color: $white;
     border-radius: $border-radius-base;
@@ -17,7 +20,7 @@ body {
     left: -9999em;
     outline: none;
     padding: rem(11px) rem(50px) rem(10px);
-    position: absolute;
+    position: fixed;
     text-align: center;
     text-decoration: none;
     top: 20px;
