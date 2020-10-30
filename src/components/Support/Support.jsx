@@ -13,7 +13,11 @@ const Support = () => {
     query {
       supportBgLarge: file(relativePath: { eq: "support-person.png" }) {
         sharp: childImageSharp {
-          fluid(quality: 90) {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

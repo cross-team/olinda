@@ -19,7 +19,11 @@ const Cards = () => {
     query {
       cardsBg: file(relativePath: { eq: "cards-bg.jpg" }) {
         sharp: childImageSharp {
-          fluid(quality: 95) {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -27,7 +31,11 @@ const Cards = () => {
 
       cardsScreens: file(relativePath: { eq: "cards-screen.png" }) {
         sharp: childImageSharp {
-          fluid {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -35,7 +43,11 @@ const Cards = () => {
 
       cardsCardLeft: file(relativePath: { eq: "cards-card-left.png" }) {
         sharp: childImageSharp {
-          fluid {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -43,7 +55,11 @@ const Cards = () => {
 
       cardsCardRight: file(relativePath: { eq: "cards-card-right.png" }) {
         sharp: childImageSharp {
-          fluid {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -51,7 +67,11 @@ const Cards = () => {
 
       cardsCardMobile: file(relativePath: { eq: "cards-card-mobile.png" }) {
         sharp: childImageSharp {
-          fluid {
+          fluid(
+            quality: 85
+            maxWidth: 2560
+            srcSetBreakpoints: [200, 340, 520, 890, 1440, 1920, 2560]
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
