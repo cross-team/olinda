@@ -11,7 +11,7 @@
 .digital-banking {
   background-color: transparent !important;
   overflow: hidden;
-  padding: vwCalc(324) 0 0;
+  padding: vwCalc(324) 0 vwCalc(50);
   position: relative;
   opacity: 1 !important;
   
@@ -32,7 +32,7 @@
   }
 
   &__brands {
-    margin: 0 0 vwCalc(287);
+    margin: 0 0 vwCalc(237);
     text-align: right;
 
     &__brand {
@@ -49,7 +49,7 @@
     height: vwCalc(256);
     left: vwCalc(-34);
     position: absolute;
-    bottom: vwCalc(692);
+    bottom: vwCalc(712);
     width: vwCalc(433);
   }
 
@@ -120,10 +120,10 @@
 
 @media (min-width: $min-width-xxl) {
   .digital-banking {
-    padding: 572px 0 0;
+    padding: 572px 0 50px;
 
     &__brands {
-      margin: 0 0 529px;
+      margin: 0 0 479px;
     }
 
     &__float-elements {
@@ -167,7 +167,7 @@
     &__float-elements {
       height: vwXlCalc(256);
       left: vwXlCalc(-13);
-      bottom: vwXlCalc(620);
+      bottom: vwXlCalc(650);
       width: vwXlCalc(385);
     }
 
@@ -234,7 +234,7 @@
     &__float-elements {
       height: vwXlCalc(256);
       left: vwXlCalc(-13);
-      bottom: vwXlCalc(730);
+      bottom: vwXlCalc(720);
       width: vwXlCalc(385);
     }
   }
