@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
 import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -25,44 +26,44 @@ export default () => {
             <nav aria-label="Content Menu">
               <ul>
                 <li>
-                  <a href="#types-of-information-we-collect">
+                  <Link to="/privacy-policy/#types-of-information-we-collect">
                     Types of Information We Collect
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#use-and-processing-of-information">
+                  <Link to="/privacy-policy/#use-and-processing-of-information">
                     Use and Processing of Information
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#sharing-of-information">
+                  <Link to="/privacy-policy/#sharing-of-information">
                     Sharing of Information
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#your-choices">
+                  <Link to="/privacy-policy/#your-choices">
                     Your Choices
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#authorized-agent">
+                  <Link to="/privacy-policy/#authorized-agent">
                     Authorized Agent
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#how-we-protect-personal-information">
+                  <Link to="/privacy-policy/#how-we-protect-personal-information">
                     How We Protect Personal Information
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#other-important-information">
+                  <Link to="/privacy-policy/#other-important-information">
                     Other Important Information 
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact-information">
+                  <Link to="/privacy-policy/#contact-information">
                     Contact Information
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -213,7 +214,7 @@ export default () => {
             <p>•	<strong>Children’s Privacy.</strong> We do not knowingly collect any personal information from children under the age of 13 years. Our websites are directed to persons who are at least 13 years of age. If a parent or guardian is made aware that a child under the age of 13 has provided us with personal information through any point of contact, we ask to be contacted at the below email address, and we will delete the information about the child referenced from our files. If we have actual knowledge that personal information about a person under the age of 13 has been collected without appropriate parental consent, then we will take the appropriate steps to delete such information. We do not sell the personal information of minors less than 16 years of age without affirmative authorization.</p>
             <p>•	<strong>Third Party Applications/Websites.</strong>  We have no control over the privacy practices of websites or applications that we do not own. </p>
             <p>•	<strong>Changes to This Privacy Policy.</strong>  We may change our privacy policy and practices over time.  To the extent that our policy changes in a material way, the policy that was in place at the time that you submitted personal information to us will generally govern that information unless we receive your consent to the new privacy policy.  Our privacy policy includes an “effective” and “last updated” date. The effective date refers to the date that the current version took effect. The last updated date refers to the date that the current version was last substantively modified.</p>
-            <p>•	<strong>Information for California Residents.</strong>  California law indicates that organizations should disclose whether certain categories of information are collected, “sold” or transferred for an organization’s “business purpose” (as those terms are defined under California law).  You can find a list of the categories of information that we collect and share <a href="#california-information-sharing-disclosure" aria-label="List of categories of information that we collect">here</a>. Please note that because this list is comprehensive it may refer to types of information that we share about people other than yourself. If you would like more information concerning the categories of personal information (if any) we share with third parties or affiliates for those parties to use for direct marketing please submit a written request to us using the information in the &quot;Contact Information&quot; section below.  We do not discriminate against California residents who exercise any of their rights described in this Privacy Policy.</p>
+            <p>•	<strong>Information for California Residents.</strong>  California law indicates that organizations should disclose whether certain categories of information are collected, “sold” or transferred for an organization’s “business purpose” (as those terms are defined under California law).  You can find a list of the categories of information that we collect and share <Link to="/privacy-policy/#california-information-sharing-disclosure" aria-label="List of categories of information that we collect">here</Link>. Please note that because this list is comprehensive it may refer to types of information that we share about people other than yourself. If you would like more information concerning the categories of personal information (if any) we share with third parties or affiliates for those parties to use for direct marketing please submit a written request to us using the information in the &quot;Contact Information&quot; section below.  We do not discriminate against California residents who exercise any of their rights described in this Privacy Policy.</p>
             <p id="contact-information">Contact Information.  If you have any questions, comments, or complaints concerning our privacy practices, or, where required by law, if you would like to submit a request based on a right listed in this policy, please contact us at the appropriate address below.  We will attempt to respond to your requests and to provide you with additional privacy-related information. </p>
             <p>
               SafraPay, Inc.<br />
