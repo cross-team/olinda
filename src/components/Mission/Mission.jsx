@@ -13,10 +13,9 @@ const Mission = () => {
           <Row className="justify-content-center">
             <Col sm={12} md={10} lg={10}>
               <h3 className="mission__copy">
-                “Our goal is to remove the worry surrounding financial services by helping merchants
-                improve earning potential and grow their business. ”
+                Safrapay’s mission is to provide businesses with easy access to flexible payment,
+                banking, and credit solutions all in one convenient location.
               </h3>
-              <p className="mission__by">Helio Sarfaty - CEO Worldwide - Safrapay</p>
             </Col>
           </Row>
         </Container>
