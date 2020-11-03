@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Formik, Field, Form } from 'formik';
+import MaskedInput from "react-text-mask";
 import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -27,6 +28,18 @@ export default () => {
  
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) && value !== '') {
       error = 'Email format is not valid';
+    }
+ 
+    return error;
+  };
+
+  const phoneNumberMask = ["(", /[1-9]/, /\d/, /\d/, ")", " ", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/];
+
+  const validatePhone = (value) => {
+    let error;
+ 
+    if (!/^[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/i.test(value) && value !== '') {
+      error = 'Phone Number format is not valid';
     }
  
     return error;
@@ -129,7 +142,20 @@ export default () => {
                           <label className="form-field__label" htmlFor="phone">
                             Phone Number
                           </label>
-                          <Field type="number" id="phone" name="phone" className="form-field__text" />
+                          <Field 
+                            name="phone"  
+                            validate={validatePhone}
+                            render={({ field }) => (
+                              <MaskedInput
+                                {...field}
+                                mask={phoneNumberMask}
+                                id="phone"
+                                type="text"
+                                className={`form-field__text ${errors.phone && touched.phone ? `form-field__text--error` : ``}`}
+                              />
+                            )} 
+                          />
+                          {errors.phone && touched.phone && <div className="form-field__error" aria-live="polite"><IconError /> {errors.phone}</div>}
                         </Col>
                       </Row>
                     </fieldset>

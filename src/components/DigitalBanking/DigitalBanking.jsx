@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Image from 'gatsby-image';
@@ -9,6 +9,7 @@ import Plx from 'react-plx';
 import SNBNY from '../../images/snbny-brand.svg';
 import FDICMember from '../../images/fdic-brand.svg';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
+import ScrollContext from '../../context/scrollContext';
 
 const DigitalBanking = () => {
   const { digitalBankingBg, iconCoin } = useStaticQuery(graphql`
@@ -124,6 +125,13 @@ const DigitalBanking = () => {
   const motionDuration = usePrefersReducedMotion() ? 0 : 500;
   const motionDurationCoins = usePrefersReducedMotion() ? 0 : 1500;
 
+  const scrollPosition = useContext(ScrollContext);
+  const [motionStarted, setMotionStarted] = useState(false);
+
+  if (!motionStarted && scrollPosition[0] === 'digital-banking') {
+    setMotionStarted(true);
+  }
+
   return (
     <div id="digital-banking" ref={digitalBakingRef} className="digital-banking--overlay">
       <Plx parallaxData={parallaxDataOverlay}>
@@ -138,7 +146,7 @@ const DigitalBanking = () => {
             }}
             aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
           >
-            <Fade bottom cascade duration={motionDuration} distance="50px">
+            <Fade bottom cascade duration={motionDuration} distance="100px" when={motionStarted}>
               <Container fluid>
                 <Row className="justify-content-center">
                   <Col
@@ -180,45 +188,56 @@ const DigitalBanking = () => {
                 </Row>
               </Container>
             </Fade>
-            <Fade left duration={motionDurationCoins} distance="200px">
+            <Fade left duration={motionDurationCoins} distance="500px" when={motionStarted} cascade>
               <div className="digital-banking__float-elements" aria-hidden>
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--1"
-                  fadeIn={false}
-                />
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--2"
-                  fadeIn={false}
-                />
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--3"
-                  fadeIn={false}
-                />
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--4"
-                  fadeIn={false}
-                />
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--5"
-                  style={{ postion: 'absolute' }}
-                  fadeIn={false}
-                />
-                <Image
-                  fluid={iconCoin.sharp.fluid}
-                  alt="Coin icon"
-                  className="digital-banking__coin digital-banking__coin--6"
-                  fadeIn={false}
-                />
+                <div className="digital-banking__coin digital-banking__coin--1">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
+                <div className="digital-banking__coin digital-banking__coin--2">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
+                <div className="digital-banking__coin digital-banking__coin--3">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
+                <div className="digital-banking__coin digital-banking__coin--4">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
+                <div className="digital-banking__coin digital-banking__coin--5">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
+                <div className="digital-banking__coin digital-banking__coin--6">
+                  <Image
+                    fluid={iconCoin.sharp.fluid}
+                    alt="Coin icon"
+                    fadeIn={false}
+                    className="icon-coin"
+                  />
+                </div>
               </div>
             </Fade>
           </BackgroundImage>

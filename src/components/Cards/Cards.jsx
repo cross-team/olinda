@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Plx from 'react-plx';
 import { Container, Row, Col } from 'react-bootstrap';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
+import ScrollContext from '../../context/scrollContext';
 
 const Cards = () => {
   const {
@@ -135,6 +136,13 @@ const Cards = () => {
 
   const motionDuration = usePrefersReducedMotion() ? 0 : 500;
 
+  const scrollPosition = useContext(ScrollContext);
+  const [motionStarted, setMotionStarted] = useState(false);
+
+  if (!motionStarted && scrollPosition[0] === 'cards') {
+    setMotionStarted(true);
+  }
+
   return (
     <div id="cards" className="cards--overlay">
       <Plx parallaxData={parallaxDataOverlay}>
@@ -145,7 +153,7 @@ const Cards = () => {
             fluid={cardsBg.sharp.fluid}
             backgroundColor="#63676f"
           >
-            <Fade bottom cascade duration={motionDuration} distance="50px">
+            <Fade bottom cascade duration={motionDuration} distance="50px" when={motionStarted}>
               <Container fluid>
                 <Row className="justify-content-center">
                   <Col sm={12} md={8} lg={6}>
@@ -159,7 +167,13 @@ const Cards = () => {
               </Container>
             </Fade>
             <div className="cards__screen">
-              <Fade bottom duration={motionDuration} delay={200} distance="100px">
+              <Fade
+                bottom
+                duration={motionDuration}
+                delay={200}
+                distance="100px"
+                when={motionStarted}
+              >
                 <Image
                   fluid={cardsScreens.sharp.fluid}
                   alt="Safrapay Banking App on a smartphone."
@@ -167,7 +181,13 @@ const Cards = () => {
               </Fade>
             </div>
             <div className="cards__back">
-              <Fade bottom duration={motionDuration} delay={400} distance="150px">
+              <Fade
+                bottom
+                duration={motionDuration}
+                delay={400}
+                distance="150px"
+                when={motionStarted}
+              >
                 <div>
                   <div className="cards__back__left">
                     <Image

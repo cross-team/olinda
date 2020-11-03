@@ -55,54 +55,78 @@
 
   &__coin {
     position: absolute !important;
-    animation-name: coinsZigZag;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-fill-mode: both;
+
+    .icon-coin {
+      height: 100%;
+      width: 100%;
+      position: absolute !important;
+      animation-name: coinsZigZag;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+      animation-fill-mode: both;
+    }
 
     &--1 {
       height: vwCalc(110);
       left: 0;
       top: 0;
       width: vwCalc(110);
-      animation-delay: .2s;
+
+      .icon-coin {
+        animation-delay: .2s;
+      }
     }
     &--2 {
       height: vwCalc(60);
       left: 20%;
       top: 60%;
       width: vwCalc(60);
-      animation-delay: .3s;
+      
+      .icon-coin {
+        animation-delay: .3s;
+      }
     }
     &--3 {
       height: vwCalc(68);
       left: 40%;
       top: 20%;
       width: vwCalc(68);
-      animation-delay: .4s;
+      
+      .icon-coin {
+        animation-delay: .4s;
+      }
     }
     &--4 {
       height: vwCalc(105);
       left: 55%;
       top: 60%;
       width: vwCalc(105);
-      animation-delay: .5s;
+      
+      .icon-coin {
+        animation-delay: .5s;
+      }
     }
     &--5 {
       height: vwCalc(84);
       left: 70%;
       top: 10%;
       width: vwCalc(84);
-      animation-delay: .6s;
+      
+      .icon-coin {
+        animation-delay: .6s;
+      }
     }
     &--6 {
       height: vwCalc(55);
       left: 90%;
       top: 50%;
       width: vwCalc(55);
-      animation-delay: .7s;
+      
+      .icon-coin {
+        animation-delay: .7s;
+      }
     }
   }
 

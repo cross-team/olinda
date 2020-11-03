@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
+import ScrollContext from '../../context/scrollContext';
 
 const Navigation = ({ className, label, ariaHidden }) => {
+  const [scrollPosition, setScrollPosition] = useContext(ScrollContext);
+
+  const updatePosition = (section) => {
+    if (section !== undefined) {
+      const sectionId = section.getAttributeNode('id').value;
+
+      if (sectionId !== scrollPosition) {
+        setScrollPosition(sectionId);
+      }
+    }
+  };
+
   return (
     <nav aria-label={label} aria-hidden={ariaHidden} className={`nav ${className}`}>
       <Scrollspy
@@ -11,7 +24,8 @@ const Navigation = ({ className, label, ariaHidden }) => {
         currentClassName="nav__link--active"
         componentTag="div"
         className="nav__wrap"
-        offset={-100}
+        offset={-250}
+        onUpdate={updatePosition}
       >
         <Link
           to="/#payment-solutions"
