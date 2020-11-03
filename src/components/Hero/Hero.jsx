@@ -106,7 +106,7 @@ const Hero = () => {
             <Fade bottom cascade duration={motionDuration} distance="50px">
               <div>
                 <h1 className="hero__title">
-                  Welcome to the Future of Payments, Banking, and Credit
+                  One Place for Your Payment, Banking, and Credit Needs
                 </h1>
                 <p className="hero__copy">Safrapay is the Perfect Solution for Your Business</p>
               </div>

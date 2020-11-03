@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import BackgroundImage from 'gatsby-background-image';
@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade';
 import Plx from 'react-plx';
 import Button from '../Button/Button';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
+import ScrollContext from '../../context/scrollContext';
 
 const About = () => {
   const { aboutBg } = useStaticQuery(graphql`
@@ -41,12 +42,19 @@ const About = () => {
 
   const motionDuration = usePrefersReducedMotion() ? 0 : 1000;
 
+  const scrollPosition = useContext(ScrollContext);
+  const [motionStarted, setMotionStarted] = useState(false);
+
+  if (!motionStarted && scrollPosition[0] === 'about') {
+    setMotionStarted(true);
+  }
+
   return (
     <div id="about">
       <Plx parallaxData={parallaxDataSection}>
         <section className="about">
           <BackgroundImage Tag="div" className="about__background" fluid={aboutBg.sharp.fluid} />
-          <Fade bottom cascade duration={motionDuration} distance="50px">
+          <Fade bottom cascade duration={motionDuration} distance="100px" when={motionStarted}>
             <Container fluid>
               <Row>
                 <Col

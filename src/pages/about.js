@@ -7,7 +7,6 @@ import Image from 'gatsby-image';
 import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
-import Mission from '../components/Mission/Mission';
 import Footer from '../components/Footer/Footer';
 import usePrefersReducedMotion from '../hooks/use-reduced-motion';
 
@@ -113,7 +112,6 @@ export default () => {
           </Row>
         </Container>
       </Fade>
-      <Mission />
       <Footer />
     </Layout>
   );
