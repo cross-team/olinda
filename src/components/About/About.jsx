@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import BackgroundImage from 'gatsby-background-image';
@@ -6,7 +6,6 @@ import Fade from 'react-reveal/Fade';
 import Plx from 'react-plx';
 import Button from '../Button/Button';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
-import ScrollContext from '../../context/scrollContext';
 
 const About = () => {
   const { aboutBg } = useStaticQuery(graphql`
@@ -42,19 +41,12 @@ const About = () => {
 
   const motionDuration = usePrefersReducedMotion() ? 0 : 1000;
 
-  const scrollPosition = useContext(ScrollContext);
-  const [motionStarted, setMotionStarted] = useState(false);
-
-  if (!motionStarted && scrollPosition[0] === 'about') {
-    setMotionStarted(true);
-  }
-
   return (
     <div id="about">
       <Plx parallaxData={parallaxDataSection}>
         <section className="about">
           <BackgroundImage Tag="div" className="about__background" fluid={aboutBg.sharp.fluid} />
-          <Fade bottom cascade duration={motionDuration} distance="100px" when={motionStarted}>
+          <Fade bottom cascade duration={motionDuration} distance="100px">
             <Container fluid>
               <Row>
                 <Col
@@ -63,7 +55,10 @@ const About = () => {
                   md={{ span: 8, offset: 1 }}
                   lg={{ span: 6, offset: 1 }}
                 >
-                  <h2 className="about__title">Modern Solutions Backed by Tradition</h2>
+                  <h2 className="about__title">
+                    <span className="about__title__head-line">Modern Solutions Backed</span> by
+                    Tradition
+                  </h2>
                 </Col>
               </Row>
               <Row>

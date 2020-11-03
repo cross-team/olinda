@@ -242,6 +242,8 @@
 
       &__icon svg path {
         fill: $font-color-light;
+        transition: fill 0.2s;
+        transition-delay: 0.5s;
       }
     }
 
@@ -352,6 +354,7 @@
         &__menu {
           &__icon svg path {
             fill: $font-color-blue;
+            transition-delay: 0s;
           }
         }
 

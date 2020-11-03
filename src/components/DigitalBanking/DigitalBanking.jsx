@@ -146,7 +146,7 @@ const DigitalBanking = () => {
             }}
             aria-label="Close up of a man’s hands using the Safrapay Banking App to view his account details on his smartphone."
           >
-            <Fade bottom cascade duration={motionDuration} distance="100px" when={motionStarted}>
+            <Fade bottom cascade duration={motionDuration} distance="100px">
               <Container fluid>
                 <Row className="justify-content-center">
                   <Col
