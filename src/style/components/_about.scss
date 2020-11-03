@@ -61,6 +61,12 @@
 @media (max-width: $max-width-sm) {
   .about {
     padding: vwSmCalc(215) 0;
+
+    &__title {
+      &__head-line {
+        display: block;
+      }
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
@@ -7,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 import Plx from 'react-plx';
 import Button from '../Button/Button';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
-import ScrollContext from '../../context/scrollContext';
 
 const Support = () => {
   const { supportBgLarge, supportBgSmall } = useStaticQuery(graphql`
@@ -67,13 +66,6 @@ const Support = () => {
 
   const motionDuration = usePrefersReducedMotion() ? 0 : 1000;
 
-  const scrollPosition = useContext(ScrollContext);
-  const [motionStarted, setMotionStarted] = useState(false);
-
-  if (!motionStarted && scrollPosition[0] === 'support') {
-    setMotionStarted(true);
-  }
-
   return (
     <div id="support">
       <Plx parallaxData={parallaxDataSection}>
@@ -87,7 +79,7 @@ const Support = () => {
           }}
           aria-label="A smiling brunette Safrapay Customer Support representative wearing headset and a white polo shirt with the Safrapay logo."
         >
-          <Fade cascade duration={motionDuration} when={motionStarted}>
+          <Fade cascade duration={motionDuration}>
             <Container fluid>
               <Row className="justify-content-center">
                 <Col

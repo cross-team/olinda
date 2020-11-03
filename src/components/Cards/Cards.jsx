@@ -153,7 +153,7 @@ const Cards = () => {
             fluid={cardsBg.sharp.fluid}
             backgroundColor="#63676f"
           >
-            <Fade bottom cascade duration={motionDuration} distance="50px" when={motionStarted}>
+            <Fade bottom cascade duration={motionDuration} distance="50px">
               <Container fluid>
                 <Row className="justify-content-center">
                   <Col sm={12} md={8} lg={6}>
