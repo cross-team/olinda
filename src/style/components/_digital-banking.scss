@@ -183,6 +183,28 @@
   }
 }
 
+@media (max-width: 2559px) {
+  .digital-banking {
+    &__float-elements {
+      height: vwCalc(256);
+      left: -100px;
+      bottom: vwCalc(600);
+      width: vwCalc(433);
+    }
+  }
+}
+
+@media (max-width: 2120px) {
+  .digital-banking {
+    &__float-elements {
+      height: vwCalc(256);
+      left: -52px;
+      bottom: vwCalc(660);
+      width: vwCalc(433);
+    }
+  }
+}
+
 @media (max-width: $max-width-xl) {
   .digital-banking {
     &__float-elements {

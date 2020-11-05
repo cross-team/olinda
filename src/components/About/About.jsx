@@ -56,8 +56,8 @@ const About = () => {
                   lg={{ span: 6, offset: 1 }}
                 >
                   <h2 className="about__title">
-                    <span className="about__title__head-line">Modern Solutions Backed</span> by
-                    Tradition
+                    Modern Solutions Backed
+                    <span className="about__title__second-line"> by Tradition</span>
                   </h2>
                 </Col>
               </Row>
