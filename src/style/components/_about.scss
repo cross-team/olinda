@@ -13,6 +13,11 @@
     font-size: $font-size-h2;
     font-weight: $font-weight-bold;
     margin: 0 0 rem(15px);
+
+    &__second-line {
+      display: inline-block;
+      margin: 0 0 0 0.5rem;
+    }
   }
 
   &__copy {
@@ -61,12 +66,6 @@
 @media (max-width: $max-width-sm) {
   .about {
     padding: vwSmCalc(215) 0;
-
-    &__title {
-      &__head-line {
-        display: block;
-      }
-    }
   }
 }
 
