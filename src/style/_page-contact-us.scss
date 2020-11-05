@@ -1,9 +1,15 @@
 .page-contact-us {
   background-color: $white;
   padding: rem(60px) 0 0;
+  min-height: calc(100vh - 552px);
 
   .row {
     margin: 0;
+  }
+
+  &__icon {
+    margin: rem(40px) auto rem(18px);
+    display: block;
   }
 
   &__title {
@@ -11,6 +17,13 @@
     font-size: $font-size-h4;
     font-weight: $font-weight-bold;
     margin: 0 0 rem(40px);
+    text-align: center;
+  }
+
+  &__copy {
+    color: $font-color-gray;
+    font-size: $font-size-copy;
+    margin: 0 0 rem(100px);
     text-align: center;
   }
 
@@ -181,6 +194,15 @@
         border-color: $clean-blue-light;
         box-shadow: 0 0 0 1px $clean-blue-light;
         outline: none;
+      }
+
+      &--error {
+        border-color: $error-color;
+
+        &:focus {
+          border-color: $error-color;
+          box-shadow: 0 0 0 1px $error-color;
+        }
       }
     }
 

@@ -17,7 +17,7 @@ export default () => {
   return (
     <ScrollContext.Provider value={scrollPosition}>
       <Layout
-        title="Safrapay - The future of payments, banking, and credit"
+        title="Safrapay - One Place for Your Payment, Banking, and Credit Needs"
         description="Safrapay offers a seamless merchant services and digital banking experience that is the perfect solution for your business."
         keywords="Safra, Safrapay, payments, banking, credit, digital banking,  merchant services, merchant, business"
       >

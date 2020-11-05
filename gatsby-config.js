@@ -41,7 +41,6 @@ module.exports = {
       options: {
         googleTagManager: {
           trackingId: 'GTM-WZK9MSJ',
-          // trackingId: 'GTM-NXPQX6W',
           cookieName: 'safrapay-google-tagmanager',
           dataLayerName: 'dataLayer',
         },
@@ -54,8 +53,8 @@ module.exports = {
         name: `Safrapay`,
         short_name: `safrapay`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#000`,
+        background_color: `#f8f8f8`,
+        theme_color: `#1E2446`,
         display: `browser`,
         icon: 'src/images/favicon.png',
       },
