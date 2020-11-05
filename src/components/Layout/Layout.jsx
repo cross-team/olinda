@@ -16,8 +16,8 @@ const Layout = ({ children, title, description, keywords }) => {
         <meta name="keywords" content={keywords} />
         <meta property="og:url" content="https://www.safrapay.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="{title}" />
-        <meta property="og:description" content="{description}" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={`https://www.safrapay.com${shareImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

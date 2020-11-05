@@ -8,6 +8,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Formik, Field, Form } from 'formik';
 import MaskedInput from "react-text-mask";
+import { forEach } from 'lodash';
+import { navigate } from '@reach/router';
 import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -19,8 +21,33 @@ import IconError from '../images/icon-error.svg';
 export default () => {
   const motionDuration = usePrefersReducedMotion() ? 0 : 500;
 
-  const subimtContact = () => {
-    return false;
+  const subimtContact = async (values) => {
+    const data = JSON.stringify(values, null, 2);
+    
+    const fetchOptions = {
+      method: 'POST',
+      body: data,
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      }),
+    };
+
+    const response = await fetch(`${process.env.SAFRAPAY_API_URL}/interests`, fetchOptions);
+    navigate('/contact-us-success');
+
+    return response;
+  };
+
+  const validateGeneral = (values) => {
+    const errors = {};
+    
+    forEach(values, (value, field) => {
+      if (field !== 'website' && value === '') {
+        errors[field] = 'Required';
+      }
+    });
+    
+    return errors;
   };
 
   const validateEmail = (value) => {
@@ -60,7 +87,7 @@ export default () => {
             <Col sm={12} md={6}>
               <Formik
                 initialValues={{
-                  reason: 'merchant',
+                  interestType: 'merchant',
                   firstName: '',
                   lastName: '',
                   email: '',
@@ -69,6 +96,7 @@ export default () => {
                   website: '',
                   message: '',
                 }}
+                validate={validateGeneral}
                 onSubmit={(values) => subimtContact(values)}
               >
                 {({ errors, touched, setFieldValue }) => (
@@ -79,16 +107,16 @@ export default () => {
                       </legend>
                       <Field
                         type="radio"
-                        name="reason"
+                        name="interestType"
                         value="merchant"
                         className="sl-only"
-                        id="reasonMerchant"
+                        id="interestTypeMerchant"
                       />
                       <label
                         className="form-field-radio form-field-radio--left"
-                        htmlFor="reasonMerchant"
+                        htmlFor="interestTypeMerchant"
                         tabIndex="0"
-                        onKeyPress={() => {setFieldValue('reason', 'merchant')}}
+                        onKeyPress={() => {setFieldValue('interestType', 'merchant')}}
                       >
                         <span className="form-field-radio__label">
                           I’m interested in becoming a Merchant
@@ -97,16 +125,16 @@ export default () => {
                       </label>
                       <Field
                         type="radio"
-                        name="reason"
+                        name="interestType"
                         value="partner"
                         className="sl-only"
-                        id="reasonPartner"
+                        id="interestTypePartner"
                       />
                       <label
                         className="form-field-radio form-field-radio--right"
-                        htmlFor="reasonPartner"
+                        htmlFor="interestTypePartner"
                         tabIndex="0"
-                        onKeyPress={() => {setFieldValue('reason', 'partner')}}
+                        onKeyPress={() => {setFieldValue('interestType', 'partner')}}
                       >
                         <span className="form-field-radio__label">
                           I’m interested in becoming a Partner (ISO or Agent)
@@ -121,13 +149,15 @@ export default () => {
                           <label className="form-field__label" htmlFor="firstName">
                             First Name
                           </label>
-                          <Field type="text" id="firstName" name="firstName" className="form-field__text" />
+                          <Field type="text" id="firstName" name="firstName" className={`form-field__text ${errors.firstName && touched.firstName ? `form-field__text--error` : ``}`} />
+                          {errors.firstName && touched.firstName && <div className="form-field__error" aria-live="polite"><IconError /> {errors.firstName}</div>}
                         </Col>
                         <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="lastName">
                             Last Name
                           </label>
-                          <Field type="text" id="lastName" name="lastName" className="form-field__text" />
+                          <Field type="text" id="lastName" name="lastName" className={`form-field__text ${errors.lastName && touched.lastName ? `form-field__text--error` : ``}`} />
+                          {errors.lastName && touched.lastName && <div className="form-field__error" aria-live="polite"><IconError /> {errors.lastName}</div>}
                         </Col>
                       </Row>
                       <Row>
@@ -166,7 +196,8 @@ export default () => {
                           <label className="form-field__label" htmlFor="companyName">
                             Company Name
                           </label>
-                          <Field type="text" id="companyName" name="companyName" className="form-field__text" />
+                          <Field type="text" id="companyName" name="companyName" className={`form-field__text ${errors.companyName && touched.companyName ? `form-field__text--error` : ``}`} />
+                          {errors.companyName && touched.companyName && <div className="form-field__error" aria-live="polite"><IconError /> {errors.companyName}</div>}
                         </Col>
                         <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="website">
@@ -177,12 +208,15 @@ export default () => {
                       </Row>
                     </fieldset>
                     <fieldset className="contact-us__group">
-                      <div className="form-field">
-                        <label className="form-field__label form-field__label--big" htmlFor="message">
-                          Your Message
-                        </label>
-                        <Field as="textarea" cols="6" rows="6" id="message" name="message" className="form-field__textarea" />
-                      </div>
+                      <Row>
+                        <Col sm={12} md={12} className="form-field">
+                          <label className="form-field__label form-field__label--big" htmlFor="message">
+                            Your Message
+                          </label>
+                          <Field as="textarea" cols="6" rows="6" id="message" name="message" className={`form-field__textarea ${errors.message && touched.message ? `form-field__textarea--error` : ``}`} />
+                          {errors.message && touched.message && <div className="form-field__error" aria-live="polite"><IconError /> {errors.message}</div>}
+                        </Col>
+                      </Row>
                     </fieldset>
                     <p className="contact-us__legal">
                       By clicking ‘Send Message’ you agree to be contacted by Safrapay and its affiliates
