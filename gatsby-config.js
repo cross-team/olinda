@@ -22,12 +22,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ['Source Sans Pro:400,600'],
-          display: 'swap',
-        },
+        fontDisplay: `swap`,
+        fonts: [
+          {
+            family: `Source Sans Pro`,
+            variants: [`400`, `600`],
+          },
+        ],
       },
     },
     {
