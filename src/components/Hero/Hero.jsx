@@ -131,7 +131,7 @@ const Hero = () => {
                   <div className="hero__screens-back__right">
                     <Image
                       fluid={heroScreensBackRight.sharp.fluid}
-                      alt="Safrapay Merchant App being used to start a new sale."
+                      alt="Safrapay Merchant App on a smartphone being used as a point of sale."
                     />
                   </div>
                 </div>

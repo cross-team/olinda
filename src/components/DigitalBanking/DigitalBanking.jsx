@@ -7,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Plx from 'react-plx';
 import SNBNY from '../../images/snbny-brand.svg';
-import FDICMember from '../../images/fdic-brand.svg';
 import usePrefersReducedMotion from '../../hooks/use-reduced-motion';
 import ScrollContext from '../../context/scrollContext';
 
@@ -166,10 +165,6 @@ const DigitalBanking = () => {
                       <SNBNY
                         className="digital-banking__brands__brand"
                         aria-label="Safra National Bank of New York"
-                      />
-                      <FDICMember
-                        className="digital-banking__brands__brand"
-                        aria-label="Member FDIC"
                       />
                     </div>
                   </Col>
