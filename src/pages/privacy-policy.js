@@ -202,7 +202,7 @@ export default () => {
             <p>In some circumstances, you may designate an authorized agent to submit requests to exercise certain privacy rights on your behalf.  We will require verification that you provided the authorized agent permission to make a request on your behalf.  You must provide us with a copy of the signed permission you have given to the authorized agent to submit the request on your behalf and verify your own identity directly with us.  </p>
             <h2 id="authorized-agent">Information for Authorized Agents</h2>
             <p>If you are an authorized agent submitting a request on behalf of an individual, you must attach a copy of the following information to the request:</p>
-            <p>1.	A completed Authorized Agent Designation <a href={form} aria-label="Navigate to Authorized Agent Designation Form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
+            <p>1.	A completed Authorized Agent Designation <a href={form} target="_blank" rel="noreferrer" aria-label="Navigate to Authorized Agent Designation Form">Form</a> indicating that you have authorization to act on our Customer’s behalf.</p>
             <p>2.	If you are a business located in California, proof that you are registered with the Secretary of State to conduct business in California.</p>
             <p>If we do not receive both pieces of information, the request will be denied.</p>
             <h2 id="how-we-protect-personal-information">How We Protect Personal Information</h2>
