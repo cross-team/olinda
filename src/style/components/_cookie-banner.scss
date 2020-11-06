@@ -28,9 +28,11 @@
 
   &__buttons {
     flex: 0 0 365px;
+    text-align: right;
 
     .button {
       margin: 0 0 0 rem(25px);
+      padding: rem(11px) rem(70px) rem(10px);
     }
   }
 }
@@ -47,6 +49,7 @@
     &__buttons {
       flex: 0 0 auto;
       min-width: 335px;
+      text-align: left;
 
       .button:first-child {
         margin: 0;

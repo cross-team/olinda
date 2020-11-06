@@ -73,17 +73,13 @@ const Header = ({ variation, location }) => {
     <>
       <CookieConsent
         buttonText="Accept"
-        declineButtonText="Decline"
         disableStyles
-        enableDeclineButton
         containerClasses="cookie-banner"
         contentClasses="cookie-banner__content"
         buttonWrapperClasses="cookie-banner__buttons"
         buttonClasses="button button--primary"
-        declineButtonClasses="button button--secondary"
         cookieName="safrapay-google-tagmanager"
         onAccept={() => setCookieConsent(Cookies.get('safrapay-google-tagmanager'))}
-        onDecline={() => setCookieConsent(Cookies.get('safrapay-google-tagmanager'))}
       >
         <p>
           <strong>Your privacy is important to us.</strong>
