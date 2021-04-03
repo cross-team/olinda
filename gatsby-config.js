@@ -22,18 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fontDisplay: `swap`,
-        fonts: [
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`, `600`],
-          },
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
         offset: -80,

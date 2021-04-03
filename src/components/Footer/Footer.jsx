@@ -1,35 +1,14 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Link } from 'gatsby';
-import Navigation from '../Navigation/Navigation';
-import LinkedIn from '../../images/linkedin.svg';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__nav">
-        <Navigation label="Footer Menu" />
-        <nav className="nav-careers" aria-label="Careers Menu">
-          <a
-            href="https://www.linkedin.com/company/safrapay-inc/jobs/"
-            className="nav-careers__link"
-            target="_blank"
-            rel="noreferrer"
-            title="Navigate to Safrapay's LinkedIn page"
-          >
-            <LinkedIn aria-label="LinkedIn Brand" />
-          </a>
-          <a
-            href="https://safrapay.applytojob.com/apply"
-            className="nav-careers__link"
-            target="_blank"
-            rel="noreferrer"
-            title="Navigate to LinkedIn to view Safrapay’s open job postings"
-          >
-            Careers at Safrapay
-          </a>
-        </nav>
-      </div>
       <div className="footer__legal">
+        <p className="footer__legal__copy">
+          © {new Date().getFullYear()} Safrapay Inc.
+        </p>
         <nav className="nav-legal" aria-label="Legal Menu">
           <Link to="/privacy-policy/" className="nav-legal__link">
             Privacy Policy
@@ -41,7 +20,6 @@ const Footer = () => {
             Accessibility Statement
           </Link>
         </nav>
-        <p className="footer__legal__copy">© 2020 Safrapay. All rights reserved.</p>
       </div>
     </footer>
   );

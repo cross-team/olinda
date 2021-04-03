@@ -33,7 +33,7 @@ export default () => {
     };
 
     const response = await fetch(`${process.env.SAFRAPAY_API_URL}/interests`, fetchOptions);
-    navigate('/contact-us-success');
+    navigate('/get-started-success');
 
     return response;
   };
@@ -74,76 +74,37 @@ export default () => {
 
   return (
     <Layout
-      title="Safrapay - Contact Us"
-      description="Contact Safrapay to learn more about working with us as a merchant or partner."
-      keywords="Safra, safrapay, merchant, banking, merchant services, banking services, contact, work with us, partner"
+      title="Get Started"
+      description=""
+      keywords=""
     >
       <Header variation="internal" location="/contact-us/" />
-      <PageTitle title="Contact Us" />
+      <PageTitle title="Get Started" />
       <Fade bottom duration={motionDuration} distance="50px">
         <Container as="section" className="page-contact-us" id="content" fluid>
-          <h2 className="page-contact-us__title">Let’s work together!</h2>
           <Row className="justify-content-center">
             <Col sm={12} md={6}>
               <Formik
                 initialValues={{
-                  interestType: 'merchant',
                   firstName: '',
                   lastName: '',
                   email: '',
                   phone: '',
                   companyName: '',
+                  monthlyVolumeSales: '',
+                  zipCode: '',
                   website: '',
                   message: '',
                 }}
                 validate={validateGeneral}
                 onSubmit={(values) => subimtContact(values)}
               >
-                {({ errors, touched, setFieldValue }) => (
+                {({ errors, touched }) => (
                   <Form className="contact-us">
-                    <fieldset className="contact-us__group contact-us__group--row">
-                      <legend className="contact-us__group__name contact-us__group__name--alt d-sm-block d-md-none">
-                        I’m interested in becoming a...
-                      </legend>
-                      <Field
-                        type="radio"
-                        name="interestType"
-                        value="merchant"
-                        className="sl-only"
-                        id="interestTypeMerchant"
-                      />
-                      <label
-                        className="form-field-radio form-field-radio--left"
-                        htmlFor="interestTypeMerchant"
-                        tabIndex="0"
-                        onKeyPress={() => {setFieldValue('interestType', 'merchant')}}
-                      >
-                        <span className="form-field-radio__label">
-                          I’m interested in becoming a Merchant
-                        </span>
-                        <span className="form-field-radio__label form-field-radio__label--mobile">Merchant</span>
-                      </label>
-                      <Field
-                        type="radio"
-                        name="interestType"
-                        value="partner"
-                        className="sl-only"
-                        id="interestTypePartner"
-                      />
-                      <label
-                        className="form-field-radio form-field-radio--right"
-                        htmlFor="interestTypePartner"
-                        tabIndex="0"
-                        onKeyPress={() => {setFieldValue('interestType', 'partner')}}
-                      >
-                        <span className="form-field-radio__label">
-                          I’m interested in becoming a Partner (ISO or Agent)
-                        </span>
-                        <span className="form-field-radio__label form-field-radio__label--mobile">Partner (ISO or Agent)</span>
-                      </label>
-                    </fieldset>
                     <fieldset className="contact-us__group">
-                      <legend className="contact-us__group__name">About You</legend>
+                      <legend className="contact-us__group__name">
+                        Our team is here to answer your questions and help you find the right solution!
+                      </legend>
                       <Row>
                         <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="firstName">
@@ -188,9 +149,6 @@ export default () => {
                           {errors.phone && touched.phone && <div className="form-field__error" aria-live="polite"><IconError /> {errors.phone}</div>}
                         </Col>
                       </Row>
-                    </fieldset>
-                    <fieldset className="contact-us__group">
-                      <legend className="contact-us__group__name">About Your Business</legend>
                       <Row>
                         <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="companyName">
@@ -200,21 +158,34 @@ export default () => {
                           {errors.companyName && touched.companyName && <div className="form-field__error" aria-live="polite"><IconError /> {errors.companyName}</div>}
                         </Col>
                         <Col sm={12} md={6} className="form-field">
+                          <label className="form-field__label" htmlFor="monthlyVolumeSales">
+                            Monthly Volume Sales
+                          </label>
+                          <Field type="text" id="monthlyVolumeSales" name="monthlyVolumeSales" className={`form-field__text ${errors.monthlyVolumeSales && touched.monthlyVolumeSales ? `form-field__text--error` : ``}`} />
+                          {errors.monthlyVolumeSales && touched.monthlyVolumeSales && <div className="form-field__error" aria-live="polite"><IconError /> {errors.monthlyVolumeSales}</div>}
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col sm={12} md={6} className="form-field">
+                          <label className="form-field__label" htmlFor="zipCode">
+                            ZIP Code
+                          </label>
+                          <Field type="text" id="zipCode" name="zipCode" className={`form-field__text ${errors.zipCode && touched.zipCode ? `form-field__text--error` : ``}`} />
+                          {errors.zipCode && touched.zipCode && <div className="form-field__error" aria-live="polite"><IconError /> {errors.zipCode}</div>}
+                        </Col>
+                        <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="website">
                             Website (Optional)
                           </label>
                           <Field type="text" id="website" name="website" className="form-field__text" />
                         </Col>
                       </Row>
-                    </fieldset>
-                    <fieldset className="contact-us__group">
                       <Row>
                         <Col sm={12} md={12} className="form-field">
-                          <label className="form-field__label form-field__label--big" htmlFor="message">
-                            Your Message
+                          <label className="form-field__label" htmlFor="message">
+                            Message (Optional)
                           </label>
-                          <Field as="textarea" cols="6" rows="6" id="message" name="message" className={`form-field__textarea ${errors.message && touched.message ? `form-field__textarea--error` : ``}`} />
-                          {errors.message && touched.message && <div className="form-field__error" aria-live="polite"><IconError /> {errors.message}</div>}
+                          <Field as="textarea" cols="6" rows="6" id="message" name="message" className="form-field__textarea" />
                         </Col>
                       </Row>
                     </fieldset>
@@ -222,8 +193,8 @@ export default () => {
                       By clicking ‘Send Message’ you agree to be contacted by Safrapay and its affiliates
                       about our services (including through automated, artificial, and/or prerecorded
                       means) via telephone, mobile device (including SMS and MMS), and/or email, and you
-                      agree to our <Link to="/terms-of-use">Terms of Use</Link> and{' '}
-                      <Link to="/privacy-policy">Privacy Policy</Link>. You understand that your consent
+                      agree to our <Link to="/">Terms of Use</Link> and{' '}
+                      <Link to="/">Privacy Policy</Link>. You understand that your consent
                       is not required as a condition to receive a good or service.
                     </p>
                     <Button variation="primary" type="submit" className="contact-us__submit">

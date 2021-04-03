@@ -13,30 +13,43 @@
   border-bottom: $border-base-light-alpha;
   display: grid;
   grid-template: 1fr / 230px auto 230px;
-  height: 90px;
+  height: 94px;
+  padding: 0 calc((100vw - 1128px) / 2);
   position: absolute;
   transform: translate(0, 0);
   width: 100%;
   max-width: 2560px;
   z-index: 10;
 
+  &::after {
+    background: $gold;
+    bottom: -5px;
+    content: '';
+    display: block;
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: vwCalc(611);
+  }
+
   &__menu {
     display: none;
   }
 
   &__brand {
-    height: 36px;
+    height: 32px;
     margin: 0 0 0 30px;
     place-self: center start;
     position: relative;
-    width: 148px;
+    width: 131px;
 
     a:focus {
       outline: none;
       position: relative;
 
       &::after {
-        border: 2px solid $white;
+        border: 2px solid $clean-blue-light;;
         border-radius: $border-radius-lg;
         content: '';
         display: block;
@@ -45,14 +58,16 @@
         position: absolute;
         top: -10%;
         transform: translate(-50%, -50%);
-        width: calc(100% + 30px);
+        width: 110%;
       }
     }
 
     &__image {
-      fill: $white;
+      height: 31px;
+      fill: $blue-brand;
       transition: fill 0s, transform 0 ease-out;
       transform-origin: left center;
+      width: 131px
     }
 
     &__name {
@@ -97,14 +112,13 @@
   }
 
   &--internal {
-    background: $blue-1;
+    background: $font-color-light;
   }
 
   &--fixed {
     animation: headerSlideDown 0.3s ease-out;
     background-color: $white;
     border-bottom: $border-base-gray-alpha;
-    height: 80px;
     position: fixed;
     transition-duration: 0s;
     top: 0;
@@ -115,15 +129,9 @@
           &::after {
             border-color: $clean-blue-light;
             height: 50px;
-            transform: translate(-63%, -50%);
-            width: 100%;
+            transform: translate(-51%, -50%);
+            width: 110%;
           }
-        }
-
-        &__image {
-          fill: $blue-1;
-          transform: scale(0.72);
-          transition-duration: 0s;
         }
       }
 

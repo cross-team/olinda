@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -20,6 +21,8 @@ const Layout = ({ children, title, description, keywords }) => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={`https://www.safrapay.com${shareImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
       </Helmet>
       <main className="wrap">{children}</main>
     </>

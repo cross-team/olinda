@@ -1,6 +1,6 @@
 .page-contact-us {
   background-color: $white;
-  padding: rem(60px) 0 0;
+  padding: rem(200px) 0 0;
   min-height: calc(100vh - 552px);
 
   .row {
@@ -8,13 +8,15 @@
   }
 
   &__icon {
+    height: 200px;
     margin: rem(40px) auto rem(18px);
     display: block;
+    width: 200px;
   }
 
   &__title {
     color: $font-color-blue;
-    font-size: $font-size-h4;
+    font-size: $font-size-h6;
     font-weight: $font-weight-bold;
     margin: 0 0 rem(40px);
     text-align: center;
@@ -47,10 +49,13 @@
       }
 
       &__name {
-        color: $font-color-blue;
-        font-size: $font-size-h6;
-        font-weight: $font-weight-bold;
-        margin: 0 0 rem(22px);
+        color: $font-color-gray;
+        display: block;
+        font-size: $font-size-base;
+        font-weight: $font-weight-base;
+        margin: 0 0 rem(48px);
+        text-align: center;
+        width: 100%;
 
         &--alt {
           color: $font-color-gray;
@@ -64,7 +69,8 @@
     }
 
     &__legal {
-      color: $font-color-gray;
+      color: $gray-5;
+      font-size: rem(14px);
       margin: 0 0 rem(34px);
       a {
         @include link-body;
@@ -156,6 +162,34 @@
 
     &__text {
       background-color: $white;
+      border: $border-base-gray;
+      border-radius: $border-radius-sm;
+      margin: 4px 0;
+      padding: 13px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &:focus {
+        border-color: $clean-blue-light;
+        box-shadow: 0 0 0 1px $clean-blue-light;
+        outline: none;
+      }
+
+      &--error {
+        border-color: $error-color;
+
+        &:focus {
+          border-color: $error-color;
+          box-shadow: 0 0 0 1px $error-color;
+        }
+      }
+    }
+
+    &__select {
+      background: $white url(../images/arrow-down-small.png) no-repeat 96% 50%;
+      background-size: 24px 24px;
       border: $border-base-gray;
       border-radius: $border-radius-sm;
       margin: 4px 0;
