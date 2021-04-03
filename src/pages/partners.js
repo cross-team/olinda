@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
@@ -33,7 +34,7 @@ export default () => {
     };
 
     const response = await fetch(`${process.env.SAFRAPAY_API_URL}/interests`, fetchOptions);
-    navigate('/contact-our-team-success');
+    navigate('/partners-success');
 
     return response;
   };
@@ -74,12 +75,12 @@ export default () => {
 
   return (
     <Layout
-      title="Contact Our Team"
+      title="Let’s work together!"
       description=""
       keywords=""
     >
       <Header variation="internal" location="/contact-us/" />
-      <PageTitle title="Contact Our Team" />
+      <PageTitle title="Let’s work together!" />
       <Fade bottom duration={motionDuration} distance="50px">
         <Container as="section" className="page-contact-us" id="content" fluid>
           <Row className="justify-content-center">
@@ -91,9 +92,9 @@ export default () => {
                   email: '',
                   phone: '',
                   companyName: '',
-                  monthlyVolumeSales: '',
                   zipCode: '',
                   website: '',
+                  typeOfPartner: '',
                   message: '',
                 }}
                 validate={validateGeneral}
@@ -158,26 +159,32 @@ export default () => {
                           {errors.companyName && touched.companyName && <div className="form-field__error" aria-live="polite"><IconError /> {errors.companyName}</div>}
                         </Col>
                         <Col sm={12} md={6} className="form-field">
-                          <label className="form-field__label" htmlFor="monthlyVolumeSales">
-                            Monthly Volume Sales
-                          </label>
-                          <Field type="text" id="monthlyVolumeSales" name="monthlyVolumeSales" className={`form-field__text ${errors.monthlyVolumeSales && touched.monthlyVolumeSales ? `form-field__text--error` : ``}`} />
-                          {errors.monthlyVolumeSales && touched.monthlyVolumeSales && <div className="form-field__error" aria-live="polite"><IconError /> {errors.monthlyVolumeSales}</div>}
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="zipCode">
                             ZIP Code
                           </label>
                           <Field type="text" id="zipCode" name="zipCode" className={`form-field__text ${errors.zipCode && touched.zipCode ? `form-field__text--error` : ``}`} />
                           {errors.zipCode && touched.zipCode && <div className="form-field__error" aria-live="polite"><IconError /> {errors.zipCode}</div>}
                         </Col>
+                      </Row>
+                      <Row>
                         <Col sm={12} md={6} className="form-field">
                           <label className="form-field__label" htmlFor="website">
                             Website (Optional)
                           </label>
                           <Field type="text" id="website" name="website" className="form-field__text" />
+                        </Col>
+                        <Col sm={12} md={6} className="form-field">
+                          <label className="form-field__label" htmlFor="typeOfPartner">
+                            Type of Partner
+                          </label>
+                          <Field component="select" id="typeOfPartner" name="typeOfPartner" className="form-field__select">
+                            <option value="" selected />
+                            <option value="Independent Contractor">Independent Contractor</option>
+                            <option value="Referral Agent">Referral Agent</option>
+                            <option value="ISO">ISO</option>
+                            <option value="ISV">ISV</option>
+                            <option value="Other">Other</option>
+                          </Field>
                         </Col>
                       </Row>
                       <Row>
